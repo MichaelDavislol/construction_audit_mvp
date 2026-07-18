@@ -1,0 +1,39 @@
+{
+  "source": "real_run",
+  "job_id": "audit_med_20260717",
+  "skill_version": "0.7.5",
+  "input_mode": "estimate_and_plan",
+  "status": "completed",
+  "geometry": {
+    "revision": 2,
+    "confirmed": true,
+    "rooms_count": 5,
+    "floor_area_m2": "164.36",
+    "unique_doors_count": 6,
+    "unique_windows_count": 5
+  },
+  "audit": {
+    "estimate_rows": 35,
+    "quantity_coverage_percent": "100",
+    "price_coverage_percent": "100",
+    "quantity_deviation_rows": 4,
+    "price_deviation_rows": 2,
+    "findings_count": 6,
+    "findings_by_severity": {
+      "high": 2,
+      "warning": 4
+    }
+  },
+  "visual_review": {
+    "photos_count": 2,
+    "observations_count": 16
+  },
+  "analyst": {
+    "status": "generated",
+    "hypotheses_count": 4
+  },
+  "generated_estimate": {
+    "rows_count": 31,
+    "skipped_count": 0
+  }
+}

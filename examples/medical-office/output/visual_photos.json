@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "archive_sha256": "35f68b4d59e6d8fc615ac620bcc973875690f36f1443af406bc1ae44755c7a7a",
+  "estimate_works": [
+    {
+      "canonical_work": "Грунтовка стен",
+      "source_rows": [
+        3,
+        10,
+        17,
+        24,
+        31
+      ]
+    },
+    {
+      "canonical_work": "Окраска стен",
+      "source_rows": [
+        2,
+        9,
+        16,
+        23,
+        30
+      ]
+    },
+    {
+      "canonical_work": "Устройство пола",
+      "source_rows": [
+        4,
+        11,
+        18,
+        25,
+        32
+      ]
+    },
+    {
+      "canonical_work": "Отделка потолка",
+      "source_rows": [
+        5,
+        12,
+        19,
+        26,
+        33
+      ]
+    },
+    {
+      "canonical_work": "Монтаж плинтуса",
+      "source_rows": [
+        6,
+        13,
+        20,
+        27,
+        34
+      ]
+    },
+    {
+      "canonical_work": "Установка дверей",
+      "source_rows": [
+        7,
+        14,
+        21,
+        28,
+        35
+      ]
+    },
+    {
+      "canonical_work": "Установка окон",
+      "source_rows": [
+        8,
+        15,
+        22,
+        29,
+        36
+      ]
+    }
+  ],
+  "photos": [
+    {
+      "photo_id": "photo_001",
+      "filename": "IMG_1430.JPG",
+      "sha256": "523ef30ea2c0ffd6539f270a3c23d4f22ce3f3c7753c7fa102a4c3189f9eb501",
+      "size_bytes": 146367,
+      "mime": "image/jpeg",
+      "imported_name": "photo_001.jpg",
+      "vision_source_path": "../input/site-photos/photo_001.jpg",
+      "delegation_token": "PUBLIC_DEMO_REDACTED_TOKEN_0000000000000001"
+    },
+    {
+      "photo_id": "photo_002",
+      "filename": "IMG_1422.JPG",
+      "sha256": "c7b425ee3a710d7d92323cea6fd70f0ee9f5b0935fa78a3a8196b9db46f66bdf",
+      "size_bytes": 72978,
+      "mime": "image/jpeg",
+      "imported_name": "photo_002.jpg",
+      "vision_source_path": "../input/site-photos/photo_002.jpg",
+      "delegation_token": "PUBLIC_DEMO_REDACTED_TOKEN_0000000000000002"
+    }
+  ]
+}

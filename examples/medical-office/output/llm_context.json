@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "scope": "construction_audit_mvp_post_check_analysis",
+  "object": {
+    "name": "Медицинский офис - 2_test",
+    "geometry_revision": 2,
+    "geometry_confirmed": true,
+    "confirmed_geometry_sha256": "3ee761be941dd714ddd60995fdbef07b8b61f69fd6946cc207ea8057a1b25d13"
+  },
+  "estimate_rows": [
+    {
+      "source_row": 22,
+      "room": "Кабинет врача 2",
+      "work_name": "Установка окон",
+      "unit": "шт.",
+      "quantity": "1"
+    },
+    {
+      "source_row": 29,
+      "room": "Кабинет врача 2",
+      "work_name": "Установка окон",
+      "unit": "шт.",
+      "quantity": "1"
+    }
+  ],
+  "geometry": {
+    "rooms": [
+      {
+        "room_id": "room_003",
+        "name": "Кабинет врача 2",
+        "metrics": {
+          "floor_area_m2": "29.40",
+          "ceiling_area_m2": "29.40",
+          "gross_wall_area_m2": "62.72",
+          "doors_area_m2": "5.40",
+          "windows_area_m2": "2.52",
+          "openings_area_m2": "7.92",
+          "net_wall_area_m2": "54.80",
+          "baseboard_length_m": "19.70",
+          "door_count": "3",
+          "window_count": "1"
+        }
+      }
+    ]
+  },
+  "mapping": {
+    "room_matches": 5,
+    "room_unresolved": 0,
+    "work_matches": 35,
+    "work_unsupported": 0,
+    "work_unresolved": 0,
+    "price_matches": 35,
+    "price_unsupported": 0,
+    "price_unresolved": 0
+  },
+  "price_summary": {
+    "catalog_items": 7,
+    "checked": 35,
+    "partially_checked": 0,
+    "not_checked": 0,
+    "deviations": 2
+  },
+  "price_checks": [
+    {
+      "source_row": 19,
+      "status": "deviation_found",
+      "mcp_work_id": "ceiling_finishing",
+      "estimate_price": "760",
+      "mcp_price": "650"
+    },
+    {
+      "source_row": 22,
+      "status": "checked",
+      "mcp_work_id": "window_installation",
+      "estimate_price": "9000",
+      "mcp_price": "9000"
+    },
+    {
+      "source_row": 29,
+      "status": "checked",
+      "mcp_work_id": "window_installation",
+      "estimate_price": "9000",
+      "mcp_price": "9000"
+    },
+    {
+      "source_row": 30,
+      "status": "deviation_found",
+      "mcp_work_id": "wall_painting",
+      "estimate_price": "520",
+      "mcp_price": "450"
+    }
+  ],
+  "deterministic_findings": [
+    {
+      "finding_id": "finding_003",
+      "type": "quantity_overstatement",
+      "severity": "high",
+      "source_row": 22,
+      "source_rows": [
+        22,
+        29
+      ],
+      "quantity_check_scope": null,
+      "allocation_status": null,
+      "canonical_room_id": "room_003",
+      "canonical_room_name": "Кабинет врача 2",
+      "canonical_work_name": "Установка окон",
+      "estimated_value": "2",
+      "control_value": "1",
+      "deviation_percent": "100",
+      "unit": "шт.",
+      "calculation_trace_refs": [
+        "room:room_003:window_count",
+        "quantity_check:rows:22-29"
+      ]
+    },
+    {
+      "finding_id": "finding_001",
+      "type": "exact_duplicate",
+      "severity": "high",
+      "source_row": 29,
+      "source_rows": [
+        29
+      ],
+      "quantity_check_scope": null,
+      "allocation_status": null,
+      "canonical_room_id": "room_003",
+      "canonical_room_name": "Кабинет врача 2",
+      "canonical_work_name": "Установка окон",
+      "estimated_value": "1",
+      "control_value": null,
+      "deviation_percent": null,
+      "unit": "шт.",
+      "calculation_trace_refs": []
+    }
+  ],
+  "warnings": [],
+  "coverage": {
+    "checked_rows": 35,
+    "not_checked_rows": 0
+  },
+  "relevant_calculation_trace": [
+    {
+      "trace_id": "room:room_003:window_count",
+      "room_id": "room_003",
+      "metric": "window_count",
+      "formula": "len(room windows)",
+      "inputs": {
+        "element_ids": [
+          "ОК-4"
+        ]
+      },
+      "rounded_result": "1",
+      "results": null
+    },
+    {
+      "trace_id": "quantity_check:rows:22-29",
+      "room_id": "room_003",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "2",
+        "control_quantity_raw": "1",
+        "control_quantity_display": "1",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "rounded_result": null,
+      "results": {
+        "deviation_signed": "1",
+        "deviation_absolute": "1",
+        "deviation_percent_raw": "100",
+        "threshold_exceeded": true,
+        "status": "deviation_found"
+      }
+    }
+  ],
+  "provenance": {
+    "price_catalog_source_tool": "mcp_construction_prices__get_supported_works",
+    "price_catalog_source_transport": "structured_object"
+  },
+  "visual_insights": {
+    "status": "generated",
+    "photos_count": 2,
+    "items_total": 16,
+    "items_included": 6,
+    "photo_ids_included": [
+      "photo_001",
+      "photo_002"
+    ],
+    "items": [
+      {
+        "visual_insight_id": "photo_001_insight_001",
+        "photo_id": "photo_001",
+        "category": "estimate_comparison",
+        "estimate_work": "Грунтовка стен",
+        "source_rows": [
+          3,
+          10,
+          17,
+          24,
+          31
+        ],
+        "status": "not_assessable",
+        "title": "Грунтовка стен не видна",
+        "observation": "Грунтовка стен скрыта под финишной отделкой, визуально не проверяется.",
+        "confidence": "low",
+        "auditor_check": "Сверить с актом на грунтовку под покраску.",
+        "limitations": "Грунтовка не видна визуально после покраски."
+      },
+      {
+        "visual_insight_id": "photo_002_insight_001",
+        "photo_id": "photo_002",
+        "category": "estimate_comparison",
+        "estimate_work": "Грунтовка стен",
+        "source_rows": [
+          3,
+          10,
+          17,
+          24,
+          31
+        ],
+        "status": "not_observed",
+        "title": "Грунтовка стен — не видна в кадре",
+        "observation": "Грунтовка стен не видна в кадре.",
+        "confidence": "medium",
+        "auditor_check": "Проверить наличие и качество грунтовочного слоя на стенах на объекте.",
+        "limitations": "По фото невозможно достоверно определить наличие грунтовки под штукатуркой."
+      },
+      {
+        "visual_insight_id": "photo_001_insight_008",
+        "photo_id": "photo_001",
+        "category": "quality",
+        "estimate_work": null,
+        "source_rows": [],
+        "status": "quality_concern",
+        "title": "Видимый признак качества",
+        "observation": "На фото виден признак для очной проверки.",
+        "confidence": "medium",
+        "auditor_check": "Проверить и устранить щель/разошедшийся стык напольного покрытия на объекте.",
+        "limitations": "Только этот кадр, причина дефекта (усадка, некачественный монтаж) не определена визуально."
+      },
+      {
+        "visual_insight_id": "photo_002_insight_008",
+        "photo_id": "photo_002",
+        "category": "quality",
+        "estimate_work": null,
+        "source_rows": [],
+        "status": "quality_concern",
+        "title": "Видимый признак качества",
+        "observation": "На фото виден признак для очной проверки.",
+        "confidence": "medium",
+        "auditor_check": "Проверить на объекте состояние штукатурного слоя стен перед финишной отделкой.",
+        "limitations": "только этот кадр, без инструментального контроля плоскости стены."
+      },
+      {
+        "visual_insight_id": "photo_001_insight_002",
+        "photo_id": "photo_001",
+        "category": "estimate_comparison",
+        "estimate_work": "Окраска стен",
+        "source_rows": [
+          2,
+          9,
+          16,
+          23,
+          30
+        ],
+        "status": "observed",
+        "title": "Окраска стен видна",
+        "observation": "На фото видны окрашенные стены равномерного светлого тона.",
+        "confidence": "high",
+        "auditor_check": "Проверить качество и равномерность окраски по всем помещениям.",
+        "limitations": "Оценка ограничена ракурсом кадра."
+      },
+      {
+        "visual_insight_id": "photo_001_insight_003",
+        "photo_id": "photo_001",
+        "category": "estimate_comparison",
+        "estimate_work": "Устройство пола",
+        "source_rows": [
+          4,
+          11,
+          18,
+          25,
+          32
+        ],
+        "status": "observed",
+        "title": "Пол уложен, есть дефект стыка",
+        "observation": "Пол из ламината уложен, но виден дефект — разошедшийся стык/щель между планками.",
+        "confidence": "high",
+        "auditor_check": "Проверить качество укладки и устранить дефект соединения.",
+        "limitations": "Оценка ограничена видимой частью пола."
+      }
+    ]
+  }
+}

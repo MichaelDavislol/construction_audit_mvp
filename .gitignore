@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.log
+.ouroboros_env/
+.venv/
+venv/
+dist/
+build/
+*.egg-info/

@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "status": "generated",
+  "photos_count": 2,
+  "analyzed_count": 2,
+  "photos": [
+    {
+      "photo_id": "photo_001",
+      "filename": "IMG_1430.JPG",
+      "sha256": "523ef30ea2c0ffd6539f270a3c23d4f22ce3f3c7753c7fa102a4c3189f9eb501",
+      "image_quality": {
+        "usable": true,
+        "issues": []
+      },
+      "scene_summary": "Помещение с уложенным ламинатом, окрашенными стенами и установленным плинтусом; в кадре виден дверной проём без полотна двери; потолок и окна не попадают в кадр.",
+      "limitations": [
+        "Только видимая часть кадра, без охвата потолка и оконных проёмов."
+      ]
+    },
+    {
+      "photo_id": "photo_002",
+      "filename": "IMG_1422.JPG",
+      "sha256": "c7b425ee3a710d7d92323cea6fd70f0ee9f5b0935fa78a3a8196b9db46f66bdf",
+      "image_quality": {
+        "usable": true,
+        "issues": []
+      },
+      "scene_summary": "Пустое помещение с непокрашенными оштукатуренными стенами, черновым бетонным полом, необработанным потолком и установленным пластиковым окном с радиатором под ним.",
+      "limitations": [
+        "Только видимая часть кадра, без комнаты и без сметы."
+      ]
+    }
+  ],
+  "items": [
+    {
+      "visual_insight_id": "photo_001_insight_001",
+      "photo_id": "photo_001",
+      "category": "estimate_comparison",
+      "estimate_work": "Грунтовка стен",
+      "source_rows": [
+        3,
+        10,
+        17,
+        24,
+        31
+      ],
+      "status": "not_assessable",
+      "title": "Грунтовка стен не видна",
+      "observation": "Грунтовка стен скрыта под финишной отделкой, визуально не проверяется.",
+      "evidence_text": "Стены окрашены равномерно, но слой грунтовки скрыт под финишным покрытием.",
+      "confidence": "low",
+      "auditor_check": "Сверить с актом на грунтовку под покраску.",
+      "limitations": "Грунтовка не видна визуально после покраски.",
+      "photo_filename": "IMG_1430.JPG"
+    },
+    {
+      "visual_insight_id": "photo_001_insight_002",
+      "photo_id": "photo_001",
+      "category": "estimate_comparison",
+      "estimate_work": "Окраска стен",
+      "source_rows": [
+        2,
+        9,
+        16,
+        23,
+        30
+      ],
+      "status": "observed",
+      "title": "Окраска стен видна",
+      "observation": "На фото видны окрашенные стены равномерного светлого тона.",
+      "evidence_text": "Стены в кадре окрашены однотонной светлой краской без видимых пропусков.",
+      "confidence": "high",
+      "auditor_check": "Проверить качество и равномерность окраски по всем помещениям.",
+      "limitations": "Оценка ограничена ракурсом кадра.",
+      "photo_filename": "IMG_1430.JPG"
+    },
+    {
+      "visual_insight_id": "photo_001_insight_003",
+      "photo_id": "photo_001",
+      "category": "estimate_comparison",
+      "estimate_work": "Устройство пола",
+      "source_rows": [
+        4,
+        11,
+        18,
+        25,
+        32
+      ],
+      "status": "observed",
+      "title": "Пол уложен, есть дефект стыка",
+      "observation": "Пол из ламината уложен, но виден дефект — разошедшийся стык/щель между планками.",
+      "evidence_text": "Ламинат уложен по всей видимой площади, в средней части кадра видна щель между планками.",
+      "confidence": "high",
+      "auditor_check": "Проверить качество укладки и устранить дефект соединения.",
+      "limitations": "Оценка ограничена видимой частью пола.",
+      "photo_filename": "IMG_1430.JPG"
+    },
+    {
+      "visual_insight_id": "photo_001_insight_004",
+      "photo_id": "photo_001",
+      "category": "estimate_comparison",
+      "estimate_work": "Отделка потолка",
+      "source_rows": [
+        5,
+        12,
+        19,
+        26,
+        33
+      ],
+      "status": "not_observed",
+      "title": "Потолок не видно в кадре",
+      "observation": "Потолок не видно в кадре.",
+      "evidence_text": "Потолок не попадает в границы кадра.",
+      "confidence": "medium",
+      "auditor_check": "Проверить отделку потолка отдельным фото.",
+      "limitations": "Потолок физически не виден на этом фото.",
+      "photo_filename": "IMG_1430.JPG"
+    },
+    {
+      "visual_insight_id": "photo_001_insight_005",
+      "photo_id": "photo_001",
+      "category": "estimate_comparison",
+      "estimate_work": "Монтаж плинтуса",
+      "source_rows": [
+        6,
+        13,
+        20,
+        27,
+        34
+      ],
+      "status": "observed",
+      "title": "Плинтус смонтирован",
+      "observation": "Плинтус установлен вдоль видимых стен.",
+      "evidence_text": "Тёмный плинтус смонтирован вдоль стен по периметру видимой части помещения.",
+      "confidence": "high",
+      "auditor_check": "Проверить целостность и крепление плинтуса по периметру.",
+      "limitations": "Оценка ограничена видимой частью периметра.",
+      "photo_filename": "IMG_1430.JPG"
+    },
+    {
+      "visual_insight_id": "photo_001_insight_006",
+      "photo_id": "photo_001",
+      "category": "estimate_comparison",
+      "estimate_work": "Установка дверей",
+      "source_rows": [
+        7,
+        14,
+        21,
+        28,
+        35
+      ],
+      "status": "not_observed",
+      "title": "Дверное полотно не видно в кадре",
+      "observation": "Дверной проём виден, но само дверное полотно не видно в кадре.",
+      "evidence_text": "В верхней части кадра виден дверной проём с наличниками, но дверное полотно не видно.",
+      "confidence": "medium",
+      "auditor_check": "Проверить наличие и установку дверного полотна очно.",
+      "limitations": "Дверное полотно могло быть открыто за пределы кадра.",
+      "photo_filename": "IMG_1430.JPG"
+    },
+    {
+      "visual_insight_id": "photo_001_insight_007",
+      "photo_id": "photo_001",
+      "category": "estimate_comparison",
+      "estimate_work": "Установка окон",
+      "source_rows": [
+        8,
+        15,
+        22,
+        29,
+        36
+      ],
+      "status": "not_observed",
+      "title": "Окна не видно в кадре",
+      "observation": "Окна не видны в кадре.",
+      "evidence_text": "Окна отсутствуют в границах кадра.",
+      "confidence": "medium",
+      "auditor_check": "Проверить наличие и монтаж окон отдельным фото.",
+      "limitations": "Окна физически не видны на этом фото.",
+      "photo_filename": "IMG_1430.JPG"
+    },
+    {
+      "visual_insight_id": "photo_001_insight_008",
+      "photo_id": "photo_001",
+      "category": "quality",
+      "estimate_work": null,
+      "source_rows": [],
+      "status": "quality_concern",
+      "title": "Видимый признак качества",
+      "observation": "На фото виден признак для очной проверки.",
+      "evidence_text": "В средней части кадра видна открытая щель между планками ламината с видимым зазором.",
+      "confidence": "medium",
+      "auditor_check": "Проверить и устранить щель/разошедшийся стык напольного покрытия на объекте.",
+      "limitations": "Только этот кадр, причина дефекта (усадка, некачественный монтаж) не определена визуально.",
+      "photo_filename": "IMG_1430.JPG"
+    },
+    {
+      "visual_insight_id": "photo_002_insight_001",
+      "photo_id": "photo_002",
+      "category": "estimate_comparison",
+      "estimate_work": "Грунтовка стен",
+      "source_rows": [
+        3,
+        10,
+        17,
+        24,
+        31
+      ],
+      "status": "not_observed",
+      "title": "Грунтовка стен — не видна в кадре",
+      "observation": "Грунтовка стен не видна в кадре.",
+      "evidence_text": "Стены имеют вид необработанной штукатурки с пятнами и разводами, слой грунтовки визуально не различим.",
+      "confidence": "medium",
+      "auditor_check": "Проверить наличие и качество грунтовочного слоя на стенах на объекте.",
+      "limitations": "По фото невозможно достоверно определить наличие грунтовки под штукатуркой.",
+      "photo_filename": "IMG_1422.JPG"
+    },
+    {
+      "visual_insight_id": "photo_002_insight_002",
+      "photo_id": "photo_002",
+      "category": "estimate_comparison",
+      "estimate_work": "Окраска стен",
+      "source_rows": [
+        2,
+        9,
+        16,
+        23,
+        30
+      ],
+      "status": "not_observed",
+      "title": "Окраска стен — не видна в кадре",
+      "observation": "Окраска стен не видна в кадре.",
+      "evidence_text": "Стены светло-бежевые, неровные, с пятнами и следами шпаклевки/штукатурки без финишного окрасочного слоя.",
+      "confidence": "high",
+      "auditor_check": "Проверить окраску стен на объекте.",
+      "limitations": "Только видимая часть кадра.",
+      "photo_filename": "IMG_1422.JPG"
+    },
+    {
+      "visual_insight_id": "photo_002_insight_003",
+      "photo_id": "photo_002",
+      "category": "estimate_comparison",
+      "estimate_work": "Устройство пола",
+      "source_rows": [
+        4,
+        11,
+        18,
+        25,
+        32
+      ],
+      "status": "not_observed",
+      "title": "Устройство пола — не видно в кадре",
+      "observation": "Устройство пола не видно в кадре.",
+      "evidence_text": "Пол представляет собой серую бетонную стяжку без финишного покрытия.",
+      "confidence": "high",
+      "auditor_check": "Проверить устройство финишного покрытия пола на объекте.",
+      "limitations": "Только видимая часть кадра.",
+      "photo_filename": "IMG_1422.JPG"
+    },
+    {
+      "visual_insight_id": "photo_002_insight_004",
+      "photo_id": "photo_002",
+      "category": "estimate_comparison",
+      "estimate_work": "Отделка потолка",
+      "source_rows": [
+        5,
+        12,
+        19,
+        26,
+        33
+      ],
+      "status": "not_observed",
+      "title": "Отделка потолка — не видна в кадре",
+      "observation": "Отделка потолка не видна в кадре.",
+      "evidence_text": "Потолок белый, с видимыми неровностями и следами шпаклевки, финишная отделка не различима.",
+      "confidence": "medium",
+      "auditor_check": "Проверить отделку потолка на объекте.",
+      "limitations": "Только видимая часть кадра, угол съёмки ограничивает обзор потолка.",
+      "photo_filename": "IMG_1422.JPG"
+    },
+    {
+      "visual_insight_id": "photo_002_insight_005",
+      "photo_id": "photo_002",
+      "category": "estimate_comparison",
+      "estimate_work": "Монтаж плинтуса",
+      "source_rows": [
+        6,
+        13,
+        20,
+        27,
+        34
+      ],
+      "status": "not_observed",
+      "title": "Монтаж плинтуса — не виден в кадре",
+      "observation": "Плинтус не виден в кадре.",
+      "evidence_text": "На стыке пола и стен плинтус отсутствует по всему периметру видимой части помещения.",
+      "confidence": "high",
+      "auditor_check": "Проверить монтаж плинтуса на объекте.",
+      "limitations": "Только видимая часть кадра.",
+      "photo_filename": "IMG_1422.JPG"
+    },
+    {
+      "visual_insight_id": "photo_002_insight_006",
+      "photo_id": "photo_002",
+      "category": "estimate_comparison",
+      "estimate_work": "Установка дверей",
+      "source_rows": [
+        7,
+        14,
+        21,
+        28,
+        35
+      ],
+      "status": "not_observed",
+      "title": "Установка дверей — не видна в кадре",
+      "observation": "Дверь не видна в кадре.",
+      "evidence_text": "В кадре отсутствует дверной проём или дверное полотно.",
+      "confidence": "medium",
+      "auditor_check": "Проверить установку дверей на объекте.",
+      "limitations": "Дверь может находиться за пределами кадра.",
+      "photo_filename": "IMG_1422.JPG"
+    },
+    {
+      "visual_insight_id": "photo_002_insight_007",
+      "photo_id": "photo_002",
+      "category": "estimate_comparison",
+      "estimate_work": "Установка окон",
+      "source_rows": [
+        8,
+        15,
+        22,
+        29,
+        36
+      ],
+      "status": "observed",
+      "title": "Установка окон — видна в кадре",
+      "observation": "Окно установлено и видно в кадре.",
+      "evidence_text": "В кадре видно установленное белое пластиковое двухстворчатое окно с подоконником и радиатором.",
+      "confidence": "high",
+      "auditor_check": "Проверить качество монтажа и комплектность установленного окна на объекте.",
+      "limitations": "только видимая часть кадра, детали монтажных швов не оценивались.",
+      "photo_filename": "IMG_1422.JPG"
+    },
+    {
+      "visual_insight_id": "photo_002_insight_008",
+      "photo_id": "photo_002",
+      "category": "quality",
+      "estimate_work": null,
+      "source_rows": [],
+      "status": "quality_concern",
+      "title": "Видимый признак качества",
+      "observation": "На фото виден признак для очной проверки.",
+      "evidence_text": "На стенах видны неоднородные пятна, разводы и перепады тона штукатурного/шпаклёвочного слоя.",
+      "confidence": "medium",
+      "auditor_check": "Проверить на объекте состояние штукатурного слоя стен перед финишной отделкой.",
+      "limitations": "только этот кадр, без инструментального контроля плоскости стены.",
+      "photo_filename": "IMG_1422.JPG"
+    }
+  ]
+}

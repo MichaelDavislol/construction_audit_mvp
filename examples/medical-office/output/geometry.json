@@ -1,0 +1,586 @@
+{
+  "schema_version": 1,
+  "plan_id": "plan_001",
+  "object_name": "Медицинский офис - 2_test",
+  "object_name_suggestion": null,
+  "image_quality": {
+    "usable": true,
+    "issues": []
+  },
+  "source_room_id_map": {
+    "1": "room_001",
+    "2": "room_002",
+    "3": "room_003",
+    "4": "room_004",
+    "5": "room_005"
+  },
+  "rooms": [
+    {
+      "room_id": "room_001",
+      "source_room_id": "1",
+      "name": "Кабинет администратора",
+      "floor_area_m2": "28.56",
+      "length_m": "5.6",
+      "width_m": "5.1",
+      "perimeter_m": "21.4",
+      "height_m": "2.8",
+      "measurements": {
+        "floor_area_m2": {
+          "value": "28.56",
+          "confidence": 1.0,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "length_m": {
+          "value": "5.6",
+          "confidence": 1.0,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "5600"
+        },
+        "width_m": {
+          "value": "5.1",
+          "confidence": 1.0,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "5100"
+        },
+        "perimeter_m": {
+          "value": "21.4",
+          "confidence": 1.0,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "height_m": {
+          "value": "2.8",
+          "confidence": 1.0,
+          "source_type": "user_correction",
+          "evidence_text": "Высота всех помещений 2.8 метра"
+        }
+      },
+      "doors": [
+        {
+          "element_id": "Д-3",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            }
+          }
+        },
+        {
+          "element_id": "Д-4",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            }
+          }
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-5",
+          "width_m": "1.8",
+          "height_m": "1.4",
+          "measurements": {
+            "width_m": {
+              "value": "1.8",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "1800×1400"
+            },
+            "height_m": {
+              "value": "1.4",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "1800×1400"
+            }
+          }
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "room_id": "room_002",
+      "source_room_id": "2",
+      "name": "Ресепшен",
+      "floor_area_m2": "38.64",
+      "length_m": "9.2",
+      "width_m": "4.2",
+      "perimeter_m": "26.8",
+      "height_m": "2.8",
+      "measurements": {
+        "floor_area_m2": {
+          "value": "38.64",
+          "confidence": 1.0,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "length_m": {
+          "value": "9.2",
+          "confidence": 1.0,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "9200"
+        },
+        "width_m": {
+          "value": "4.2",
+          "confidence": 1.0,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "4200"
+        },
+        "perimeter_m": {
+          "value": "26.8",
+          "confidence": 1.0,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "height_m": {
+          "value": "2.8",
+          "confidence": 1.0,
+          "source_type": "user_correction",
+          "evidence_text": "Высота всех помещений 2.8 метра"
+        }
+      },
+      "doors": [
+        {
+          "element_id": "Д-3",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            }
+          }
+        },
+        {
+          "element_id": "Д-1",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            }
+          }
+        },
+        {
+          "element_id": "Д-2",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            }
+          }
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-1",
+          "width_m": "1.8",
+          "height_m": "1.4",
+          "measurements": {
+            "width_m": {
+              "value": "1.8",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "1800×1400"
+            },
+            "height_m": {
+              "value": "1.4",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "1800×1400"
+            }
+          }
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "room_id": "room_003",
+      "source_room_id": "3",
+      "name": "Кабинет врача 2",
+      "floor_area_m2": "29.4",
+      "length_m": "4.2",
+      "width_m": "7",
+      "perimeter_m": "22.4",
+      "height_m": "2.8",
+      "measurements": {
+        "floor_area_m2": {
+          "value": "29.4",
+          "confidence": 1.0,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "length_m": {
+          "value": "4.2",
+          "confidence": 1.0,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "4200"
+        },
+        "width_m": {
+          "value": "7",
+          "confidence": 1.0,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "7000"
+        },
+        "perimeter_m": {
+          "value": "22.4",
+          "confidence": 1.0,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "height_m": {
+          "value": "2.8",
+          "confidence": 1.0,
+          "source_type": "user_correction",
+          "evidence_text": "Высота всех помещений 2.8 метра"
+        }
+      },
+      "doors": [
+        {
+          "element_id": "Д-1",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            }
+          }
+        },
+        {
+          "element_id": "Д-5",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            }
+          }
+        },
+        {
+          "element_id": "Д-6",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            }
+          }
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-4",
+          "width_m": "1.8",
+          "height_m": "1.4",
+          "measurements": {
+            "width_m": {
+              "value": "1.8",
+              "confidence": 0.6,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "1800×1400 (нижняя стена, позиция под Кабинетом врача 2)"
+            },
+            "height_m": {
+              "value": "1.4",
+              "confidence": 0.6,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "1800×1400 (нижняя стена, позиция под Кабинетом врача 2)"
+            }
+          }
+        }
+      ],
+      "warnings": [
+        "ОК-4 расположено на общей нижней стене вблизи границы между Кабинетом врача 2 и Кабинетом врача 1; привязка к конкретному помещению визуально приблизительна"
+      ]
+    },
+    {
+      "room_id": "room_004",
+      "source_room_id": "4",
+      "name": "Кабинет врача 1",
+      "floor_area_m2": "33.6",
+      "length_m": "4.8",
+      "width_m": "7",
+      "perimeter_m": "23.6",
+      "height_m": "2.8",
+      "measurements": {
+        "floor_area_m2": {
+          "value": "33.6",
+          "confidence": 1.0,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "length_m": {
+          "value": "4.8",
+          "confidence": 1.0,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "4800"
+        },
+        "width_m": {
+          "value": "7",
+          "confidence": 1.0,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "7000"
+        },
+        "perimeter_m": {
+          "value": "23.6",
+          "confidence": 1.0,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "height_m": {
+          "value": "2.8",
+          "confidence": 1.0,
+          "source_type": "user_correction",
+          "evidence_text": "Высота всех помещений 2.8 метра"
+        }
+      },
+      "doors": [
+        {
+          "element_id": "Д-2",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            }
+          }
+        },
+        {
+          "element_id": "Д-6",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            }
+          }
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-3",
+          "width_m": "1.8",
+          "height_m": "1.4",
+          "measurements": {
+            "width_m": {
+              "value": "1.8",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "1800×1400"
+            },
+            "height_m": {
+              "value": "1.4",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "1800×1400"
+            }
+          }
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "room_id": "room_005",
+      "source_room_id": "5",
+      "name": "Зона ожидания",
+      "floor_area_m2": "34.16",
+      "length_m": "5.6",
+      "width_m": "6.1",
+      "perimeter_m": "23.4",
+      "height_m": "2.8",
+      "measurements": {
+        "floor_area_m2": {
+          "value": "34.16",
+          "confidence": 1.0,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "length_m": {
+          "value": "5.6",
+          "confidence": 1.0,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "5600"
+        },
+        "width_m": {
+          "value": "6.1",
+          "confidence": 1.0,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "6100"
+        },
+        "perimeter_m": {
+          "value": "23.4",
+          "confidence": 1.0,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "height_m": {
+          "value": "2.8",
+          "confidence": 1.0,
+          "source_type": "user_correction",
+          "evidence_text": "Высота всех помещений 2.8 метра"
+        }
+      },
+      "doors": [
+        {
+          "element_id": "Д-4",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            }
+          }
+        },
+        {
+          "element_id": "Д-5",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "900×2000"
+            }
+          }
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-2",
+          "width_m": "1.8",
+          "height_m": "1.4",
+          "measurements": {
+            "width_m": {
+              "value": "1.8",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "1800×1400"
+            },
+            "height_m": {
+              "value": "1.4",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "1800×1400"
+            }
+          }
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "warnings": [
+    "Явных подписей площади (м²) на плане нет; floor_area_m2 для всех помещений получены расчётом (derived_from_explicit_dimensions) из указанных линейных размеров.",
+    "Окно ОК-4 расположено на общей нижней стене без явной привязки к конкретному помещению; отнесено к Кабинету врача 2 по визуальному положению с пониженной уверенностью.",
+    "ОК-4 расположено на общей нижней стене вблизи границы между Кабинетом врача 2 и Кабинетом врача 1; привязка к конкретному помещению визуально приблизительна"
+  ],
+  "missing_fields": [],
+  "conflicts": []
+}
