@@ -127,7 +127,14 @@ mcp_construction_prices__get_supported_works
 ├── mcp/
 │   └── price-mcp/
 ├── tests/
-│   └── test_registration.py
+│   ├── README.md
+│   ├── _mvp_fixtures.py
+│   ├── test_mvp_workflow.py
+│   ├── test_mvp_geometry.py
+│   ├── test_mvp_calculations.py
+│   ├── test_mvp_prices.py
+│   ├── test_mvp_visual.py
+│   └── ...
 └── skill/
     ├── SKILL.md
     ├── plugin.py
@@ -139,6 +146,25 @@ mcp_construction_prices__get_supported_works
 ```
 
 Каталог `skill/` является устанавливаемым payload. Документация репозитория намеренно хранится отдельно и не попадает в runtime-каталог скилла.
+
+## Тесты
+
+В наборе 166 проверок: быстрые unit-тесты формул и validation, тесты публичных
+tools и один короткий сквозной сценарий до готового HTML. На текущей версии все
+они проходят примерно за полторы секунды. Statement coverage основных Python-модулей
+составляет около 87%; минимальный порог в репозитории — 80%.
+
+Тесты покрывают весь детерминированный контур скилла. Ответы LLM представлены
+фиксированными контрактными примерами, поэтому coverage относится к Python-коду,
+а не к качеству распознавания или рассуждений модели.
+
+```bash
+python -m pip install -r requirements-test.txt
+python -m coverage run -m pytest
+python -m coverage report
+```
+
+Подробная карта набора и объяснение границ находится в [`tests/README.md`](tests/README.md).
 
 ## Документация
 

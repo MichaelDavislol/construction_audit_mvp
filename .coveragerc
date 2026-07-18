@@ -1,0 +1,7 @@
+[run]
+source = skill
+
+[report]
+show_missing = True
+skip_covered = True
+fail_under = 80
