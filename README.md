@@ -41,7 +41,7 @@
 - 100% coverage проверки количества и цены;
 - 6 предварительных findings: 2 высокой важности и 4 предупреждения;
 - 16 наблюдений по фотографиям и 4 проверяемые аналитические гипотезы;
-- полный набор из 18 output-артефактов, включая [`report.html`](examples/medical-office/output/report.html), [`generated_estimate.xlsx`](examples/medical-office/output/generated_estimate.xlsx), трассировку расчётов, mapping, findings и результаты модельных этапов.
+- полный набор из 18 output-артефактов, включая [`report.html`](https://michaeldavislol.github.io/construction_audit_mvp/examples/medical-office/output/report.html), [`generated_estimate.xlsx`](examples/medical-office/output/generated_estimate.xlsx), трассировку расчётов, mapping, findings и результаты модельных этапов.
 
 ![План demo-объекта](examples/medical-office/input/plan.png)
 
