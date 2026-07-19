@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Пошаговая демонстрация Construction Audit MVP: от плана и сметы до проверяемого HTML-отчёта и контрольной XLSX.">
+  <meta name="theme-color" content="#08110f">
+  <meta property="og:title" content="Construction Audit MVP — реальная работа скилла">
+  <meta property="og:description" content="Два реальных сценария Ouroboros с видео, tool-вызовами, субагентами, MCP и готовыми артефактами.">
+  <meta property="og:type" content="website">
+  <title>Construction Audit MVP — интерактивный demo-кейс</title>
+  <link rel="stylesheet" href="styles.css?v=2">
+  <script src="app.js?v=3" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Перейти к содержанию</a>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
+
+  <header class="site-header">
+    <a class="brand" href="https://github.com/MichaelDavislol/construction_audit_mvp" aria-label="Construction Audit MVP — репозиторий на GitHub">
+      <span class="brand-mark" aria-hidden="true">CA</span>
+      <span>Construction Audit MVP</span>
+    </a>
+    <nav aria-label="Основная навигация">
+      <a href="#how-it-works">Как устроено</a>
+      <a href="#audit-flow">Аудит сметы</a>
+      <a href="#plan-only-flow">Только план</a>
+      <a class="nav-cta" href="https://github.com/MichaelDavislol/construction_audit_mvp">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="hero section-shell" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">Реальные запуски · 17–18 июля 2026</p>
+        <h1>Поэтапная проверка строительной сметы</h1>
+        <p class="hero-lead">
+          Пошаговый разбор реального запуска: действия пользователя, работа tools
+          и субагентов, источник контрольных цен и проверяемые результаты каждого этапа.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#audit-flow">Смотреть полный аудит</a>
+          <a class="button button-secondary" href="#plan-only-flow">Смета только по плану</a>
+        </div>
+        <p class="hero-note">
+          Это предварительная автоматизированная проверка, а не заключение строительного эксперта.
+        </p>
+      </div>
+
+      <aside class="hero-proof" aria-label="Результаты demo-кейса">
+        <div class="proof-topline">
+          <span class="status-dot"></span>
+          <span>Фактический end-to-end запуск</span>
+        </div>
+        <dl class="proof-grid">
+          <div><dt>35 / 35</dt><dd>строк проверено</dd></div>
+          <div><dt>100%</dt><dd>полнота проверки объёма и цены</dd></div>
+          <div><dt>6</dt><dd>предварительных расхождений</dd></div>
+          <div><dt>31</dt><dd>строка контрольной XLSX</dd></div>
+        </dl>
+        <a class="text-link" href="../examples/medical-office/output/report.html">Открыть фактический HTML-отчёт →</a>
+      </aside>
+    </section>
+
+    <section class="problem section-shell" aria-labelledby="problem-title">
+      <div class="section-heading compact">
+        <p class="eyebrow">Задача</p>
+        <h2 id="problem-title">Почему одной LLM недостаточно</h2>
+        <p>
+          Языковая модель хорошо читает изображения и понимает названия работ, но арифметика,
+          цены и происхождение каждого значения должны иметь отдельную проверяемую границу.
+        </p>
+      </div>
+      <div class="principle-grid">
+        <article>
+          <span class="principle-number">01</span>
+          <h3>Не подставлять отсутствующие размеры</h3>
+          <p>Если на плане нет высоты, процесс останавливается и запрашивает значение у пользователя.</p>
+        </article>
+        <article>
+          <span class="principle-number">02</span>
+          <h3>Использовать только внешний каталог цен</h3>
+          <p>Каталог поступает из отдельного MCP-сервера и сохраняется вместе с данными о происхождении.</p>
+        </article>
+        <article>
+          <span class="principle-number">03</span>
+          <h3>Проверять модельные результаты</h3>
+          <p>JSON-ответы субагентов проходят проверку по схеме, а расчёты выполняются в Python.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="architecture section-shell" id="how-it-works" aria-labelledby="architecture-title">
+      <div class="section-heading">
+        <p class="eyebrow">Устройство системы</p>
+        <h2 id="architecture-title">Четыре роли, одна контролируемая цепочка</h2>
+        <p>Основная LLM распределяет задачи между изолированными компонентами.</p>
+      </div>
+
+      <div class="architecture-map" aria-label="Схема компонентов Construction Audit MVP">
+        <article class="architecture-card orchestrator">
+          <span class="architecture-kicker">Управление процессом</span>
+          <h3>Основная LLM</h3>
+          <p>Понимает запрос, ведёт диалог и выбирает следующий разрешённый этап.</p>
+        </article>
+        <div class="architecture-connector" aria-hidden="true"></div>
+        <div class="architecture-branches">
+          <article class="architecture-card">
+            <span class="architecture-kicker">14 публичных функций</span>
+            <h3>Python-tools</h3>
+            <p>Импорт, контроль состояния, проверка данных, расчёты и запись артефактов.</p>
+            <a href="https://github.com/MichaelDavislol/construction_audit_mvp/blob/main/docs/TECHNICAL.md#публичные-tools">Список tools ↗</a>
+          </article>
+          <article class="architecture-card">
+            <span class="architecture-kicker">Изолированный контекст</span>
+            <h3>Субагенты</h3>
+            <p>Отдельные LLM-задачи зрения и смысла получают только минимальный пакет.</p>
+            <a href="https://github.com/MichaelDavislol/construction_audit_mvp/blob/main/docs/TECHNICAL.md#внешние-возможности-среды-выполнения">Роли субагентов ↗</a>
+          </article>
+          <article class="architecture-card">
+            <span class="architecture-kicker">Внешний источник</span>
+            <h3>price-mcp</h3>
+            <p>Возвращает семь работ и контрольные цены; LLM не формирует их самостоятельно.</p>
+            <a href="https://github.com/MichaelDavislol/construction_audit_mvp/blob/main/docs/MCP_SETUP.md">Настройка MCP ↗</a>
+          </article>
+        </div>
+      </div>
+
+      <div class="interface-note">
+        <div class="interface-note-icon" aria-hidden="true">i</div>
+        <div>
+          <h3>Что видно в интерфейсе Ouroboros</h3>
+          <p>
+            Запись показывает обычный диалог и часть внутреннего управления процессом: вызовы tools,
+            технические ответы субагентов и служебные сводки. Это особенность текущего
+            интерфейса Ouroboros; для демонстрации мы её не изменяли. Итогом считаются только
+            проверенные обзоры, итоговые сводки и сохранённые файлы.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="inputs section-shell" aria-labelledby="inputs-title">
+      <div class="section-heading compact">
+        <p class="eyebrow">Демонстрационные данные</p>
+        <h2 id="inputs-title">Один план, намеренно ошибочная смета и два разных состояния объекта</h2>
+      </div>
+      <div class="input-layout">
+        <div class="input-media">
+          <img src="../examples/medical-office/input/plan.png" alt="План медицинского офиса из пяти помещений" loading="lazy">
+          <p class="media-label"><strong>План:</strong> медицинский офис из пяти помещений</p>
+        </div>
+        <div class="input-copy">
+          <ul class="check-list">
+            <li><strong>План:</strong> пять помещений, шесть уникальных дверей и пять окон.</li>
+            <li><strong>Смета:</strong> 35 строк; ошибки добавлены намеренно для полной демонстрации.</li>
+            <li><strong>Фото 1:</strong> уложенный ламинат с видимой щелью в стыке.</li>
+            <li><strong>Фото 2:</strong> помещение до финишной отделки.</li>
+          </ul>
+          <div class="inline-links">
+            <a href="https://github.com/MichaelDavislol/construction_audit_mvp/tree/main/examples/medical-office/input">Посмотреть все входы ↗</a>
+            <a href="../examples/medical-office/input/estimate.xlsx">Скачать исходную XLSX</a>
+          </div>
+        </div>
+      </div>
+      <div class="photo-grid" aria-label="Фотографии объекта, использованные в демонстрации">
+        <figure class="photo-card">
+          <img src="../examples/medical-office/input/site-photos/photo_001.jpg" alt="Уложенный ламинат с видимой щелью в стыке" loading="lazy">
+          <figcaption>
+            <span>Фото 1</span>
+            <strong>Ламинат с видимой щелью в стыке</strong>
+            <p>Кадр показывает, как Photo Vision фиксирует наблюдаемый дефект без необоснованной привязки к помещению.</p>
+          </figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="../examples/medical-office/input/site-photos/photo_002.jpg" alt="Помещение до финишной отделки" loading="lazy">
+          <figcaption>
+            <span>Фото 2</span>
+            <strong>Помещение до финишной отделки</strong>
+            <p>Другое состояние объекта проверяет, что наблюдения двух кадров обрабатываются раздельно и не смешиваются.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="scenario section-shell" id="audit-flow" aria-labelledby="audit-title">
+      <header class="scenario-header">
+        <div>
+          <p class="eyebrow">Сценарий 1 · полный аудит</p>
+          <h2 id="audit-title">План + готовая смета + фотографии</h2>
+        </div>
+        <div class="scenario-result">
+          <span>Результат</span>
+          <strong>HTML-аудит + контрольная XLSX</strong>
+        </div>
+      </header>
+
+      <div class="timeline">
+        <article class="stage" id="audit-setup">
+          <div class="stage-index">01</div>
+          <div class="stage-grid">
+            <div class="stage-copy">
+              <p class="stage-kicker">Подготовка · исходник 00:07–01:03</p>
+              <h3>Проверяем окружение и входные материалы</h3>
+              <p>
+                Скилл включён и прошёл проверку, MCP-tool доступен, а сервер запущен локально.
+                Пользователь заранее показывает план, смету с намеренными ошибками и ZIP с фото.
+              </p>
+              <div class="tool-row"><span>Проверка скилла</span><span>Подключение MCP</span><span>Тестовые данные</span></div>
+            </div>
+            <div class="stage-player" data-player>
+              <video controls muted playsinline preload="metadata" poster="media/1_00-07_00-10.jpg" aria-label="Подготовка окружения и входных данных">
+                <source src="media/1_00-07_00-10.webm" type="video/webm">
+              </video>
+              <p class="clip-caption" aria-live="polite">Скилл подключён и прошёл проверку</p>
+              <div class="clip-picker" aria-label="Фрагменты этапа подготовки">
+                <button class="clip-button is-active" data-src="media/1_00-07_00-10.webm" data-poster="media/1_00-07_00-10.jpg" data-label="Скилл подключён и прошёл проверку">Скилл</button>
+                <button class="clip-button" data-src="media/1_00-13_00-20.webm" data-poster="media/1_00-13_00-20.jpg" data-label="MCP-tool в интерфейсе и сервер в консоли">MCP</button>
+                <button class="clip-button" data-src="media/1_00-25_00-35.webm" data-poster="media/1_00-25_00-35.jpg" data-label="Новый проект для демонстрации">Проект</button>
+                <button class="clip-button" data-src="media/1_00-39_00-45.webm" data-poster="media/1_00-39_00-45.jpg" data-label="План медицинского офиса">План</button>
+                <button class="clip-button" data-src="media/1_00-49_00-54.webm" data-poster="media/1_00-49_00-54.jpg" data-label="Исходная смета с намеренными ошибками">Смета</button>
+                <button class="clip-button" data-src="media/1_00-55_01-03.webm" data-poster="media/1_00-55_01-03.jpg" data-label="Две фотографии и ZIP-архив">Фото</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage" id="audit-import">
+          <div class="stage-index">02</div>
+          <div class="stage-grid">
+            <div class="stage-copy">
+              <p class="stage-kicker">Запуск · исходник 01:19–01:45</p>
+              <h3>Создаём отдельный запуск и импортируем 35 строк</h3>
+              <p>
+                <code>create_case</code> создаёт изолированное состояние проверки.
+                <code>import_documents</code> принимает подготовленные план и XLSX, проверяет файлы,
+                сохраняет копии и нормализует строки сметы.
+              </p>
+              <dl class="io-list">
+                <div><dt>Вход</dt><dd>PNG-план + XLSX-смета</dd></div>
+                <div><dt>Выход</dt><dd>Отдельный запуск + 35 структурированных строк</dd></div>
+                <div><dt>Зачем</dt><dd>Зафиксировать безопасную расчётную основу</dd></div>
+              </dl>
+              <a class="detail-link" href="https://github.com/MichaelDavislol/construction_audit_mvp/blob/main/docs/TECHNICAL.md#состояние-и-файлы">Как хранится состояние запуска ↗</a>
+            </div>
+            <div class="stage-player" data-player>
+              <video controls muted playsinline preload="metadata" poster="media/1_01-19_01-31.jpg" aria-label="Запуск аудита и импорт документов">
+                <source src="media/1_01-19_01-31.webm" type="video/webm">
+              </video>
+              <p class="clip-caption" aria-live="polite">Пользователь прикрепляет план и смету</p>
+              <div class="clip-picker">
+                <button class="clip-button is-active" data-src="media/1_01-19_01-31.webm" data-poster="media/1_01-19_01-31.jpg" data-label="Пользователь прикрепляет план и смету">Запрос</button>
+                <button class="clip-button" data-src="media/1_01-31_01-45.webm" data-poster="media/1_01-31_01-45.jpg" data-label="create_case и import_documents">Tools</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage" id="audit-vision">
+          <div class="stage-index">03</div>
+          <div class="stage-grid">
+            <div class="stage-copy">
+              <p class="stage-kicker">Plan Vision · исходник 01:59–04:18</p>
+              <h3>Передаём субагенту только план</h3>
+              <p>
+                Plan Vision запускается с пустой памятью и получает лишь изображение и
+                <code>plan_id</code>. Он не видит смету, цены и историю диалога, поэтому
+                распознанная геометрия не зависит от данных Excel.
+              </p>
+              <dl class="io-list">
+                <div><dt>Субагент</dt><dd>Plan Vision</dd></div>
+                <div><dt>Находит</dt><dd>5 помещений, размеры, двери и окна</dd></div>
+                <div><dt>Проверяет</dt><dd><code>save_geometry</code> по JSON-схеме</dd></div>
+              </dl>
+              <a class="detail-link" href="https://github.com/MichaelDavislol/construction_audit_mvp/blob/main/skill/vision.py">Проверка геометрии в коде ↗</a>
+            </div>
+            <div class="stage-player" data-player>
+              <video controls muted playsinline preload="metadata" poster="media/1_01-59_02-05.jpg" aria-label="Plan Vision и проверка геометрии">
+                <source src="media/1_01-59_02-05.webm" type="video/webm">
+              </video>
+              <p class="clip-caption" aria-live="polite">Запуск изолированного Plan Vision</p>
+              <div class="clip-picker">
+                <button class="clip-button is-active" data-src="media/1_01-59_02-05.webm" data-poster="media/1_01-59_02-05.jpg" data-label="Запуск изолированного Plan Vision">Запуск</button>
+                <button class="clip-button" data-src="media/1_03-37_03-45.webm" data-poster="media/1_03-37_03-45.jpg" data-label="save_geometry проверяет ответ">Проверка</button>
+                <button class="clip-button" data-src="media/1_04-04_04-18.webm" data-poster="media/1_04-04_04-18.jpg" data-label="Пользователь получает обзор геометрии">Обзор</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage" id="audit-geometry">
+          <div class="stage-index">04</div>
+          <div class="stage-grid">
+            <div class="stage-copy">
+              <p class="stage-kicker">Проверка пользователем · исходник 04:48–06:03</p>
+              <h3>Система показывает недостающие данные и ожидает ответа</h3>
+              <p>
+                Обзор содержит размеры помещений и привязку дверей и окон. Общий проём
+                имеет один <code>element_id</code> у смежных комнат и не задваивается в итоге.
+                Высоты на плане нет — скилл не подставляет «типовое» значение.
+              </p>
+              <div class="dialogue">
+                <p><span>Ouroboros</span> Высота помещений не найдена.</p>
+                <p><span>Пользователь</span> Высота всех помещений — 2,8 метра.</p>
+                <p><span>Ouroboros</span> Геометрия, ревизия 2. Проверьте ещё раз.</p>
+                <p><span>Пользователь</span> Геометрия верна.</p>
+              </div>
+              <a class="detail-link" href="https://github.com/MichaelDavislol/construction_audit_mvp/blob/main/docs/USER_GUIDE.md#сценарий-план-и-готовая-смета">Правила подтверждения ↗</a>
+            </div>
+            <div class="stage-player" data-player>
+              <video controls muted playsinline preload="metadata" poster="media/1_04-48_05-10.jpg" aria-label="Коррекция и подтверждение геометрии">
+                <source src="media/1_04-48_05-10.webm" type="video/webm">
+              </video>
+              <p class="clip-caption" aria-live="polite">Недостающая высота и явное исправление</p>
+              <div class="clip-picker">
+                <button class="clip-button is-active" data-src="media/1_04-48_05-10.webm" data-poster="media/1_04-48_05-10.jpg" data-label="Недостающая высота и явное исправление">Исправление</button>
+                <button class="clip-button" data-src="media/1_05-24_05-34.webm" data-poster="media/1_05-24_05-34.jpg" data-label="Новая ревизия геометрии 2">Ревизия 2</button>
+                <button class="clip-button" data-src="media/1_05-50_06-03.webm" data-poster="media/1_05-50_06-03.jpg" data-label="Отдельное подтверждение пользователя">Подтверждение</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage" id="audit-mcp">
+          <div class="stage-index">05</div>
+          <div class="stage-grid">
+            <div class="stage-copy">
+              <p class="stage-kicker">Цены · исходник 06:03–06:19</p>
+              <h3>Запрашиваем MCP только после подтверждения</h3>
+              <p>
+                <code>mcp_construction_prices__get_supported_works</code> возвращает семь
+                работ, единицы и цены. <code>save_price_catalog</code> валидирует ответ и
+                сохраняет его SHA-256. Если MCP недоступен, аудит останавливается.
+              </p>
+              <div class="tool-row"><span>7 работ</span><span>Внешние цены</span><span>Контролируемая остановка</span></div>
+              <a class="detail-link" href="https://github.com/MichaelDavislol/construction_audit_mvp/tree/main/mcp/price-mcp">Исходники price-mcp ↗</a>
+            </div>
+            <div class="stage-player" data-player>
+              <video controls muted playsinline preload="metadata" poster="media/1_06-03_06-19.jpg" aria-label="Запрос и сохранение каталога MCP">
+                <source src="media/1_06-03_06-19.webm" type="video/webm">
+              </video>
+              <p class="clip-caption">MCP возвращает поддерживаемые работы и цены</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage" id="audit-calculation">
+          <div class="stage-index">06</div>
+          <div class="stage-grid">
+            <div class="stage-copy">
+              <p class="stage-kicker">Сопоставление + Python · исходник 06:40–08:46</p>
+              <h3>Смысловое сопоставление и детерминированный расчёт</h3>
+              <p>
+                Mapping-субагент связывает «Монтаж напольного покрытия» из сметы с
+                «Устройством пола» из MCP. Затем <code>run_audit</code> считает площади,
+                плинтус и уникальные проёмы, сравнивает объёмы, единичные цены и стоимость строк.
+              </p>
+              <div class="mapping-example" aria-label="Пример смыслового сопоставления">
+                <span>Монтаж напольного покрытия</span><b>→</b><span>Устройство пола</span>
+              </div>
+              <p class="stage-callout">LLM не участвует в арифметике. Каждая формула сохраняется в трассировке расчётов.</p>
+              <a class="detail-link" href="../examples/medical-office/output/calculation_trace.json">Открыть расчётную трассировку</a>
+            </div>
+            <div class="stage-player" data-player>
+              <video controls muted playsinline preload="metadata" poster="media/1_06-40_06-48.jpg" aria-label="Mapping и детерминированный аудит">
+                <source src="media/1_06-40_06-48.webm" type="video/webm">
+              </video>
+              <p class="clip-caption" aria-live="polite">Запуск Mapping-субагента</p>
+              <div class="clip-picker">
+                <button class="clip-button is-active" data-src="media/1_06-40_06-48.webm" data-poster="media/1_06-40_06-48.jpg" data-label="Запуск Mapping-субагента">Mapping</button>
+                <button class="clip-button" data-src="media/1_07-50_07-58.webm" data-poster="media/1_07-50_07-58.jpg" data-label="Структурированный результат Mapping">Результат</button>
+                <button class="clip-button" data-src="media/1_08-30_08-46.webm" data-poster="media/1_08-30_08-46.jpg" data-label="run_audit завершает расчёты">run_audit</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage" id="audit-photos">
+          <div class="stage-index">07</div>
+          <div class="stage-grid">
+            <div class="stage-copy">
+              <p class="stage-kicker">Фото · исходник 08:45–10:52</p>
+              <h3>Один кадр — один изолированный Photo Vision</h3>
+              <p>
+                Ouroboros предлагает загрузить ZIP или написать «без фото». Для каждого
+                кадра параллельно запускается отдельный субагент. Он получает одно фото,
+                семь работ и номера строк — но не название помещения и не другие кадры.
+              </p>
+              <dl class="io-list">
+                <div><dt>Зачем изоляция</dt><dd>Не смешивать фотографии</dd></div>
+                <div><dt>Ограничение</dt><dd>Не привязывать кадр к помещению без подтверждающих данных</dd></div>
+                <div><dt>Результат</dt><dd>16 предварительных наблюдений</dd></div>
+              </dl>
+              <a class="detail-link" href="https://github.com/MichaelDavislol/construction_audit_mvp/blob/main/skill/visual.py">Контракт Photo Vision ↗</a>
+            </div>
+            <div class="stage-player" data-player>
+              <video controls muted playsinline preload="metadata" poster="media/1_08-45_09-12.jpg" aria-label="Загрузка и анализ фотографий">
+                <source src="media/1_08-45_09-12.webm" type="video/webm">
+              </video>
+              <p class="clip-caption" aria-live="polite">Пользователь выбирает фотоанализ и загружает ZIP</p>
+              <div class="clip-picker">
+                <button class="clip-button is-active" data-src="media/1_08-45_09-12.webm" data-poster="media/1_08-45_09-12.jpg" data-label="Пользователь выбирает фотоанализ и загружает ZIP">Выбор</button>
+                <button class="clip-button" data-src="media/1_09-30_09-40.webm" data-poster="media/1_09-30_09-40.jpg" data-label="Два Photo Vision запускаются параллельно">2 субагента</button>
+                <button class="clip-button" data-src="media/1_10-19_10-52.webm" data-poster="media/1_10-19_10-52.jpg" data-label="Photo Vision возвращает наблюдения">Наблюдения</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage" id="audit-validation">
+          <div class="stage-index">08</div>
+          <div class="stage-grid">
+            <div class="stage-copy">
+              <p class="stage-kicker">Проверка результатов · исходник 12:50–22:15</p>
+              <h3>Ответ, не прошедший проверку, не включается в отчёт</h3>
+              <p>
+                Результат второго фото не проходит проверку по схеме — повторяется только
+                соответствующий субагент. Аналитический субагент затем получает уже проверенные
+                факты и предлагает гипотезы, не меняя найденные расхождения и расчёты.
+              </p>
+              <p>
+                Его первый ответ также отклоняется за внутренние термины и недоказанную
+                привязку фото к комнате. Основная LLM не исправляет JSON вручную: повторный запуск получает
+                точные причины ошибки.
+              </p>
+              <p class="stage-callout">В этом фрагменте особенно заметны служебные задачи Ouroboros, описанные выше.</p>
+              <a class="detail-link" href="https://github.com/MichaelDavislol/construction_audit_mvp/blob/main/skill/insights.py">Валидация гипотез ↗</a>
+            </div>
+            <div class="stage-player" data-player>
+              <video controls muted playsinline preload="metadata" poster="media/1_12-50_13-15.jpg" aria-label="Валидация и повторные запуски субагентов">
+                <source src="media/1_12-50_13-15.webm" type="video/webm">
+              </video>
+              <p class="clip-caption" aria-live="polite">Ответ по photo_002 отклонён; повторяется только этот этап</p>
+              <div class="clip-picker">
+                <button class="clip-button is-active" data-src="media/1_12-50_13-15.webm" data-poster="media/1_12-50_13-15.jpg" data-label="Ответ по photo_002 отклонён; повторяется только этот этап">Повтор фото</button>
+                <button class="clip-button" data-src="media/1_15-45_15-53.webm" data-poster="media/1_15-45_15-53.jpg" data-label="Запуск аналитического субагента">Analyst</button>
+                <button class="clip-button" data-src="media/1_17-00_17-08.webm" data-poster="media/1_17-00_17-08.jpg" data-label="Первый ответ Analyst отклонён">Ошибка</button>
+                <button class="clip-button" data-src="media/1_17-49_17-57.webm" data-poster="media/1_17-49_17-57.jpg" data-label="Повтор Analyst с точными причинами ошибки">Повтор</button>
+                <button class="clip-button" data-src="media/1_22-08_22-15.webm" data-poster="media/1_22-08_22-15.jpg" data-label="finalize_audit успешно принимает результат">Принято</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage result-stage" id="audit-result">
+          <div class="stage-index">09</div>
+          <div class="stage-grid">
+            <div class="stage-copy">
+              <p class="stage-kicker">Результат · исходник 22:55–24:12</p>
+              <h3>Полный аудит и независимая контрольная смета</h3>
+              <div class="result-metrics">
+                <div><strong>35 / 35</strong><span>строк проверено</span></div>
+                <div><strong>6</strong><span>расхождений</span></div>
+                <div><strong>16</strong><span>фото-наблюдений</span></div>
+                <div><strong>4</strong><span>гипотезы Analyst</span></div>
+              </div>
+              <p>
+                После отчёта Ouroboros отдельно предлагает контрольную XLSX. Она создаётся
+                только по явной просьбе пользователя и содержит 31 строку.
+              </p>
+              <div class="artifact-links">
+                <a class="button button-primary" href="../examples/medical-office/output/report.html">Открыть HTML-отчёт</a>
+                <a class="button button-secondary" href="../examples/medical-office/output/generated_estimate.xlsx">Скачать контрольную XLSX</a>
+                <a class="text-link" href="https://github.com/MichaelDavislol/construction_audit_mvp/tree/main/examples/medical-office/output">Все 18 артефактов ↗</a>
+              </div>
+            </div>
+            <div class="stage-player" data-player>
+              <video controls muted playsinline preload="metadata" poster="media/1_22-55_23-08.jpg" aria-label="Итог аудита и создание контрольной сметы">
+                <source src="media/1_22-55_23-08.webm" type="video/webm">
+              </video>
+              <p class="clip-caption" aria-live="polite">Итоговая сводка аудита в Ouroboros</p>
+              <div class="clip-picker">
+                <button class="clip-button is-active" data-src="media/1_22-55_23-08.webm" data-poster="media/1_22-55_23-08.jpg" data-label="Итоговая сводка аудита в Ouroboros">Сводка</button>
+                <button class="clip-button" data-src="media/1_23-50_24-12.webm" data-poster="media/1_23-50_24-12.jpg" data-label="Пользователь просит контрольную смету и открыть отчёт">XLSX + отчёт</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="evidence section-shell" aria-labelledby="evidence-title">
+      <div class="section-heading compact">
+        <p class="eyebrow">Проверяемые результаты</p>
+        <h2 id="evidence-title">Каждый результат сохранён как проверяемый артефакт</h2>
+        <p>Видео показывает интерфейс, а репозиторий содержит фактические выходные файлы того же запуска.</p>
+      </div>
+      <div class="evidence-grid">
+        <a href="../examples/medical-office/output/geometry.json"><strong>geometry.json</strong><span>Подтверждённые помещения и проёмы</span></a>
+        <a href="../examples/medical-office/output/mapping.json"><strong>mapping.json</strong><span>Связи строк сметы с каноническими работами</span></a>
+        <a href="../examples/medical-office/output/calculation_trace.json"><strong>calculation_trace.json</strong><span>Формулы, входы и результаты</span></a>
+        <a href="../examples/medical-office/output/findings.json"><strong>findings.json</strong><span>Расхождения и полнота проверки</span></a>
+        <a href="../examples/medical-office/output/visual_insights.json"><strong>visual_insights.json</strong><span>Все 16 наблюдений по фото</span></a>
+        <a href="../examples/medical-office/output/llm_insights.json"><strong>llm_insights.json</strong><span>Четыре проверенные гипотезы</span></a>
+      </div>
+      <p class="evidence-footnote">
+        Описание порядка появления файлов: <a href="https://github.com/MichaelDavislol/construction_audit_mvp/blob/main/examples/medical-office/ARTIFACTS.md">ARTIFACTS.md ↗</a>.
+        Публичная санитизация: <a href="https://github.com/MichaelDavislol/construction_audit_mvp/blob/main/examples/medical-office/SANITIZATION.md">SANITIZATION.md ↗</a>.
+      </p>
+    </section>
+
+    <section class="scenario scenario-secondary section-shell" id="plan-only-flow" aria-labelledby="plan-only-title">
+      <header class="scenario-header">
+        <div>
+          <p class="eyebrow">Сценарий 2 · только план</p>
+          <h2 id="plan-only-title">Тот же план, но исходной сметы нет</h2>
+          <p>Вместо сравнения с документом скилл создаёт новую предварительную XLSX с нуля.</p>
+        </div>
+        <div class="scenario-result">
+          <span>Результат</span>
+          <strong>31 строка · 0 пропущено</strong>
+        </div>
+      </header>
+
+      <div class="timeline">
+        <article class="stage" id="plan-start">
+          <div class="stage-index">01</div>
+          <div class="stage-grid">
+            <div class="stage-copy">
+              <p class="stage-kicker">Вход · исходник 00:33–00:58</p>
+              <h3>Импортируем только изображение</h3>
+              <p>
+                Пользователь просит сформировать смету по плану. <code>create_case</code>
+                создаёт новый отдельный запуск, а <code>import_plan</code> сохраняет изображение. Фиктивная
+                исходная XLSX не создаётся.
+              </p>
+              <div class="tool-row"><span>План</span><span>Без XLSX</span><span>Без фото</span></div>
+            </div>
+            <div class="stage-player" data-player>
+              <video controls muted playsinline preload="metadata" poster="media/2_00-33_00-45.jpg" aria-label="Начало сценария только с планом">
+                <source src="media/2_00-33_00-45.webm" type="video/webm">
+              </video>
+              <p class="clip-caption" aria-live="polite">Запрос: сформировать смету по одному плану</p>
+              <div class="clip-picker">
+                <button class="clip-button is-active" data-src="media/2_00-33_00-45.webm" data-poster="media/2_00-33_00-45.jpg" data-label="Запрос: сформировать смету по одному плану">Запрос</button>
+                <button class="clip-button" data-src="media/2_00-45_00-58.webm" data-poster="media/2_00-45_00-58.jpg" data-label="create_case и import_plan">Импорт</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage" id="plan-vision">
+          <div class="stage-index">02</div>
+          <div class="stage-grid">
+            <div class="stage-copy">
+              <p class="stage-kicker">Распознавание плана · исходник 01:12–04:22</p>
+              <h3>Та же строгая проверка геометрии</h3>
+              <p>
+                Изолированный Plan Vision снова получает только план. Он извлекает пять
+                помещений общей площадью 164,36 м², шесть уникальных дверей и пять окон.
+                Tools проверяют ответ и показывают полный обзор геометрии.
+              </p>
+              <a class="detail-link" href="https://github.com/MichaelDavislol/construction_audit_mvp/tree/main/examples/plan-only-review/output">Артефакты сценария «только план» ↗</a>
+            </div>
+            <div class="stage-player" data-player>
+              <video controls muted playsinline preload="metadata" poster="media/2_01-12_01-23.jpg" aria-label="Plan Vision в сценарии только с планом">
+                <source src="media/2_01-12_01-23.webm" type="video/webm">
+              </video>
+              <p class="clip-caption" aria-live="polite">Запуск Plan Vision и view_image</p>
+              <div class="clip-picker">
+                <button class="clip-button is-active" data-src="media/2_01-12_01-23.webm" data-poster="media/2_01-12_01-23.jpg" data-label="Запуск Plan Vision и view_image">Запуск</button>
+                <button class="clip-button" data-src="media/2_02-40_02-49.webm" data-poster="media/2_02-40_02-49.jpg" data-label="Plan Vision завершает распознавание">Результат</button>
+                <button class="clip-button" data-src="media/2_03-30_03-47.webm" data-poster="media/2_03-30_03-47.jpg" data-label="save_geometry и render_geometry_review">Tools</button>
+                <button class="clip-button" data-src="media/2_04-16_04-22.webm" data-poster="media/2_04-16_04-22.jpg" data-label="Пользователь получает обзор геометрии">Обзор</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage" id="plan-review">
+          <div class="stage-index">03</div>
+          <div class="stage-grid">
+            <div class="stage-copy">
+              <p class="stage-kicker">Диалог · исходник 04:46–06:23</p>
+              <h3>Исправление, новая ревизия и отдельное подтверждение</h3>
+              <p>
+                Пользователь снова задаёт отсутствующую высоту 2,8 м, проверяет ревизию 2
+                и отдельным сообщением подтверждает геометрию. Служебное восстановление состояния между
+                сообщениями — внутренняя работа Ouroboros, а не расчёт скилла.
+              </p>
+              <div class="flow-mini" aria-label="Порядок проверки геометрии">
+                <span>Исправление</span><b>→</b><span>Ревизия 2</span><b>→</b><span>Обзор</span><b>→</b><span>Подтверждение</span>
+              </div>
+            </div>
+            <div class="stage-player" data-player>
+              <video controls muted playsinline preload="metadata" poster="media/2_04-46_04-55.jpg" aria-label="Исправление и подтверждение геометрии в сценарии только с планом">
+                <source src="media/2_04-46_04-55.webm" type="video/webm">
+              </video>
+              <p class="clip-caption" aria-live="polite">Пользователь задаёт высоту 2,8 м</p>
+              <div class="clip-picker">
+                <button class="clip-button is-active" data-src="media/2_04-46_04-55.webm" data-poster="media/2_04-46_04-55.jpg" data-label="Пользователь задаёт высоту 2,8 м">Высота</button>
+                <button class="clip-button" data-src="media/2_05-02_05-32.webm" data-poster="media/2_05-02_05-32.jpg" data-label="Служебное восстановление состояния Ouroboros">Служебный этап</button>
+                <button class="clip-button" data-src="media/2_05-32_05-48.webm" data-poster="media/2_05-32_05-48.jpg" data-label="confirm_geometry создаёт ревизию 2">Ревизия 2</button>
+                <button class="clip-button" data-src="media/2_05-58_06-03.webm" data-poster="media/2_05-58_06-03.jpg" data-label="Обновлённый обзор геометрии">Обзор</button>
+                <button class="clip-button" data-src="media/2_06-17_06-23.webm" data-poster="media/2_06-17_06-23.jpg" data-label="Пользователь подтверждает геометрию">Подтверждение</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage result-stage" id="plan-generate">
+          <div class="stage-index">04</div>
+          <div class="stage-grid">
+            <div class="stage-copy">
+              <p class="stage-kicker">MCP + XLSX · исходник 06:29–07:41</p>
+              <h3>Создаём смету только после явного согласия</h3>
+              <p>
+                MCP возвращает канонические работы и цены. Mapping не нужен: пользовательских
+                названий из исходной сметы нет. Ouroboros спрашивает разрешение, затем
+                <code>generate_estimate</code> создаёт XLSX детерминированно.
+              </p>
+              <div class="estimate-math">
+                <div><strong>5 × 6</strong><span>работ по помещениям</span></div>
+                <b>+</b>
+                <div><strong>1</strong><span>общая строка дверей</span></div>
+                <b>=</b>
+                <div><strong>31</strong><span>строка, 0 пропущено</span></div>
+              </div>
+              <p>
+                Стены считаются без проёмов, плинтус — без ширины дверей, а шесть уникальных
+                дверей добавляются одной строкой на весь объект.
+              </p>
+              <div class="artifact-links">
+                <a class="button button-primary" href="../examples/plan-only-review/output/generated_estimate.xlsx">Скачать XLSX</a>
+                <a class="button button-secondary" href="../examples/plan-only-review/output/generated_estimate.json">Открыть JSON</a>
+              </div>
+            </div>
+            <div class="stage-player" data-player>
+              <video controls muted playsinline preload="metadata" poster="media/2_06-29_06-51.jpg" aria-label="Получение MCP-каталога и генерация XLSX">
+                <source src="media/2_06-29_06-51.webm" type="video/webm">
+              </video>
+              <p class="clip-caption" aria-live="polite">MCP-каталог сохранён; Ouroboros спрашивает согласие</p>
+              <div class="clip-picker">
+                <button class="clip-button is-active" data-src="media/2_06-29_06-51.webm" data-poster="media/2_06-29_06-51.jpg" data-label="MCP-каталог сохранён; Ouroboros спрашивает согласие">MCP + вопрос</button>
+                <button class="clip-button" data-src="media/2_07-03_07-10.webm" data-poster="media/2_07-03_07-10.jpg" data-label="Пользователь разрешает сформировать смету">Согласие</button>
+                <button class="clip-button" data-src="media/2_07-14_07-24.webm" data-poster="media/2_07-14_07-24.jpg" data-label="generate_estimate создаёт 31 строку">Генерация</button>
+                <button class="clip-button" data-src="media/2_07-29_07-41.webm" data-poster="media/2_07-29_07-41.jpg" data-label="Пользователь открывает готовую XLSX">Открытие XLSX</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="comparison section-shell" aria-labelledby="comparison-title">
+      <div class="section-heading compact">
+        <p class="eyebrow">Два входа — два результата</p>
+        <h2 id="comparison-title">Какой сценарий выбрать</h2>
+      </div>
+      <div class="comparison-table" role="table" aria-label="Сравнение сценариев">
+        <div class="comparison-row comparison-head" role="row">
+          <div role="columnheader">Сценарий</div><div role="columnheader">Что подать</div><div role="columnheader">Что получить</div>
+        </div>
+        <div class="comparison-row" role="row">
+          <div role="cell"><strong>Аудит готовой сметы</strong></div>
+          <div role="cell">План + XLSX + необязательный ZIP</div>
+          <div role="cell">Findings, фото-наблюдения, HTML и контрольная XLSX</div>
+        </div>
+        <div class="comparison-row" role="row">
+          <div role="cell"><strong>Смета только по плану</strong></div>
+          <div role="cell">Один план</div>
+          <div role="cell">Новая предварительная XLSX по geometry и ценам MCP</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="next section-shell" aria-labelledby="next-title">
+      <div class="next-panel">
+        <div>
+          <p class="eyebrow">Продолжить изучение</p>
+          <h2 id="next-title">От демонстрации — к воспроизводимому запуску</h2>
+          <p>Установите скилл, запустите включённый price-mcp на том же компьютере и повторите demo на готовых входах.</p>
+        </div>
+        <div class="next-links">
+          <a href="https://github.com/MichaelDavislol/construction_audit_mvp/blob/main/INSTALL.md"><strong>Установка</strong><span>Skill + MCP с нуля ↗</span></a>
+          <a href="https://github.com/MichaelDavislol/construction_audit_mvp/blob/main/docs/USER_GUIDE.md"><strong>Руководство</strong><span>Пользовательские сценарии ↗</span></a>
+          <a href="https://github.com/MichaelDavislol/construction_audit_mvp/blob/main/docs/TECHNICAL.md"><strong>Техническая документация</strong><span>Порядок работы, tools и состояние ↗</span></a>
+          <a href="https://github.com/MichaelDavislol/construction_audit_mvp/blob/main/docs/GLOSSARY.md"><strong>Словарь</strong><span>Термины простыми словами ↗</span></a>
+          <a href="https://github.com/MichaelDavislol/construction_audit_mvp/tree/main/tests"><strong>166 тестов</strong><span>Детерминированный контур ↗</span></a>
+          <a href="https://github.com/MichaelDavislol/construction_audit_mvp/tree/main/examples/stability-evidence"><strong>10 stability runs</strong><span>Независимые реальные запуски ↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <p>Construction Audit MVP · MIT License · Предварительный результат требует проверки специалистом.</p>
+    <div>
+      <a href="https://github.com/MichaelDavislol/construction_audit_mvp#readme">README</a>
+      <a href="https://github.com/MichaelDavislol/construction_audit_mvp">GitHub</a>
+      <a href="#top">Наверх ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
