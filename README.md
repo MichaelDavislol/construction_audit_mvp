@@ -1,5 +1,7 @@
 # Construction Audit MVP for Ouroboros
 
+[![Тесты](https://github.com/MichaelDavislol/construction_audit_mvp/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/MichaelDavislol/construction_audit_mvp/actions/workflows/tests.yml)
+
 `construction_audit_mvp` — расширение для [Ouroboros](https://github.com/razzant/Ouroboros), которое проводит предварительную автоматизированную проверку строительной сметы по плану объекта и, при наличии, фотографиям площадки.
 
 Скилл решает две задачи:

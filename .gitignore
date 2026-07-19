@@ -2,6 +2,8 @@
 __pycache__/
 *.py[cod]
 *.log
+.coverage
+htmlcov/
 .ouroboros_env/
 .venv/
 venv/
