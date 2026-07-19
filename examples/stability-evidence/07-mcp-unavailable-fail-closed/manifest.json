@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "skill_version": "0.7.7",
+  "job_id": "audit_office_20260719",
+  "object_name": "Офис план 1 (19.07.2026)",
+  "documents_imported": true,
+  "input_mode": "estimate_and_plan",
+  "vision_attempts": 1,
+  "geometry_revision": 2,
+  "geometry_confirmed": true,
+  "audit_completed": false,
+  "audit_status": "not_started",
+  "report_generated": false,
+  "created_at": "2026-07-19T01:22:09.552480+00:00",
+  "updated_at": "2026-07-19T01:26:25.598677+00:00",
+  "documents": {
+    "estimate": {
+      "filename": "e98a26990dbf4ec0ba5c007f738691a5_1.xlsx",
+      "sha256": "95bdb62b2a8d95f232c1dcc6421fcd2aaa00909814fd4920df7e5a62494a2c95",
+      "size_bytes": 11921,
+      "imported_name": "estimate.xlsx"
+    },
+    "plan": {
+      "filename": "369840304be843cfa1e93bb7b7b641b1_1.png",
+      "sha256": "7e9fa42eadbc3d8ec02da6ad6b6ae6e8b1216f63546cd1f53be359b522f2c59d",
+      "size_bytes": 71563,
+      "mime": "image/png",
+      "plan_id": "plan_001",
+      "imported_name": "plan.png",
+      "vision_source_path": "input/plan.png"
+    }
+  },
+  "vision_task_id": "2daf82d8",
+  "geometry_sha256": "b27f3a8096a2d952160bf5d9df959b9548fd0585e5b729345fbec00d4a9218ec",
+  "geometry_schema_version": 1,
+  "geometry_validation_status": "validated_with_user_corrections",
+  "review_task_id": "0af304cf",
+  "review_client_message_id": "msg-1784424326410-32",
+  "geometry_correction_count": 1,
+  "geometry_corrections_sha256": "9561d8f86a783f9fdaa26f40dae87a2ab4e6e7ffc98e1fde7adc1a98ef0ab93e",
+  "last_geometry_correction_at": "2026-07-19T01:25:35.414647+00:00",
+  "confirmed_geometry_sha256": "b27f3a8096a2d952160bf5d9df959b9548fd0585e5b729345fbec00d4a9218ec",
+  "geometry_confirmed_revision": 2,
+  "geometry_confirmed_at": "2026-07-19T01:26:25.598580+00:00",
+  "confirmation_task_id": "f2fa91ea",
+  "confirmation_client_message_id": "msg-1784424377619-33"
+}

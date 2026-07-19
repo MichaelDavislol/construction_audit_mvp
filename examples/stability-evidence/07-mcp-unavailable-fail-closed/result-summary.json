@@ -1,0 +1,48 @@
+{
+  "source": "real_run",
+  "job_id": "audit_office_20260719",
+  "skill_version": "0.7.7",
+  "input_mode": "estimate_and_plan",
+  "scenario": "required_price_mcp_unavailable",
+  "expected_outcome": "fail_closed_before_mapping_and_audit",
+  "reproducibility": "reproducible_when_mcp_credentials_or_connection_are_unavailable",
+  "status": "blocked_external_dependency",
+  "geometry": {
+    "revision": 2,
+    "confirmed": true,
+    "rooms_count": 5,
+    "floor_area_m2": "98.38",
+    "unique_doors_count": 6,
+    "unique_windows_count": 5,
+    "missing_fields_count": 0,
+    "conflicts_count": 0
+  },
+  "estimate": {
+    "rows_count": 35,
+    "normalized": true
+  },
+  "external_dependency_failure": {
+    "server_id": "construction_prices",
+    "tool": "get_supported_works",
+    "attempts_shown": 2,
+    "errors_shown": [
+      "ExceptionGroup: unhandled errors in a TaskGroup",
+      "missing_credential"
+    ],
+    "evidence_file": "evidence/mcp-unavailable.png",
+    "evidence_sha256": "cef28c51a77b6396bafeccb550d12b9b52ad0e281a105dd685e21b2058f25849"
+  },
+  "fail_closed_assertions": {
+    "price_catalog_created": false,
+    "mapping_created": false,
+    "deterministic_audit_started": false,
+    "findings_created": false,
+    "report_created": false,
+    "fallback_prices_used": false
+  },
+  "manifest_state": {
+    "audit_completed": false,
+    "audit_status": "not_started",
+    "report_generated": false
+  }
+}
