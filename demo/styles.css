@@ -1276,7 +1276,15 @@ h1 {
   }
 
   .photo-card img {
-    max-height: 430px;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .photo-card figcaption {
+    min-width: 0;
+    padding: 24px;
   }
 
   .principle-grid article {
