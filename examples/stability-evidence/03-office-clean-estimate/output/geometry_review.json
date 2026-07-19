@@ -1,0 +1,181 @@
+{
+  "object_name": "Офис (Ресепшен, Open space, Кабинет руководителя, Архив, Переговорная)",
+  "image_quality": {
+    "usable": true,
+    "issues": []
+  },
+  "rooms": [
+    {
+      "room_id": "room_001",
+      "name": "Кабинет руководителя",
+      "floor_area_m2": "15,84",
+      "length_m": "4,80",
+      "width_m": "3,30",
+      "perimeter_m": "16,20",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-1",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-4",
+          "width_m": "0,70",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-5",
+          "width_m": "0,85",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-3",
+          "width_m": "1,50",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_002",
+      "name": "Архив",
+      "floor_area_m2": "6,66",
+      "length_m": "1,80",
+      "width_m": "3,70",
+      "perimeter_m": "11,00",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-4",
+          "width_m": "0,70",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-6",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-5",
+          "width_m": "0,90",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_003",
+      "name": "Переговорная",
+      "floor_area_m2": "10,36",
+      "length_m": "2,80",
+      "width_m": "3,70",
+      "perimeter_m": "13,00",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-5",
+          "width_m": "0,85",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-6",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-2",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-4",
+          "width_m": "1,30",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_004",
+      "name": "Ресепшен",
+      "floor_area_m2": "40,04",
+      "length_m": "5,20",
+      "width_m": "7,70",
+      "perimeter_m": "25,80",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-1",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-2",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-3",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-1",
+          "width_m": "1,80",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_005",
+      "name": "Open space",
+      "floor_area_m2": "25,48",
+      "length_m": "5,20",
+      "width_m": "4,90",
+      "perimeter_m": "20,20",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-3",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-2",
+          "width_m": "1,80",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    }
+  ],
+  "totals": {
+    "rooms_count": 5,
+    "floor_area_m2": "98,38",
+    "unique_doors_count": 6,
+    "unique_windows_count": 5
+  },
+  "warnings": [
+    "Площади и периметры не подписаны текстом на плане явно как м2 — рассчитаны из явно подписанных линейных размеров (derived_from_explicit_dimensions).",
+    "Двери на общих границах между двумя распознанными помещениями включены в оба помещения с одинаковым element_id и размерами, как требуют инструкции."
+  ],
+  "missing_fields": [],
+  "conflicts": []
+}

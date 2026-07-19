@@ -1,0 +1,110 @@
+{
+  "object_name": "Склад-Торговый зал (план 10)",
+  "image_quality": {
+    "usable": true,
+    "issues": []
+  },
+  "rooms": [
+    {
+      "room_id": "room_001",
+      "name": "Склад",
+      "floor_area_m2": "52,70",
+      "length_m": "8,50",
+      "width_m": "6,20",
+      "perimeter_m": "29,40",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-1",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-3",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-3",
+          "width_m": "1,80",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_002",
+      "name": "Кассовая зона",
+      "floor_area_m2": "54,40",
+      "length_m": "8,50",
+      "width_m": "6,40",
+      "perimeter_m": "29,80",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-3",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-2",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-2",
+          "width_m": "1,80",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_003",
+      "name": "Торговый зал",
+      "floor_area_m2": "103,68",
+      "length_m": "12,80",
+      "width_m": "8,10",
+      "perimeter_m": "41,80",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-1",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-2",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-1",
+          "width_m": "1,80",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    }
+  ],
+  "totals": {
+    "rooms_count": 3,
+    "floor_area_m2": "210,78",
+    "unique_doors_count": 3,
+    "unique_windows_count": 3
+  },
+  "warnings": [
+    "На плане отсутствуют явные подписи площади для помещений; площадь и периметр рассчитаны из явных линейных размеров (длина×ширина)."
+  ],
+  "missing_fields": [],
+  "conflicts": []
+}

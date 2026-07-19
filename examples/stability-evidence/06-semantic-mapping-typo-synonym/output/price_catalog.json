@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "source_tool": "mcp_construction_prices__get_supported_works",
+  "source_transport": "structured_object",
+  "items": [
+    {
+      "id": "wall_priming",
+      "name": "Грунтовка стен",
+      "unit": "м²",
+      "price": "120"
+    },
+    {
+      "id": "wall_painting",
+      "name": "Окраска стен",
+      "unit": "м²",
+      "price": "450"
+    },
+    {
+      "id": "floor_installation",
+      "name": "Устройство пола",
+      "unit": "м²",
+      "price": "1700"
+    },
+    {
+      "id": "ceiling_finishing",
+      "name": "Отделка потолка",
+      "unit": "м²",
+      "price": "650"
+    },
+    {
+      "id": "baseboard_installation",
+      "name": "Монтаж плинтуса",
+      "unit": "м",
+      "price": "350"
+    },
+    {
+      "id": "window_installation",
+      "name": "Установка окон",
+      "unit": "шт.",
+      "price": "9000"
+    },
+    {
+      "id": "door_installation",
+      "name": "Установка дверей",
+      "unit": "шт.",
+      "price": "7000"
+    }
+  ]
+}

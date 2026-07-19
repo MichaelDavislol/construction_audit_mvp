@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "plan_id": "plan_001",
+  "object_name": "Склад-Торговый зал (план 10)",
+  "object_name_suggestion": "Торговое помещение со складом и кассовой зоной",
+  "image_quality": {
+    "usable": true,
+    "issues": []
+  },
+  "source_room_id_map": {
+    "1": "room_001",
+    "2": "room_002",
+    "3": "room_003"
+  },
+  "rooms": [
+    {
+      "room_id": "room_001",
+      "source_room_id": "1",
+      "name": "Склад",
+      "floor_area_m2": "52.7",
+      "length_m": "8.5",
+      "width_m": "6.2",
+      "perimeter_m": "29.4",
+      "height_m": "2.8",
+      "measurements": {
+        "floor_area_m2": {
+          "value": "52.7",
+          "confidence": 0.95,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "length_m": {
+          "value": "8.5",
+          "confidence": 0.95,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "8500 (верх и низ помещения)"
+        },
+        "width_m": {
+          "value": "6.2",
+          "confidence": 0.95,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "6200 (левая и внутренняя сторона)"
+        },
+        "perimeter_m": {
+          "value": "29.4",
+          "confidence": 0.95,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "height_m": {
+          "value": "2.8",
+          "confidence": 0.95,
+          "source_type": "explicit_plan_label",
+          "evidence_text": "Заголовок плана: 'Высота всех помещений 2.8'"
+        }
+      },
+      "doors": [
+        {
+          "element_id": "Д-1",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 0.95,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "Д-1 900×2000"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 0.95,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "Д-1 900×2000"
+            }
+          }
+        },
+        {
+          "element_id": "Д-3",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 0.95,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "Д-3 900×2000"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 0.95,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "Д-3 900×2000"
+            }
+          }
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-3",
+          "width_m": "1.8",
+          "height_m": "1.4",
+          "measurements": {
+            "width_m": {
+              "value": "1.8",
+              "confidence": 0.95,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "ОК-3 1800×1400"
+            },
+            "height_m": {
+              "value": "1.4",
+              "confidence": 0.95,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "ОК-3 1800×1400"
+            }
+          }
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "room_id": "room_002",
+      "source_room_id": "2",
+      "name": "Кассовая зона",
+      "floor_area_m2": "54.4",
+      "length_m": "8.5",
+      "width_m": "6.4",
+      "perimeter_m": "29.8",
+      "height_m": "2.8",
+      "measurements": {
+        "floor_area_m2": {
+          "value": "54.4",
+          "confidence": 0.95,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "length_m": {
+          "value": "8.5",
+          "confidence": 0.95,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "8500 (верх и низ помещения)"
+        },
+        "width_m": {
+          "value": "6.4",
+          "confidence": 0.95,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "6400 (левая и внутренняя сторона)"
+        },
+        "perimeter_m": {
+          "value": "29.8",
+          "confidence": 0.95,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "height_m": {
+          "value": "2.8",
+          "confidence": 0.95,
+          "source_type": "explicit_plan_label",
+          "evidence_text": "Заголовок плана: 'Высота всех помещений 2.8'"
+        }
+      },
+      "doors": [
+        {
+          "element_id": "Д-3",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 0.95,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "Д-3 900×2000"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 0.95,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "Д-3 900×2000"
+            }
+          }
+        },
+        {
+          "element_id": "Д-2",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 0.95,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "Д-2 900×2000"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 0.95,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "Д-2 900×2000"
+            }
+          }
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-2",
+          "width_m": "1.8",
+          "height_m": "1.4",
+          "measurements": {
+            "width_m": {
+              "value": "1.8",
+              "confidence": 0.95,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "ОК-2 1800×1400"
+            },
+            "height_m": {
+              "value": "1.4",
+              "confidence": 0.95,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "ОК-2 1800×1400"
+            }
+          }
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "room_id": "room_003",
+      "source_room_id": "3",
+      "name": "Торговый зал",
+      "floor_area_m2": "103.68",
+      "length_m": "12.8",
+      "width_m": "8.1",
+      "perimeter_m": "41.8",
+      "height_m": "2.8",
+      "measurements": {
+        "floor_area_m2": {
+          "value": "103.68",
+          "confidence": 0.95,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "length_m": {
+          "value": "12.8",
+          "confidence": 0.95,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "12800 (левая и правая сторона помещения)"
+        },
+        "width_m": {
+          "value": "8.1",
+          "confidence": 0.95,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "8100 (верх и низ помещения)"
+        },
+        "perimeter_m": {
+          "value": "41.8",
+          "confidence": 0.95,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "height_m": {
+          "value": "2.8",
+          "confidence": 0.95,
+          "source_type": "explicit_plan_label",
+          "evidence_text": "Заголовок плана: 'Высота всех помещений 2.8'"
+        }
+      },
+      "doors": [
+        {
+          "element_id": "Д-1",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 0.95,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "Д-1 900×2000"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 0.95,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "Д-1 900×2000"
+            }
+          }
+        },
+        {
+          "element_id": "Д-2",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 0.95,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "Д-2 900×2000"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 0.95,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "Д-2 900×2000"
+            }
+          }
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-1",
+          "width_m": "1.8",
+          "height_m": "1.4",
+          "measurements": {
+            "width_m": {
+              "value": "1.8",
+              "confidence": 0.95,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "ОК-1 1800×1400"
+            },
+            "height_m": {
+              "value": "1.4",
+              "confidence": 0.95,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "ОК-1 1800×1400"
+            }
+          }
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "warnings": [
+    "На плане отсутствуют явные подписи площади для помещений; площадь и периметр рассчитаны из явных линейных размеров (длина×ширина)."
+  ],
+  "missing_fields": [],
+  "conflicts": []
+}

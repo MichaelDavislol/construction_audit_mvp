@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "scope": "construction_audit_mvp_post_check_analysis",
+  "object": {
+    "name": "Магазин (Торговый зал + подсобные помещения)",
+    "geometry_revision": 1,
+    "geometry_confirmed": true,
+    "confirmed_geometry_sha256": "ed00145c6aabd3a480c84a0f288eae83195cb086f806b053b522834ab5eab8a1"
+  },
+  "estimate_rows": [
+    {
+      "source_row": 27,
+      "room": "Подсобное помещение",
+      "work_name": "Монтаж плинтуса",
+      "unit": "м",
+      "quantity": "16.4"
+    },
+    {
+      "source_row": 30,
+      "room": "Зона выдачи",
+      "work_name": "Окраска стен",
+      "unit": "м²",
+      "quantity": "30.64"
+    },
+    {
+      "source_row": 31,
+      "room": "Зона выдачи",
+      "work_name": "Грунтовка стен",
+      "unit": "м²",
+      "quantity": "30.64"
+    },
+    {
+      "source_row": 34,
+      "room": "Зона выдачи",
+      "work_name": "Монтаж плинтуса",
+      "unit": "м",
+      "quantity": "10.8"
+    }
+  ],
+  "geometry": {
+    "rooms": [
+      {
+        "room_id": "room_001",
+        "name": "Подсобное помещение",
+        "metrics": {
+          "floor_area_m2": "18.60",
+          "ceiling_area_m2": "18.60",
+          "gross_wall_area_m2": "50.96",
+          "doors_area_m2": "1.80",
+          "windows_area_m2": "1.96",
+          "openings_area_m2": "3.76",
+          "net_wall_area_m2": "47.20",
+          "baseboard_length_m": "17.30",
+          "door_count": "1",
+          "window_count": "1"
+        }
+      },
+      {
+        "room_id": "room_005",
+        "name": "Зона выдачи",
+        "metrics": {
+          "floor_area_m2": "10.80",
+          "ceiling_area_m2": "10.80",
+          "gross_wall_area_m2": "37.52",
+          "doors_area_m2": "7.00",
+          "windows_area_m2": "1.68",
+          "openings_area_m2": "8.68",
+          "net_wall_area_m2": "28.84",
+          "baseboard_length_m": "9.90",
+          "door_count": "4",
+          "window_count": "1"
+        }
+      }
+    ]
+  },
+  "mapping": {
+    "room_matches": 6,
+    "room_unresolved": 0,
+    "work_matches": 42,
+    "work_unsupported": 0,
+    "work_unresolved": 0,
+    "price_matches": 42,
+    "price_unsupported": 0,
+    "price_unresolved": 0
+  },
+  "price_summary": {
+    "catalog_items": 7,
+    "checked": 42,
+    "partially_checked": 0,
+    "not_checked": 0,
+    "deviations": 0
+  },
+  "price_checks": [
+    {
+      "source_row": 27,
+      "status": "checked",
+      "mcp_work_id": "baseboard_installation",
+      "estimate_price": "350",
+      "mcp_price": "350"
+    },
+    {
+      "source_row": 30,
+      "status": "checked",
+      "mcp_work_id": "wall_painting",
+      "estimate_price": "450",
+      "mcp_price": "450"
+    },
+    {
+      "source_row": 31,
+      "status": "checked",
+      "mcp_work_id": "wall_priming",
+      "estimate_price": "120",
+      "mcp_price": "120"
+    },
+    {
+      "source_row": 34,
+      "status": "checked",
+      "mcp_work_id": "baseboard_installation",
+      "estimate_price": "350",
+      "mcp_price": "350"
+    }
+  ],
+  "deterministic_findings": [
+    {
+      "finding_id": "finding_001",
+      "type": "quantity_understatement",
+      "severity": "warning",
+      "source_row": 27,
+      "source_rows": [
+        27
+      ],
+      "quantity_check_scope": null,
+      "allocation_status": null,
+      "canonical_room_id": "room_001",
+      "canonical_room_name": "Подсобное помещение",
+      "canonical_work_name": "Монтаж плинтуса",
+      "estimated_value": "16.4",
+      "control_value": "17.3",
+      "deviation_percent": "5.202312138728323699421965318",
+      "unit": "м",
+      "calculation_trace_refs": [
+        "room:room_001:baseboard_length_m",
+        "quantity_check:rows:27"
+      ]
+    },
+    {
+      "finding_id": "finding_002",
+      "type": "quantity_overstatement",
+      "severity": "warning",
+      "source_row": 30,
+      "source_rows": [
+        30
+      ],
+      "quantity_check_scope": null,
+      "allocation_status": null,
+      "canonical_room_id": "room_005",
+      "canonical_room_name": "Зона выдачи",
+      "canonical_work_name": "Окраска стен",
+      "estimated_value": "30.64",
+      "control_value": "28.84",
+      "deviation_percent": "6.241331484049930651872399445",
+      "unit": "м²",
+      "calculation_trace_refs": [
+        "room:room_005:net_wall_area_m2",
+        "quantity_check:rows:30"
+      ]
+    },
+    {
+      "finding_id": "finding_003",
+      "type": "quantity_overstatement",
+      "severity": "warning",
+      "source_row": 31,
+      "source_rows": [
+        31
+      ],
+      "quantity_check_scope": null,
+      "allocation_status": null,
+      "canonical_room_id": "room_005",
+      "canonical_room_name": "Зона выдачи",
+      "canonical_work_name": "Грунтовка стен",
+      "estimated_value": "30.64",
+      "control_value": "28.84",
+      "deviation_percent": "6.241331484049930651872399445",
+      "unit": "м²",
+      "calculation_trace_refs": [
+        "room:room_005:net_wall_area_m2",
+        "quantity_check:rows:31"
+      ]
+    },
+    {
+      "finding_id": "finding_004",
+      "type": "quantity_overstatement",
+      "severity": "warning",
+      "source_row": 34,
+      "source_rows": [
+        34
+      ],
+      "quantity_check_scope": null,
+      "allocation_status": null,
+      "canonical_room_id": "room_005",
+      "canonical_room_name": "Зона выдачи",
+      "canonical_work_name": "Монтаж плинтуса",
+      "estimated_value": "10.8",
+      "control_value": "9.9",
+      "deviation_percent": "9.090909090909090909090909091",
+      "unit": "м",
+      "calculation_trace_refs": [
+        "room:room_005:baseboard_length_m",
+        "quantity_check:rows:34"
+      ]
+    }
+  ],
+  "warnings": [],
+  "coverage": {
+    "checked_rows": 42,
+    "not_checked_rows": 0
+  },
+  "relevant_calculation_trace": [
+    {
+      "trace_id": "room:room_001:baseboard_length_m",
+      "room_id": "room_001",
+      "metric": "baseboard_length_m",
+      "formula": "perimeter_m - sum(unique room door widths)",
+      "inputs": {
+        "perimeter_m": "18.2",
+        "doors": [
+          {
+            "element_id": "Д-3",
+            "width_m": "0.9"
+          }
+        ]
+      },
+      "rounded_result": "17.30",
+      "results": null
+    },
+    {
+      "trace_id": "room:room_005:net_wall_area_m2",
+      "room_id": "room_005",
+      "metric": "net_wall_area_m2",
+      "formula": "gross_wall_area_m2 - openings_area_m2",
+      "inputs": {
+        "gross_wall_area_m2": "37.52",
+        "openings_area_m2": "8.68"
+      },
+      "rounded_result": "28.84",
+      "results": null
+    },
+    {
+      "trace_id": "room:room_005:baseboard_length_m",
+      "room_id": "room_005",
+      "metric": "baseboard_length_m",
+      "formula": "perimeter_m - sum(unique room door widths)",
+      "inputs": {
+        "perimeter_m": "13.4",
+        "doors": [
+          {
+            "element_id": "Д-2",
+            "width_m": "0.9"
+          },
+          {
+            "element_id": "Д-4",
+            "width_m": "0.9"
+          },
+          {
+            "element_id": "Д-5",
+            "width_m": "0.8"
+          },
+          {
+            "element_id": "Д-7",
+            "width_m": "0.9"
+          }
+        ]
+      },
+      "rounded_result": "9.90",
+      "results": null
+    },
+    {
+      "trace_id": "quantity_check:rows:27",
+      "room_id": "room_001",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "16.4",
+        "control_quantity_raw": "17.3",
+        "control_quantity_display": "17.30",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "rounded_result": null,
+      "results": {
+        "deviation_signed": "-0.9",
+        "deviation_absolute": "0.9",
+        "deviation_percent_raw": "5.202312138728323699421965318",
+        "threshold_exceeded": true,
+        "status": "deviation_found"
+      }
+    },
+    {
+      "trace_id": "quantity_check:rows:30",
+      "room_id": "room_005",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "30.64",
+        "control_quantity_raw": "28.84",
+        "control_quantity_display": "28.84",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "rounded_result": null,
+      "results": {
+        "deviation_signed": "1.8",
+        "deviation_absolute": "1.8",
+        "deviation_percent_raw": "6.241331484049930651872399445",
+        "threshold_exceeded": true,
+        "status": "deviation_found"
+      }
+    },
+    {
+      "trace_id": "quantity_check:rows:31",
+      "room_id": "room_005",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "30.64",
+        "control_quantity_raw": "28.84",
+        "control_quantity_display": "28.84",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "rounded_result": null,
+      "results": {
+        "deviation_signed": "1.8",
+        "deviation_absolute": "1.8",
+        "deviation_percent_raw": "6.241331484049930651872399445",
+        "threshold_exceeded": true,
+        "status": "deviation_found"
+      }
+    },
+    {
+      "trace_id": "quantity_check:rows:34",
+      "room_id": "room_005",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "10.8",
+        "control_quantity_raw": "9.9",
+        "control_quantity_display": "9.90",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "rounded_result": null,
+      "results": {
+        "deviation_signed": "0.9",
+        "deviation_absolute": "0.9",
+        "deviation_percent_raw": "9.090909090909090909090909091",
+        "threshold_exceeded": true,
+        "status": "deviation_found"
+      }
+    }
+  ],
+  "provenance": {
+    "price_catalog_source_tool": "mcp_construction_prices__get_supported_works",
+    "price_catalog_source_transport": "structured_object"
+  }
+}

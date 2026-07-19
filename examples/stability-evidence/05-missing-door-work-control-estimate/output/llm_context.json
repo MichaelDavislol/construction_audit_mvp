@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "scope": "construction_audit_mvp_post_check_analysis",
+  "object": {
+    "name": "Склад-Торговый зал (план 10)",
+    "geometry_revision": 1,
+    "geometry_confirmed": true,
+    "confirmed_geometry_sha256": "f18d6ecc6f26460c8db49f78092c41cd91d0bb69c25b5e96b51f4fa15f9506b2"
+  },
+  "estimate_rows": [
+    {
+      "source_row": 7,
+      "room": "Торговый зал",
+      "work_name": "Установка дверей",
+      "unit": "шт.",
+      "quantity": "2"
+    },
+    {
+      "source_row": 20,
+      "room": "Склад",
+      "work_name": "Установка дверей",
+      "unit": "шт.",
+      "quantity": "0"
+    }
+  ],
+  "geometry": {
+    "rooms": []
+  },
+  "mapping": {
+    "room_matches": 3,
+    "room_unresolved": 0,
+    "work_matches": 20,
+    "work_unsupported": 0,
+    "work_unresolved": 0,
+    "price_matches": 20,
+    "price_unsupported": 0,
+    "price_unresolved": 0
+  },
+  "price_summary": {
+    "catalog_items": 7,
+    "checked": 20,
+    "partially_checked": 0,
+    "not_checked": 0,
+    "deviations": 0
+  },
+  "price_checks": [
+    {
+      "source_row": 7,
+      "status": "checked",
+      "mcp_work_id": "door_installation",
+      "estimate_price": "7000",
+      "mcp_price": "7000"
+    },
+    {
+      "source_row": 20,
+      "status": "checked",
+      "mcp_work_id": "door_installation",
+      "estimate_price": "7000",
+      "mcp_price": "7000"
+    }
+  ],
+  "deterministic_findings": [
+    {
+      "finding_id": "finding_001",
+      "type": "quantity_understatement",
+      "severity": "high",
+      "source_row": 7,
+      "source_rows": [
+        7,
+        20
+      ],
+      "quantity_check_scope": "object_total_unique_doors",
+      "allocation_status": "estimate_declared",
+      "canonical_room_id": null,
+      "canonical_room_name": "Весь объект",
+      "canonical_work_name": "Установка дверей",
+      "estimated_value": "2",
+      "control_value": "3",
+      "deviation_percent": "33.33333333333333333333333333",
+      "unit": "шт",
+      "calculation_trace_refs": [
+        "object_total:door_count",
+        "quantity_check:rows:7-20"
+      ]
+    }
+  ],
+  "warnings": [],
+  "coverage": {
+    "checked_rows": 20,
+    "not_checked_rows": 0
+  },
+  "relevant_calculation_trace": [
+    {
+      "trace_id": "object_total:door_count",
+      "room_id": null,
+      "metric": "door_count",
+      "formula": "deduplicate by element_id",
+      "inputs": {
+        "room_values": [
+          {
+            "room_id": "room_001",
+            "value": "2"
+          },
+          {
+            "room_id": "room_002",
+            "value": "2"
+          },
+          {
+            "room_id": "room_003",
+            "value": "2"
+          }
+        ],
+        "element_ids": [
+          "Д-1",
+          "Д-2",
+          "Д-3"
+        ]
+      },
+      "rounded_result": "3",
+      "results": null
+    },
+    {
+      "trace_id": "quantity_check:rows:7-20",
+      "room_id": null,
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "2",
+        "control_quantity_raw": "3",
+        "control_quantity_display": "3",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "rounded_result": null,
+      "results": {
+        "deviation_signed": "-1",
+        "deviation_absolute": "1",
+        "deviation_percent_raw": "33.33333333333333333333333333",
+        "threshold_exceeded": true,
+        "status": "deviation_found"
+      }
+    }
+  ],
+  "provenance": {
+    "price_catalog_source_tool": "mcp_construction_prices__get_supported_works",
+    "price_catalog_source_transport": "structured_object"
+  }
+}

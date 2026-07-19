@@ -1,0 +1,44 @@
+{
+  "source": "real_run",
+  "job_id": "audit_shop_20260718",
+  "skill_version": "0.7.7",
+  "scenario": "user_confirmed_incorrect_geometry",
+  "expected_outcome": "audit_uses_confirmed_revision",
+  "reproducibility": {
+    "vision_error": "not_reliably_reproducible",
+    "post_confirmation_workflow": "reproducible_from_confirmed_geometry"
+  },
+  "status": "completed",
+  "geometry": {
+    "revision": 1,
+    "confirmed": true,
+    "intentionally_accepted_as_incorrect": true,
+    "known_vision_error": "door_D4_missing_from_utility_room_but_detected_in_warehouse",
+    "height_source": "drawing_text_2.8_m_for_all_rooms",
+    "rooms_count": 6,
+    "floor_area_m2": "128.92",
+    "unique_doors_count": 7,
+    "unique_windows_count": 6,
+    "warnings_count": 1
+  },
+  "audit": {
+    "estimate_rows": 42,
+    "quantity_coverage_percent": "100",
+    "price_coverage_percent": "100",
+    "quantity_deviation_rows": 4,
+    "quantity_below_threshold_rows": 2,
+    "price_deviation_rows": 0,
+    "findings_count": 4,
+    "findings_by_severity": {
+      "high": 0,
+      "warning": 4
+    }
+  },
+  "analyst": {
+    "status": "generated",
+    "hypotheses_count": 3
+  },
+  "generated_estimate": {
+    "status": "not_requested"
+  }
+}

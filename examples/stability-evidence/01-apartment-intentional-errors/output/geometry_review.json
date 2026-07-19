@@ -1,0 +1,98 @@
+{
+  "object_name": "Квартира План 6",
+  "image_quality": {
+    "usable": true,
+    "issues": []
+  },
+  "rooms": [
+    {
+      "room_id": "room_001",
+      "name": "Кухня",
+      "floor_area_m2": "40,56",
+      "length_m": "7,80",
+      "width_m": "5,20",
+      "perimeter_m": "26,00",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-1",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-2",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-2",
+          "width_m": "1,80",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_002",
+      "name": "Спальня",
+      "floor_area_m2": "36,40",
+      "length_m": "7,00",
+      "width_m": "5,20",
+      "perimeter_m": "24,40",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-2",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-3",
+          "width_m": "1,80",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_003",
+      "name": "Гостиная",
+      "floor_area_m2": "46,20",
+      "length_m": "7,70",
+      "width_m": "6,00",
+      "perimeter_m": "27,40",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-1",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-1",
+          "width_m": "1,80",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    }
+  ],
+  "totals": {
+    "rooms_count": 3,
+    "floor_area_m2": "123,16",
+    "unique_doors_count": 2,
+    "unique_windows_count": 3
+  },
+  "warnings": [],
+  "missing_fields": [],
+  "conflicts": []
+}

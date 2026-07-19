@@ -1,0 +1,37 @@
+{
+  "source": "real_run",
+  "job_id": "audit_6_20260718",
+  "skill_version": "0.7.7",
+  "scenario": "intentional_estimate_errors",
+  "expected_outcome": "errors_detected",
+  "reproducibility": "reproducible_on_rerun",
+  "status": "completed",
+  "geometry": {
+    "revision": 2,
+    "confirmed": true,
+    "rooms_count": 3,
+    "floor_area_m2": "123.16",
+    "unique_doors_count": 2,
+    "unique_windows_count": 3
+  },
+  "audit": {
+    "estimate_rows": 21,
+    "quantity_coverage_percent": "100",
+    "price_coverage_percent": "100",
+    "quantity_deviation_rows": 1,
+    "price_deviation_rows": 2,
+    "findings_count": 4,
+    "findings_by_severity": {
+      "high": 2,
+      "warning": 2
+    }
+  },
+  "analyst": {
+    "status": "generated",
+    "hypotheses_count": 2
+  },
+  "generated_estimate": {
+    "rows_count": 19,
+    "skipped_count": 0
+  }
+}

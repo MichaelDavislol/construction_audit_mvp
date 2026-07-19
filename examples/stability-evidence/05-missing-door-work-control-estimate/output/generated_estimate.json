@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "geometry_revision": 1,
+  "geometry_sha256": "f18d6ecc6f26460c8db49f78092c41cd91d0bb69c25b5e96b51f4fa15f9506b2",
+  "price_catalog_sha256": "935b70a56ebfd9adb46c33dfa57196d839a536c28657ed94ae6da23425aeca84",
+  "rows": [
+    {
+      "room": "Склад",
+      "work_name": "Грунтовка стен",
+      "unit": "м²",
+      "quantity": "76.2",
+      "price": "120",
+      "total": "9144",
+      "note": "Чистая площадь стен без проёмов",
+      "mcp_work_id": "wall_priming"
+    },
+    {
+      "room": "Склад",
+      "work_name": "Окраска стен",
+      "unit": "м²",
+      "quantity": "76.2",
+      "price": "450",
+      "total": "34290",
+      "note": "Чистая площадь стен без проёмов",
+      "mcp_work_id": "wall_painting"
+    },
+    {
+      "room": "Склад",
+      "work_name": "Устройство пола",
+      "unit": "м²",
+      "quantity": "52.7",
+      "price": "1700",
+      "total": "89590",
+      "note": "По площади помещения",
+      "mcp_work_id": "floor_installation"
+    },
+    {
+      "room": "Склад",
+      "work_name": "Отделка потолка",
+      "unit": "м²",
+      "quantity": "52.7",
+      "price": "650",
+      "total": "34255",
+      "note": "По площади помещения",
+      "mcp_work_id": "ceiling_finishing"
+    },
+    {
+      "room": "Склад",
+      "work_name": "Монтаж плинтуса",
+      "unit": "м",
+      "quantity": "27.6",
+      "price": "350",
+      "total": "9660",
+      "note": "Периметр минус ширина дверных проёмов",
+      "mcp_work_id": "baseboard_installation"
+    },
+    {
+      "room": "Склад",
+      "work_name": "Установка окон",
+      "unit": "шт.",
+      "quantity": "1",
+      "price": "9000",
+      "total": "9000",
+      "note": "По количеству окон помещения",
+      "mcp_work_id": "window_installation"
+    },
+    {
+      "room": "Кассовая зона",
+      "work_name": "Грунтовка стен",
+      "unit": "м²",
+      "quantity": "77.32",
+      "price": "120",
+      "total": "9278.4",
+      "note": "Чистая площадь стен без проёмов",
+      "mcp_work_id": "wall_priming"
+    },
+    {
+      "room": "Кассовая зона",
+      "work_name": "Окраска стен",
+      "unit": "м²",
+      "quantity": "77.32",
+      "price": "450",
+      "total": "34794",
+      "note": "Чистая площадь стен без проёмов",
+      "mcp_work_id": "wall_painting"
+    },
+    {
+      "room": "Кассовая зона",
+      "work_name": "Устройство пола",
+      "unit": "м²",
+      "quantity": "54.4",
+      "price": "1700",
+      "total": "92480",
+      "note": "По площади помещения",
+      "mcp_work_id": "floor_installation"
+    },
+    {
+      "room": "Кассовая зона",
+      "work_name": "Отделка потолка",
+      "unit": "м²",
+      "quantity": "54.4",
+      "price": "650",
+      "total": "35360",
+      "note": "По площади помещения",
+      "mcp_work_id": "ceiling_finishing"
+    },
+    {
+      "room": "Кассовая зона",
+      "work_name": "Монтаж плинтуса",
+      "unit": "м",
+      "quantity": "28",
+      "price": "350",
+      "total": "9800",
+      "note": "Периметр минус ширина дверных проёмов",
+      "mcp_work_id": "baseboard_installation"
+    },
+    {
+      "room": "Кассовая зона",
+      "work_name": "Установка окон",
+      "unit": "шт.",
+      "quantity": "1",
+      "price": "9000",
+      "total": "9000",
+      "note": "По количеству окон помещения",
+      "mcp_work_id": "window_installation"
+    },
+    {
+      "room": "Торговый зал",
+      "work_name": "Грунтовка стен",
+      "unit": "м²",
+      "quantity": "110.92",
+      "price": "120",
+      "total": "13310.4",
+      "note": "Чистая площадь стен без проёмов",
+      "mcp_work_id": "wall_priming"
+    },
+    {
+      "room": "Торговый зал",
+      "work_name": "Окраска стен",
+      "unit": "м²",
+      "quantity": "110.92",
+      "price": "450",
+      "total": "49914",
+      "note": "Чистая площадь стен без проёмов",
+      "mcp_work_id": "wall_painting"
+    },
+    {
+      "room": "Торговый зал",
+      "work_name": "Устройство пола",
+      "unit": "м²",
+      "quantity": "103.68",
+      "price": "1700",
+      "total": "176256",
+      "note": "По площади помещения",
+      "mcp_work_id": "floor_installation"
+    },
+    {
+      "room": "Торговый зал",
+      "work_name": "Отделка потолка",
+      "unit": "м²",
+      "quantity": "103.68",
+      "price": "650",
+      "total": "67392",
+      "note": "По площади помещения",
+      "mcp_work_id": "ceiling_finishing"
+    },
+    {
+      "room": "Торговый зал",
+      "work_name": "Монтаж плинтуса",
+      "unit": "м",
+      "quantity": "40",
+      "price": "350",
+      "total": "14000",
+      "note": "Периметр минус ширина дверных проёмов",
+      "mcp_work_id": "baseboard_installation"
+    },
+    {
+      "room": "Торговый зал",
+      "work_name": "Установка окон",
+      "unit": "шт.",
+      "quantity": "1",
+      "price": "9000",
+      "total": "9000",
+      "note": "По количеству окон помещения",
+      "mcp_work_id": "window_installation"
+    },
+    {
+      "room": "Весь объект",
+      "work_name": "Установка дверей",
+      "unit": "шт.",
+      "quantity": "3",
+      "price": "7000",
+      "total": "21000",
+      "note": "Уникальные двери по всему объекту",
+      "mcp_work_id": "door_installation"
+    }
+  ],
+  "skipped": [],
+  "quantity_warnings": [],
+  "xlsx_sha256": "86fb4a5ca3f7141fd8d8ee06d3ca14c6fcae973739cb9526cc4f55e5b75797cb"
+}

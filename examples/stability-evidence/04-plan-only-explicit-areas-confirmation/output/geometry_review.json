@@ -1,0 +1,238 @@
+{
+  "object_name": "Магазин (план 4.png)",
+  "image_quality": {
+    "usable": true,
+    "issues": []
+  },
+  "rooms": [
+    {
+      "room_id": "room_001",
+      "name": "Подсобное помещение",
+      "floor_area_m2": "19,04",
+      "length_m": "3,40",
+      "width_m": "5,60",
+      "perimeter_m": "18,00",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-3",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-7",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-4",
+          "width_m": "1,50",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_002",
+      "name": "Торговый зал",
+      "floor_area_m2": "29,68",
+      "length_m": "5,30",
+      "width_m": "5,60",
+      "perimeter_m": "21,80",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-3",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-1",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-2",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-1",
+          "width_m": "1,80",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_003",
+      "name": "Примерочная",
+      "floor_area_m2": "11,76",
+      "length_m": "2,10",
+      "width_m": "5,60",
+      "perimeter_m": "15,40",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-1",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-4",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-6",
+          "width_m": "1,00",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_004",
+      "name": "Кассовая зона",
+      "floor_area_m2": "20,16",
+      "length_m": "3,60",
+      "width_m": "5,60",
+      "perimeter_m": "18,40",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-4",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-2",
+          "width_m": "1,80",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_005",
+      "name": "Офис",
+      "floor_area_m2": "12,48",
+      "length_m": "3,90",
+      "width_m": "3,20",
+      "perimeter_m": "14,20",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-7",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-5",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-8",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-5",
+          "width_m": "1,40",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_006",
+      "name": "Склад",
+      "floor_area_m2": "19,60",
+      "length_m": "3,50",
+      "width_m": "5,60",
+      "perimeter_m": "18,20",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-2",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-5",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-6",
+          "width_m": "0,70",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-3",
+          "width_m": "1,60",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_007",
+      "name": "Зона выдачи",
+      "floor_area_m2": "8,58",
+      "length_m": "3,90",
+      "width_m": "2,20",
+      "perimeter_m": "12,20",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-8",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-6",
+          "width_m": "0,70",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-7",
+          "width_m": "1,00",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    }
+  ],
+  "totals": {
+    "rooms_count": 7,
+    "floor_area_m2": "121,30",
+    "unique_doors_count": 8,
+    "unique_windows_count": 7
+  },
+  "warnings": [],
+  "missing_fields": [],
+  "conflicts": []
+}

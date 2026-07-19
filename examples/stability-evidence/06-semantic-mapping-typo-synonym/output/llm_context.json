@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "scope": "construction_audit_mvp_post_check_analysis",
+  "object": {
+    "name": "Магазин (Склад, Кассовая зона, Торговый зал)",
+    "geometry_revision": 1,
+    "geometry_confirmed": true,
+    "confirmed_geometry_sha256": "863a1d9da027add9991d517bdf137900c4bc4084817decc6c07d4a9d06350f81"
+  },
+  "estimate_rows": [],
+  "geometry": {
+    "rooms": []
+  },
+  "mapping": {
+    "room_matches": 3,
+    "room_unresolved": 0,
+    "work_matches": 21,
+    "work_unsupported": 0,
+    "work_unresolved": 0,
+    "price_matches": 21,
+    "price_unsupported": 0,
+    "price_unresolved": 0
+  },
+  "price_summary": {
+    "catalog_items": 7,
+    "checked": 21,
+    "partially_checked": 0,
+    "not_checked": 0,
+    "deviations": 0
+  },
+  "price_checks": [],
+  "deterministic_findings": [],
+  "warnings": [],
+  "coverage": {
+    "checked_rows": 21,
+    "not_checked_rows": 0
+  },
+  "relevant_calculation_trace": [],
+  "provenance": {
+    "price_catalog_source_tool": "mcp_construction_prices__get_supported_works",
+    "price_catalog_source_transport": "structured_object"
+  }
+}

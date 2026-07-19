@@ -1,0 +1,60 @@
+{
+  "source": "real_run",
+  "job_id": "audit_10_2_20260719",
+  "skill_version": "0.7.7",
+  "input_mode": "estimate_and_plan",
+  "scenario": "semantic_mapping_for_typo_and_synonym",
+  "expected_outcome": "mapping_subagent_resolves_names_without_false_findings",
+  "reproducibility": "canonical_matches_and_audit_result_reproducible_rationale_may_vary",
+  "status": "completed",
+  "geometry": {
+    "revision": 1,
+    "confirmed": true,
+    "rooms_count": 3,
+    "floor_area_m2": "210.78",
+    "unique_doors_count": 3,
+    "unique_windows_count": 3
+  },
+  "mapping": {
+    "mode": "delegated_subagent",
+    "task_id": "88a8ff35",
+    "schema_version": 3,
+    "validation_status": "validated",
+    "work_matches_count": 21,
+    "work_unresolved_count": 0,
+    "work_unsupported_count": 0,
+    "target_matches": [
+      {
+        "source_row": 6,
+        "estimate_work": "Монтаж плнтуса",
+        "canonical_work": "Монтаж плинтуса",
+        "mcp_work_id": "baseboard_installation",
+        "confidence": 1.0
+      },
+      {
+        "source_row": 11,
+        "estimate_work": "Укладка ламината",
+        "canonical_work": "Устройство пола",
+        "mcp_work_id": "floor_installation",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "audit": {
+    "estimate_rows": 21,
+    "quantity_coverage_percent": "100",
+    "price_coverage_percent": "100",
+    "quantity_exact_match_rows": 21,
+    "quantity_deviation_rows": 0,
+    "price_deviation_rows": 0,
+    "findings_count": 0,
+    "info_count": 1
+  },
+  "analyst": {
+    "status": "no_useful_observations",
+    "hypotheses_count": 0
+  },
+  "generated_estimate": {
+    "status": "not_requested"
+  }
+}

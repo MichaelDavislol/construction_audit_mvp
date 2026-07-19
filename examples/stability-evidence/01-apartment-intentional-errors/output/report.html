@@ -1,0 +1,2177 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Предварительный аудит — Квартира План 6</title>
+<style>
+:root{--ink:#182536;--muted:#647286;--line:#d9e0e8;--surface:#f5f7fa;--navy:#173a5e;--red:#a93636;--amber:#9a6500;--blue:#246392;--violet:#68509b}
+*{box-sizing:border-box}body{margin:0;background:#edf1f5;color:var(--ink);font:15px/1.5 system-ui,-apple-system,sans-serif}
+main{max-width:1180px;margin:0 auto;background:white;min-height:100vh;padding:42px 48px 70px}h1{font-size:34px;margin:5px 0 8px;color:var(--navy)}h2{margin:42px 0 16px;font-size:24px;color:var(--navy)}h3{margin:8px 0;font-size:18px}p{margin:7px 0}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.lead{font-size:17px;color:var(--muted)}.status-line{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.status{background:#dff2e6;color:#17643a;padding:5px 10px;border-radius:999px;font-weight:700}
+.notice,.hypothesis-note{padding:14px 16px;border-left:4px solid var(--amber);background:#fff7df;margin:18px 0}.hypothesis-note{border-color:var(--violet);background:#f5f1ff}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0}.kpi{padding:17px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}.kpi span{display:block;color:var(--muted);font-size:12px}.kpi strong{display:block;font-size:25px;margin-top:4px}.kpi small{color:var(--muted)}
+.finding,.insight{border:1px solid var(--line);border-radius:12px;padding:20px;margin:14px 0;background:#fff}.finding.high{border-left:5px solid var(--red)}.finding.warning{border-left:5px solid var(--amber)}.finding-head{display:flex;justify-content:space-between;gap:20px}.deviation{font-size:24px;font-weight:700;color:var(--red)}.badge{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;padding:3px 7px;border-radius:5px;margin-right:8px}.badge.high{background:#fae1e1;color:var(--red)}.badge.warning{background:#fff0c9;color:var(--amber)}.badge.hypothesis{background:#e9e0ff;color:var(--violet)}
+.comparison{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}.comparison>div,.impact{background:var(--surface);padding:12px;border-radius:8px}.comparison span,.impact span,.impact small{display:block;color:var(--muted);font-size:12px}.comparison strong,.impact strong{font-size:18px}.impact{border-left:3px solid var(--blue)}.finding-notes{border-top:1px solid var(--line);padding-top:10px}.insight{border-left:5px solid var(--violet)}.muted{color:var(--muted)}
+.table-wrap{overflow:auto;margin:10px 0 20px}table{border-collapse:collapse;width:100%;font-size:13px}th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:var(--surface);color:#394b60;white-space:nowrap}.empty,.empty-state{padding:22px;color:var(--muted);background:var(--surface);border-radius:8px;text-align:center}
+details{border:1px solid var(--line);border-radius:9px;padding:0 14px;margin:10px 0}summary{cursor:pointer;font-weight:700;padding:13px 0;color:var(--navy)}.plan-preview img{display:block;max-width:100%;height:auto;margin:12px auto 18px;border:1px solid var(--line);border-radius:8px;background:white}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#172231;color:#eef4fa;padding:14px;border-radius:8px;font-size:12px}.disclaimer{margin-top:48px;padding:18px;background:#fff1bd;border:1px solid #e3c35b;font-weight:700}
+@media(max-width:800px){main{padding:24px 18px}.kpis{grid-template-columns:1fr 1fr}.comparison{grid-template-columns:1fr}}
+</style></head><body><main>
+<header><div class="status-line"><span class="status">Аудит завершён</span><span class="eyebrow">Версия геометрии 2</span></div>
+<h1>Предварительный аудит строительной сметы</h1><p class="lead"><strong>Квартира План 6</strong></p>
+<div class="notice">Результат является предварительным автоматизированным аудитом и требует проверки специалистом.</div></header>
+
+<section><h2>Краткое резюме</h2><div class="kpis">
+<div class="kpi"><span>Строк сметы</span><strong>21</strong><small>нормализовано</small></div>
+<div class="kpi"><span>Охвачено сравнением количества</span><strong>100%</strong><small>21 проверено · 0 не проверено</small></div>
+<div class="kpi"><span>Покрытие цены</span><strong>100%</strong><small>21 полностью · 0 частично</small></div>
+<div class="kpi"><span>Первичные замечания</span><strong>4</strong><small>2 высокой важности · 2 предупреждений</small></div>
+<div class="kpi"><span>Результат количества</span><strong>1</strong><small>20 точных · 0 ниже порога</small></div>
+<div class="kpi"><span>Служебные предупреждения</span><strong>0</strong></div>
+<div class="kpi"><span>Цена и стоимость</span><strong>2</strong><small>Отклонения цены или стоимости в 2 строках</small></div>
+<div class="kpi"><span>Геометрия</span><strong>Подтверждена</strong><small>подтверждённая версия 2</small></div>
+<div class="kpi"><span>Статус</span><strong>Аудит завершён</strong><small>18.07.2026 23:32 UTC</small></div>
+</div></section>
+
+<section><h2>Ход проверки</h2>
+<p class="muted">Этапы собраны из данных текущего аудита; служебные идентификаторы здесь не показываются.</p>
+<div class="table-wrap"><table><thead><tr><th>Этап</th><th>Статус</th><th>Результат</th></tr></thead><tbody><tr><td>Исходные документы</td><td>Получены</td><td>176296e97d5a4850a62a6d6799a270c0_6_1.xlsx, cf5053849baa4c6f9bfa6fac52286a2d_6.png</td></tr><tr><td>Подтверждение геометрии</td><td>Подтверждена</td><td>Подтверждена версия 2</td></tr><tr><td>Каталог цен</td><td>Получен</td><td>Позиций в каталоге: 7</td></tr><tr><td>Сопоставление данных</td><td>Выполнен</td><td>Помещений: 3; работ: 21; цен: 21. Способ: Точное детерминированное сопоставление. Python сопоставил точные названия и совместимые единицы; mapping-субагент не использовался. Результат детерминированно проверен по допустимым значениям, покрытию строк и совместимости единиц.</td></tr><tr><td>Проверка количества</td><td>Выполнена</td><td>Проверено строк: 21; с отклонением: 1; не проверено: 0</td></tr><tr><td>Проверка цены и стоимости</td><td>Выполнена</td><td>Полностью: 21; частично: 0; с отклонением: 2; не проверено: 0</td></tr><tr><td>Анализ фотографий</td><td>Пропущен</td><td>Фотографии не предоставлены</td></tr><tr><td>Дополнительный анализ</td><td>Выполнен</td><td>Сформировано гипотез: 2</td></tr><tr><td>Формирование отчёта</td><td>Выполнено</td><td>Завершено: 18.07.2026 23:32 UTC</td></tr></tbody></table></div></section>
+
+<section><h2>Как читать отчёт</h2><ul>
+<li><strong>Ключевые замечания</strong> — основной результат детерминированных проверок Python.</li>
+<li><strong>Количество, цена за единицу и стоимость строки проверяются раздельно.</strong> Одна строка может пройти проверку цены, но содержать ошибку количества или арифметики стоимости.</li>
+<li><strong>Позиция</strong> — номер позиции внутри сметы; <strong>строка Excel</strong> — фактический номер строки исходного файла.</li>
+<li><strong>Аналитические гипотезы</strong> — вторичный материал для эксперта, а не подтверждённые нарушения.</li>
+</ul></section>
+
+<section><h2>Ключевые замечания</h2>
+    <article class="finding high">
+      <div class="finding-head"><div><span class="badge high">важно</span>
+      <span class="eyebrow">Позиция №10 · строка Excel 11</span>
+      <h3>Количество ниже контроля</h3></div>
+      <div class="deviation">40,4%</div></div>
+      <p><strong>Кухня</strong> · Устройство пола</p>
+      <div class="comparison"><div><span>Количество в смете</span><strong>24,16 м²</strong></div>
+      <div><span>Контрольное количество</span><strong>40,56 м²</strong></div>
+      <div><span>Абсолютное отклонение</span><strong>16,4</strong></div></div>
+      <div class="impact"><span>Расчётное влияние</span><strong>−27 880</strong><small>(Количество по смете − контрольное количество) × цена из каталога</small></div>
+      
+      <div class="finding-notes"><p><strong>Основание:</strong> Точное совпадение работы и совместимая единица.</p>
+      <p><strong>Расчёт:</strong> Площадь пола — Кухня; Сравнение количества с установленным порогом</p>
+      <p><strong>Что проверить:</strong> Сверить привязку работы к помещению, исходный объём и геометрические размеры.</p></div>
+    </article>
+    <article class="finding high">
+      <div class="finding-head"><div><span class="badge high">важно</span>
+      <span class="eyebrow">Позиция №1 · строка Excel 2</span>
+      <h3>Цена выше MCP</h3></div>
+      <div class="deviation">24,4%</div></div>
+      <p><strong>Гостиная</strong> · Окраска стен</p>
+      <div class="comparison"><div><span>Цена в смете</span><strong>560</strong></div>
+      <div><span>Цена MCP</span><strong>450</strong></div>
+      <div><span>Абсолютное отклонение</span><strong>110</strong></div></div>
+      <div class="impact"><span>Расчётное влияние</span><strong>7 964</strong><small>(Цена по смете − цена из каталога) × количество по смете</small></div>
+      
+        <div class="line-analysis"><h4>Полное отклонение стоимости строки</h4>
+        <div class="comparison"><div><span>Стоимость в смете</span><strong>32 580</strong></div>
+        <div><span>Полная эталонная стоимость</span><strong>32 580</strong></div>
+        <div><span>Полное отклонение</span><strong>0 (0%)</strong></div></div>
+        <p>Вклад количества: <strong>0</strong> · вклад цены: <strong>7 964</strong> · арифметика строки: <strong>−7 964</strong></p>
+        <p class="muted">Полное отклонение = вклад количества + вклад цены + арифметическая разница строки.</p>
+        </div>
+      <div class="finding-notes"><p><strong>Основание:</strong> Точное совпадение работы и единицы каталога.</p>
+      <p><strong>Расчёт:</strong> Проверка цены по строке 2</p>
+      <p><strong>Что проверить:</strong> Проверить состав работы, единицу измерения и применимость позиции MCP.</p></div>
+    </article>
+    <article class="finding warning">
+      <div class="finding-head"><div><span class="badge warning">внимание</span>
+      <span class="eyebrow">Позиция №1 · строка Excel 2</span>
+      <h3>Несоответствие арифметики строки</h3></div>
+      <div class="deviation">19,6%</div></div>
+      <p><strong>Гостиная</strong> · Окраска стен</p>
+      <div class="comparison"><div><span>Стоимость в смете</span><strong>32 580</strong></div>
+      <div><span>Количество × цена за единицу</span><strong>40 544</strong></div>
+      <div><span>Абсолютное отклонение</span><strong>7 964</strong></div></div>
+      
+      
+      <div class="finding-notes"><p><strong>Основание:</strong> Детерминированная проверка: стоимость строки должна равняться количеству × цене за единицу</p>
+      <p><strong>Расчёт:</strong> —</p>
+      <p><strong>Что проверить:</strong> Пересчитать количество × цену за единицу и сверить результат со стоимостью, указанной в смете.</p></div>
+    </article>
+    <article class="finding warning">
+      <div class="finding-head"><div><span class="badge warning">внимание</span>
+      <span class="eyebrow">Позиция №10 · строка Excel 11</span>
+      <h3>Несоответствие арифметики строки</h3></div>
+      <div class="deviation">67,9%</div></div>
+      <p><strong>Кухня</strong> · Устройство пола</p>
+      <div class="comparison"><div><span>Стоимость в смете</span><strong>68 952</strong></div>
+      <div><span>Количество × цена за единицу</span><strong>41 072</strong></div>
+      <div><span>Абсолютное отклонение</span><strong>27 880</strong></div></div>
+      
+      
+      <div class="finding-notes"><p><strong>Основание:</strong> Детерминированная проверка: стоимость строки должна равняться количеству × цене за единицу</p>
+      <p><strong>Расчёт:</strong> —</p>
+      <p><strong>Что проверить:</strong> Пересчитать количество × цену за единицу и сверить результат со стоимостью, указанной в смете.</p></div>
+    </article></section>
+<section><h2>Наблюдения по фотографиям объекта</h2>
+        <div class="empty-state">Фотографии объекта не предоставлены.</div></section>
+<section><h2>Аналитические наблюдения и гипотезы</h2>
+    <div class="hypothesis-note">Этот блок сформирован после расчётов. Он содержит предположения для дополнительной проверки и не подтверждает нарушения. Если формулировка гипотезы расходится с точной привязкой строки, помещения или работы, приоритет имеют детерминированные данные в «Ключевых замечаниях» и строке «Связанные данные отчёта».</div>
+    <p>Найдены две самостоятельные гипотезы: возможная общая причина отклонений и несовпадений итоговых сумм в проверенных строках, а также несоответствие между ценой за единицу и итоговой суммой в строке с окраской стен.</p><article class="insight"><div><span class="badge hypothesis">Дополнительная гипотеза</span>
+            <span class="eyebrow">Уверенность: средняя — гипотезу нужно проверить</span></div>
+            <h3>Отклонения по цене и объёму совпадают со строками, где не сходится итоговая сумма</h3>
+            <p><strong>Связанные данные отчёта:</strong> расхождение: позиция 1, строка Excel 2 · Гостиная · Окраска стен; расхождение: позиция 10, строка Excel 11 · Кухня · Устройство пола</p>
+            <p><strong>Вывод:</strong> Возможно, отклонения по цене и по объёму работ в этих строках связаны с несовпадением итоговых сумм по тем же строкам — то есть речь идёт об одной общей причине, а не о двух независимых проблемах.</p>
+            <p><strong>Что на это указывает:</strong> В обеих проверенных строках сметы, где найдено отклонение по цене или по объёму работ, также отдельно выявлено несовпадение между итоговой суммой строки и результатом умножения количества на цену.</p>
+            <p><strong>Что проверить:</strong> Специалисту стоит проверить построчно, как рассчитывались итоговые суммы по всем позициям сметы, а не только по этим двум.</p>
+            <details><summary>Основания и ограничения</summary>
+            <p><strong>Основания:</strong> расхождение: позиция 1, строка Excel 2 · Гостиная · Окраска стен; расхождение: позиция 10, строка Excel 11 · Кухня · Устройство пола</p>
+            <p class="muted"><strong>Ограничения:</strong> Проверены только две строки сметы, поэтому нельзя утверждать, что это относится ко всей смете.</p></details></article><article class="insight"><div><span class="badge hypothesis">Дополнительная гипотеза</span>
+            <span class="eyebrow">Уверенность: низкая — оснований мало</span></div>
+            <h3>Итоговая сумма по строке не соответствует указанной в ней цене за единицу</h3>
+            <p><strong>Связанные данные отчёта:</strong> расхождение: позиция 1, строка Excel 2 · Гостиная · Окраска стен; контрольный расчёт</p>
+            <p><strong>Вывод:</strong> Возможно, итоговая сумма и цена за единицу в этой строке сметы были получены разными способами расчёта, из-за чего они не соответствуют друг другу, хотя формально относятся к одной и той же работе.</p>
+            <p><strong>Что на это указывает:</strong> По строке с окраской стен цена за единицу в смете выше контрольной цены, но итоговая сумма по строке совпадает с суммой, которая получилась бы при использовании контрольной цены, а не цены, указанной в смете.</p>
+            <p><strong>Что проверить:</strong> Специалисту стоит запросить отдельный расчёт итоговой суммы по этой строке и сравнить его с указанной в смете ценой за единицу.</p>
+            <details><summary>Основания и ограничения</summary>
+            <p><strong>Основания:</strong> расхождение: позиция 1, строка Excel 2 · Гостиная · Окраска стен; контрольный расчёт</p>
+            <p class="muted"><strong>Ограничения:</strong> Доступных данных недостаточно, чтобы понять, каким образом на самом деле формировалась итоговая сумма по этой строке.</p></details></article></section>
+
+<section><h2>Установка дверей</h2>
+<div class="notice">Распределение установок между помещениями принято из сметы и не определяется по плану. Проверено только суммарное количество установок по всем строкам сметы относительно уникальных дверей на плане.</div>
+<div class="table-wrap"><table><thead><tr><th>Строка</th><th>Помещение сметы</th><th>Установок по смете</th><th>Статус распределения</th></tr></thead><tbody><tr><td>7</td><td>Гостиная</td><td>1</td><td>Принято из сметы; по помещению не проверялось</td></tr><tr><td>14</td><td>Кухня</td><td>0</td><td>Принято из сметы; по помещению не проверялось</td></tr><tr><td>21</td><td>Спальня</td><td>1</td><td>Принято из сметы; по помещению не проверялось</td></tr></tbody></table></div>
+<p><strong>Сумма установок по смете:</strong> 2 · <strong>Уникальных дверей на плане:</strong> 2</p>
+</section>
+
+<section><h2>Раздельная проверка</h2>
+<h3>Количество</h3><p class="muted">Для каждой проверяемой работы показаны сметное количество, формула по подтверждённой геометрии и сравнение с порогом.</p>
+<div class="table-wrap"><table><thead><tr><th>Позиция</th><th>Строки Excel</th><th>Помещение</th><th>Работа</th><th>Количество сметы</th><th>Контрольный расчёт</th><th>Сравнение</th><th>Статус</th></tr></thead><tbody><tr><td>1</td><td>2</td><td>Гостиная</td><td>Окраска стен</td><td>72,4 м²</td><td>76,72 м² − 4,32 м² = 72,4 м²</td><td>72,4 − 72,4 = 0 м²; отклонение 0%; порог 5%</td><td>Точное совпадение</td></tr><tr><td>2</td><td>3</td><td>Гостиная</td><td>Грунтовка стен</td><td>72,4 м²</td><td>76,72 м² − 4,32 м² = 72,4 м²</td><td>72,4 − 72,4 = 0 м²; отклонение 0%; порог 5%</td><td>Точное совпадение</td></tr><tr><td>3</td><td>4</td><td>Гостиная</td><td>Устройство пола</td><td>46,2 м²</td><td>Площадь по подтверждённой геометрии = 46,2 м²</td><td>46,2 − 46,2 = 0 м²; отклонение 0%; порог 5%</td><td>Точное совпадение</td></tr><tr><td>4</td><td>5</td><td>Гостиная</td><td>Отделка потолка</td><td>46,2 м²</td><td>Площадь потолка = площадь пола = 46,2 м²</td><td>46,2 − 46,2 = 0 м²; отклонение 0%; порог 5%</td><td>Точное совпадение</td></tr><tr><td>5</td><td>6</td><td>Гостиная</td><td>Монтаж плинтуса</td><td>26,5 м</td><td>27,4 м − (0,9) м = 26,5 м</td><td>26,5 − 26,5 = 0 м; отклонение 0%; порог 5%</td><td>Точное совпадение</td></tr><tr><td>6, 13, 20</td><td>7, 14, 21</td><td>Весь объект</td><td>Установка дверей</td><td>2 шт.</td><td>Количество уникальных дверных проёмов = 2 шт.</td><td>2 − 2 = 0 шт.; отклонение 0%; порог 5%</td><td>Точное совпадение</td></tr><tr><td>7</td><td>8</td><td>Гостиная</td><td>Установка окон</td><td>1 шт.</td><td>Количество оконных проёмов = 1 шт.</td><td>1 − 1 = 0 шт.; отклонение 0%; порог 5%</td><td>Точное совпадение</td></tr><tr><td>8</td><td>9</td><td>Кухня</td><td>Окраска стен</td><td>66,68 м²</td><td>72,8 м² − 6,12 м² = 66,68 м²</td><td>66,68 − 66,68 = 0 м²; отклонение 0%; порог 5%</td><td>Точное совпадение</td></tr><tr><td>9</td><td>10</td><td>Кухня</td><td>Грунтовка стен</td><td>66,68 м²</td><td>72,8 м² − 6,12 м² = 66,68 м²</td><td>66,68 − 66,68 = 0 м²; отклонение 0%; порог 5%</td><td>Точное совпадение</td></tr><tr><td>10</td><td>11</td><td>Кухня</td><td>Устройство пола</td><td>24,16 м²</td><td>Площадь по подтверждённой геометрии = 40,56 м²</td><td>24,16 − 40,56 = −16,4 м²; отклонение 40,4%; порог 5%</td><td>Есть отклонение</td></tr><tr><td>11</td><td>12</td><td>Кухня</td><td>Отделка потолка</td><td>40,56 м²</td><td>Площадь потолка = площадь пола = 40,56 м²</td><td>40,56 − 40,56 = 0 м²; отклонение 0%; порог 5%</td><td>Точное совпадение</td></tr><tr><td>12</td><td>13</td><td>Кухня</td><td>Монтаж плинтуса</td><td>24,2 м</td><td>26 м − (0,9 + 0,9) м = 24,2 м</td><td>24,2 − 24,2 = 0 м; отклонение 0%; порог 5%</td><td>Точное совпадение</td></tr><tr><td>14</td><td>15</td><td>Кухня</td><td>Установка окон</td><td>1 шт.</td><td>Количество оконных проёмов = 1 шт.</td><td>1 − 1 = 0 шт.; отклонение 0%; порог 5%</td><td>Точное совпадение</td></tr><tr><td>15</td><td>16</td><td>Спальня</td><td>Окраска стен</td><td>64 м²</td><td>68,32 м² − 4,32 м² = 64 м²</td><td>64 − 64 = 0 м²; отклонение 0%; порог 5%</td><td>Точное совпадение</td></tr><tr><td>16</td><td>17</td><td>Спальня</td><td>Грунтовка стен</td><td>64 м²</td><td>68,32 м² − 4,32 м² = 64 м²</td><td>64 − 64 = 0 м²; отклонение 0%; порог 5%</td><td>Точное совпадение</td></tr><tr><td>17</td><td>18</td><td>Спальня</td><td>Устройство пола</td><td>36,4 м²</td><td>Площадь по подтверждённой геометрии = 36,4 м²</td><td>36,4 − 36,4 = 0 м²; отклонение 0%; порог 5%</td><td>Точное совпадение</td></tr><tr><td>18</td><td>19</td><td>Спальня</td><td>Отделка потолка</td><td>36,4 м²</td><td>Площадь потолка = площадь пола = 36,4 м²</td><td>36,4 − 36,4 = 0 м²; отклонение 0%; порог 5%</td><td>Точное совпадение</td></tr><tr><td>19</td><td>20</td><td>Спальня</td><td>Монтаж плинтуса</td><td>23,5 м</td><td>24,4 м − (0,9) м = 23,5 м</td><td>23,5 − 23,5 = 0 м; отклонение 0%; порог 5%</td><td>Точное совпадение</td></tr><tr><td>21</td><td>22</td><td>Спальня</td><td>Установка окон</td><td>1 шт.</td><td>Количество оконных проёмов = 1 шт.</td><td>1 − 1 = 0 шт.; отклонение 0%; порог 5%</td><td>Точное совпадение</td></tr></tbody></table></div>
+<h3>Цена за единицу</h3><p class="muted">Статус в этой таблице относится только к цене за единицу и не наследует ошибки количества или стоимости строки.</p>
+<div class="table-wrap"><table><thead><tr><th>Позиция</th><th>Строка Excel</th><th>Работа</th><th>Единица работы</th><th>Цена сметы</th><th>Цена по каталогу MCP</th><th>Формула влияния цены</th><th>Статус</th></tr></thead><tbody><tr><td>1</td><td>2</td><td>Окраска стен</td><td>м²</td><td>560</td><td>450</td><td>(560 − 450) × 72,4 = +7 964</td><td>Есть отклонение цены</td></tr><tr><td>2</td><td>3</td><td>Грунтовка стен</td><td>м²</td><td>120</td><td>120</td><td>(120 − 120) × 72,4 = 0</td><td>Цена совпадает</td></tr><tr><td>3</td><td>4</td><td>Устройство пола</td><td>м²</td><td>1 700</td><td>1 700</td><td>(1 700 − 1 700) × 46,2 = 0</td><td>Цена совпадает</td></tr><tr><td>4</td><td>5</td><td>Отделка потолка</td><td>м²</td><td>650</td><td>650</td><td>(650 − 650) × 46,2 = 0</td><td>Цена совпадает</td></tr><tr><td>5</td><td>6</td><td>Монтаж плинтуса</td><td>м</td><td>350</td><td>350</td><td>(350 − 350) × 26,5 = 0</td><td>Цена совпадает</td></tr><tr><td>6</td><td>7</td><td>Установка дверей</td><td>шт.</td><td>7 000</td><td>7 000</td><td>(7 000 − 7 000) × 1 = 0</td><td>Цена совпадает</td></tr><tr><td>7</td><td>8</td><td>Установка окон</td><td>шт.</td><td>9 000</td><td>9 000</td><td>(9 000 − 9 000) × 1 = 0</td><td>Цена совпадает</td></tr><tr><td>8</td><td>9</td><td>Окраска стен</td><td>м²</td><td>450</td><td>450</td><td>(450 − 450) × 66,68 = 0</td><td>Цена совпадает</td></tr><tr><td>9</td><td>10</td><td>Грунтовка стен</td><td>м²</td><td>120</td><td>120</td><td>(120 − 120) × 66,68 = 0</td><td>Цена совпадает</td></tr><tr><td>10</td><td>11</td><td>Устройство пола</td><td>м²</td><td>1 700</td><td>1 700</td><td>(1 700 − 1 700) × 24,16 = 0</td><td>Цена совпадает</td></tr><tr><td>11</td><td>12</td><td>Отделка потолка</td><td>м²</td><td>650</td><td>650</td><td>(650 − 650) × 40,56 = 0</td><td>Цена совпадает</td></tr><tr><td>12</td><td>13</td><td>Монтаж плинтуса</td><td>м</td><td>350</td><td>350</td><td>(350 − 350) × 24,2 = 0</td><td>Цена совпадает</td></tr><tr><td>13</td><td>14</td><td>Установка дверей</td><td>шт.</td><td>7 000</td><td>7 000</td><td>(7 000 − 7 000) × 0 = 0</td><td>Цена совпадает</td></tr><tr><td>14</td><td>15</td><td>Установка окон</td><td>шт.</td><td>9 000</td><td>9 000</td><td>(9 000 − 9 000) × 1 = 0</td><td>Цена совпадает</td></tr><tr><td>15</td><td>16</td><td>Окраска стен</td><td>м²</td><td>450</td><td>450</td><td>(450 − 450) × 64 = 0</td><td>Цена совпадает</td></tr><tr><td>16</td><td>17</td><td>Грунтовка стен</td><td>м²</td><td>120</td><td>120</td><td>(120 − 120) × 64 = 0</td><td>Цена совпадает</td></tr><tr><td>17</td><td>18</td><td>Устройство пола</td><td>м²</td><td>1 700</td><td>1 700</td><td>(1 700 − 1 700) × 36,4 = 0</td><td>Цена совпадает</td></tr><tr><td>18</td><td>19</td><td>Отделка потолка</td><td>м²</td><td>650</td><td>650</td><td>(650 − 650) × 36,4 = 0</td><td>Цена совпадает</td></tr><tr><td>19</td><td>20</td><td>Монтаж плинтуса</td><td>м</td><td>350</td><td>350</td><td>(350 − 350) × 23,5 = 0</td><td>Цена совпадает</td></tr><tr><td>20</td><td>21</td><td>Установка дверей</td><td>шт.</td><td>7 000</td><td>7 000</td><td>(7 000 − 7 000) × 1 = 0</td><td>Цена совпадает</td></tr><tr><td>21</td><td>22</td><td>Установка окон</td><td>шт.</td><td>9 000</td><td>9 000</td><td>(9 000 − 9 000) × 1 = 0</td><td>Цена совпадает</td></tr></tbody></table></div>
+<h3>Стоимость строки и арифметика</h3><p class="muted"><strong>Стоимость сметы</strong> сверяется с арифметикой строки. <strong>Контрольная стоимость</strong> равна количеству сметы × цене по каталогу MCP. <strong>Расчётное влияние</strong> показано как разница между ними.</p>
+<div class="table-wrap"><table><thead><tr><th>Позиция</th><th>Строка Excel</th><th>Работа</th><th>Расчёт по смете</th><th>Контрольный расчёт</th><th>Сравнение</th><th>Статус</th></tr></thead><tbody><tr><td>1</td><td>2</td><td>Окраска стен</td><td>72,4 × 560 = 40 544; в смете указано 32 580</td><td>72,4 × 450 = 32 580</td><td>32 580 − 32 580 = 0; отклонение 0%</td><td>Ошибка арифметики в смете</td></tr><tr><td>2</td><td>3</td><td>Грунтовка стен</td><td>72,4 × 120 = 8 688; в смете указано 8 688</td><td>72,4 × 120 = 8 688</td><td>8 688 − 8 688 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr><tr><td>3</td><td>4</td><td>Устройство пола</td><td>46,2 × 1 700 = 78 540; в смете указано 78 540</td><td>46,2 × 1 700 = 78 540</td><td>78 540 − 78 540 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr><tr><td>4</td><td>5</td><td>Отделка потолка</td><td>46,2 × 650 = 30 030; в смете указано 30 030</td><td>46,2 × 650 = 30 030</td><td>30 030 − 30 030 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr><tr><td>5</td><td>6</td><td>Монтаж плинтуса</td><td>26,5 × 350 = 9 275; в смете указано 9 275</td><td>26,5 × 350 = 9 275</td><td>9 275 − 9 275 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr><tr><td>6</td><td>7</td><td>Установка дверей</td><td>1 × 7 000 = 7 000; в смете указано 7 000</td><td>1 × 7 000 = 7 000</td><td>7 000 − 7 000 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr><tr><td>7</td><td>8</td><td>Установка окон</td><td>1 × 9 000 = 9 000; в смете указано 9 000</td><td>1 × 9 000 = 9 000</td><td>9 000 − 9 000 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr><tr><td>8</td><td>9</td><td>Окраска стен</td><td>66,68 × 450 = 30 006; в смете указано 30 006</td><td>66,68 × 450 = 30 006</td><td>30 006 − 30 006 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr><tr><td>9</td><td>10</td><td>Грунтовка стен</td><td>66,68 × 120 = 8 001,6; в смете указано 8 001,6</td><td>66,68 × 120 = 8 001,6</td><td>8 001,6 − 8 001,6 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr><tr><td>10</td><td>11</td><td>Устройство пола</td><td>24,16 × 1 700 = 41 072; в смете указано 68 952</td><td>24,16 × 1 700 = 41 072</td><td>68 952 − 41 072 = +27 880; отклонение 67,9%</td><td>Ошибка арифметики в смете</td></tr><tr><td>11</td><td>12</td><td>Отделка потолка</td><td>40,56 × 650 = 26 364; в смете указано 26 364</td><td>40,56 × 650 = 26 364</td><td>26 364 − 26 364 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr><tr><td>12</td><td>13</td><td>Монтаж плинтуса</td><td>24,2 × 350 = 8 470; в смете указано 8 470</td><td>24,2 × 350 = 8 470</td><td>8 470 − 8 470 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr><tr><td>13</td><td>14</td><td>Установка дверей</td><td>0 × 7 000 = 0; в смете указано 0</td><td>0 × 7 000 = 0</td><td>0 − 0 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr><tr><td>14</td><td>15</td><td>Установка окон</td><td>1 × 9 000 = 9 000; в смете указано 9 000</td><td>1 × 9 000 = 9 000</td><td>9 000 − 9 000 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr><tr><td>15</td><td>16</td><td>Окраска стен</td><td>64 × 450 = 28 800; в смете указано 28 800</td><td>64 × 450 = 28 800</td><td>28 800 − 28 800 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr><tr><td>16</td><td>17</td><td>Грунтовка стен</td><td>64 × 120 = 7 680; в смете указано 7 680</td><td>64 × 120 = 7 680</td><td>7 680 − 7 680 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr><tr><td>17</td><td>18</td><td>Устройство пола</td><td>36,4 × 1 700 = 61 880; в смете указано 61 880</td><td>36,4 × 1 700 = 61 880</td><td>61 880 − 61 880 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr><tr><td>18</td><td>19</td><td>Отделка потолка</td><td>36,4 × 650 = 23 660; в смете указано 23 660</td><td>36,4 × 650 = 23 660</td><td>23 660 − 23 660 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr><tr><td>19</td><td>20</td><td>Монтаж плинтуса</td><td>23,5 × 350 = 8 225; в смете указано 8 225</td><td>23,5 × 350 = 8 225</td><td>8 225 − 8 225 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr><tr><td>20</td><td>21</td><td>Установка дверей</td><td>1 × 7 000 = 7 000; в смете указано 7 000</td><td>1 × 7 000 = 7 000</td><td>7 000 − 7 000 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr><tr><td>21</td><td>22</td><td>Установка окон</td><td>1 × 9 000 = 9 000; в смете указано 9 000</td><td>1 × 9 000 = 9 000</td><td>9 000 − 9 000 = 0; отклонение 0%</td><td>Стоимость совпадает</td></tr></tbody></table></div></section>
+
+<section><h2>Геометрия объекта</h2><div class="table-wrap"><table><thead><tr><th>Помещение</th><th>Площадь</th><th>Периметр</th><th>Высота</th><th>Дверные проёмы</th><th>Окна</th><th>Статус данных</th></tr></thead><tbody><tr><td>Кухня</td><td>40,56</td><td>26</td><td>2,8</td><td>2</td><td>1</td><td>Достаточно данных</td></tr><tr><td>Спальня</td><td>36,4</td><td>24,4</td><td>2,8</td><td>1</td><td>1</td><td>Достаточно данных</td></tr><tr><td>Гостиная</td><td>46,2</td><td>27,4</td><td>2,8</td><td>1</td><td>1</td><td>Достаточно данных</td></tr></tbody></table></div></section>
+<section><h2>Исходный план</h2>
+    <details class="plan-preview"><summary>Показать план, по которому подтверждалась геометрия</summary>
+    <p class="muted">Исходное изображение встроено в отчёт, поэтому оно останется доступным при переносе HTML-файла.</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABN8AAAQ1CAYAAACFsGlZAAAAAXNSR0IArs4c6QAAAFBlWElmTU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAE36ADAAQAAAABAAAENQAAAACe2PdBAAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgoZXuEHAABAAElEQVR4AezdCZQdVZkH8NshLInZiGytQQSDJAYFVBjcIiAHGCcKaHRG56gRl4NGUVlkGFBxRD0DYpAYwZFBRMUJhlVHlgkmBlCMgKyGaFgihAiBCCFkgUBmvnKqeen09rpfdVf1+9U5nX5dr+rWV79b6Xr9f7detWzYsGFjMhEgQIAAAQIECBAgQIAAAQIECBAg0HCBIQ1vUYMECBAgQIAAAQIECBAgQIAAAQIECGQCwjcHAgECBAgQIECAAAECBAgQIECAAIGCBIRvBcFqlgABAgQIECBAgAABAgQIECBAgIDwzTFAgAABAgQIECBAgAABAgQIECBAoCAB4VtBsJolQIAAAQIECBAgQIAAAQIECBAgIHxzDBAgQIAAAQIECBAgQIAAAQIECBAoSED4VhCsZgkQIECAAAECBAgQIECAAAECBAgI3xwDBAgQIECAAAECBAgQIECAAAECBAoSEL4VBKtZAgQIECBAgAABAgQIECBAgAABAsI3xwABAgQIECBAgAABAgQIECBAgACBggSEbwXBapYAAQIECBAgQIAAAQIECBAgQICA8M0xQIAAAQIECBAgQIAAAQIECBAgQKAgAeFbQbCaJUCAAAECBAgQIECAAAECBAgQICB8cwwQIECAAAECBAgQIECAAAECBAgQKEhA+FYQrGYJECBAgAABAgQIECBAgAABAgQICN8cAwQIECBAgAABAgQIECBAgAABAgQKEhC+FQSrWQIECBAgQIAAAQIECBAgQIAAAQLCN8cAAQIECBAgQIAAAQIECBAgQIAAgYIEhG8FwWqWAAECBAgQIECAAAECBAgQIECAgPDNMUCAAAECBAgQIECAAAECBAgQIECgIAHhW0GwmiVAgAABAgQIECBAgAABAgQIECAgfHMMECBAgAABAgQIECBAgAABAgQIEChIQPhWEKxmCRAgQIAAAQIECBAgQIAAAQIECAjfHAMECBAgQIAAAQIECBAgQIAAAQIEChIQvhUEq1kCBAgQIECAAAECBAgQIECAAAECwjfHAAECBAgQIECAAAECBAgQIECAAIGCBIRvBcFqlgABAgQIECBAgAABAgQIECBAgIDwzTFAgAABAgQIECBAgAABAgQIECBAoCAB4VtBsJolQIAAAQIECBAgQIAAAQIECBAgIHxzDBAgQIAAAQIECBAgQIAAAQIECBAoSED4VhCsZgkQIECAAAECBAgQIECAAAECBAgI3xwDBAgQIECAAAECBAgQIECAAAECBAoSEL4VBKtZAgQIECBAgAABAgQIECBAgAABAsI3xwABAgQIECBAgAABAgQIECBAgACBggSEbwXBapYAAQIECBAgQIAAAQIECBAgQICA8M0xQIAAAQIECBAgQIAAAQIECBAgQKAgAeFbQbCaJUCAAAECBAgQIECAAAECBAgQICB8cwwQIECAAAECBAgQIECAAAECBAgQKEhA+FYQrGYJECBAgAABAgQIECBAgAABAgQICN8cAwQIECBAgAABAgQIECBAgAABAgQKEhC+FQSrWQIECBAgQIAAAQIECBAgQIAAAQLCN8cAAQIECBAgQIAAAQIECBAgQIAAgYIEhG8FwWqWAAECBAgQIECAAAECBAgQIECAgPDNMUCAAAECBAgQIECAAAECBAgQIECgIAHhW0GwmiVAgAABAgQIECBAgAABAgQIECAgfHMMECBAgAABAgQIECBAgAABAgQIEChIQPhWEKxmCRAgQIAAAQIECBAgQIAAAQIECAjfHAMECBAgQIAAAQIECBAgQIAAAQIEChIQvhUEq1kCBAgQIECAAAECBAgQIECAAAECwjfHAAECBAgQIECAAAECBAgQIECAAIGCBIRvBcFqlgABAgQIECBAgAABAgQIECBAgIDwzTFAgAABAgQIECBAgAABAgQIECBAoCAB4VtBsJolQIAAAQIECBAgQIAAAQIECBAgIHxzDBAgQIAAAQIECBAgQIAAAQIECBAoSED4VhCsZgkQIECAAAECBAgQIECAAAECBAgI3xwDBAgQIECAAAECBAgQIECAAAECBAoSEL4VBKtZAgQIECBAgAABAgQIECBAgAABAsI3xwABAgQIECBAgAABAgQIECBAgACBggSEbwXBapYAAQIECBAgQIAAAQIECBAgQICA8M0xQIAAAQIECBAgQIAAAQIECBAgQKAgAeFbQbCaJUCAAAECBAgQIECAAAECBAgQICB8cwwQIECAAAECBAgQIECAAAECBAgQKEhA+FYQrGYJECBAgAABAgQIECBAgAABAgQICN8cAwQIECBAgAABAgQIECBAgAABAgQKEhC+FQSrWQIECBAgQIAAAQIECBAgQIAAAQLCN8cAAQIECBAgQIAAAQIECBAgQIAAgYIEhG8FwWqWAAECBAgQIECAAAECBAgQIECAgPDNMUCAAAECBAgQIECAAAECBAgQIECgIAHhW0GwmiVAgAABAgQIECBAgAABAgQIECAgfHMMECBAgAABAgQIECBAgAABAgQIEChIQPhWEKxmCRAgQIAAAQIECBAgQIAAAQIECAjfHAMECBAgQIAAAQIECBAgQIAAAQIEChIQvhUEq1kCBAgQIECAAAECBAgQIECAAAECwjfHAAECBAgQIECAAAECBAgQIECAAIGCBIRvBcFqlgABAgQIECBAgAABAgQIECBAgIDwzTFAgAABAgQIECBAgAABAgQIECBAoCAB4VtBsJolQIAAAQIECBAgQIAAAQIECBAgIHxzDBAgQIAAAQIECBAgQIAAAQIECBAoSED4VhCsZgkQIECAAAECBAgQIECAAAECBAgI3xwDBAgQIECAAAECBAgQIECAAAECBAoSEL4VBKtZAgQIECBAgAABAgQIECBAgAABAsI3xwABAgQIECBAgAABAgQIECBAgACBggSEbwXBapYAAQIECBAgQIAAAQIECBAgQICA8M0xQIAAAQIECBAgQIAAAQIECBAgQKAgAeFbQbCaJUCAAAECBAgQIECAAAECBAgQICB8cwwQIECAAAECBAgQIECAAAECBAgQKEhA+FYQrGYJECBAgAABAgQIECBAgAABAgQICN8cAwQIECBAgAABAgQIECBAgAABAgQKEhC+FQSrWQIECBAgQIAAAQIECBAgQIAAAQLCN8cAAQIECBAgQIAAAQIECBAgQIAAgYIEhG8FwWqWAAECBAgQIECAAAECBAgQIECAgPDNMUCAAAECBAgQIECAAAECBAgQIECgIAHhW0GwmiVAgAABAgQIECBAgAABAgQIECAgfHMMECBAgAABAgQIECBAgAABAgQIEChIQPhWEKxmCRAgQIAAAQIECBAgQIAAAQIECAjfHAMECBAgQIAAAQIECBAgQIAAAQIEChIQvhUEq1kCBAgQIECAAAECBAgQIECAAAECwjfHAAECBAgQIECAAAECBAgQIECAAIGCBIRvBcFqlgABAgQIECBAgAABAgQIECBAgIDwzTFAgAABAgQIECBAgAABAgQIECBAoCAB4VtBsJolQIAAAQIECBAgQIAAAQIECBAgIHxzDBAgQIAAAQIECBAgQIAAAQIECBAoSED4VhCsZgkQIECAAAECBAgQIECAAAECBAgI3xwDBAgQIECAAAECBAgQIECAAAECBAoSEL4VBKtZAgQIECBAgAABAgQIECBAgAABAsI3xwABAgQIECBAgAABAgQIECBAgACBggSEbwXBapYAAQIECBAgQIAAAQIECBAgQICA8M0xQIAAAQIECBAgQIAAAQIECBAgQKAgAeFbQbCaJUCAAAECBAgQIECAAAECBAgQICB8cwwQIECAAAECBAgQIECAAAECBAgQKEhA+FYQrGYJECBAgAABAgQIECBAgAABAgQICN8cAwQIECBAgAABAgQIECBAgAABAgQKEhC+FQSrWQIECBAgQIAAAQIECBAgQIAAAQLCN8cAAQIECBAgQIAAAQIECBAgQIAAgYIEhG8FwWqWAAECBAgQIECAAAECBAgQIECAgPDNMUCAAAECBAgQIECAAAECBAgQIECgIAHhW0GwmiVAgAABAgQIECBAgAABAgQIECAgfHMMECBAgAABAgQIECBAgAABAgQIEChIQPhWEKxmCRAgQIAAAQIECBAgQIAAAQIECAjfHAMECBAgQIAAAQIECBAgQIAAAQIEChIQvhUEq1kCBAgQIECAAAECBAgQIECAAAECwjfHAAECBAgQIECAAAECBAgQIECAAIGCBIRvBcFqlgABAgQIECBAgAABAgQIECBAgIDwzTFAgAABAgQIECBAgAABAgQIECBAoCAB4VtBsJolQIAAAQIECBAgQIAAAQIECBAgIHxzDBAgQIAAAQIECBAgQIAAAQIECBAoSED4VhCsZgkQIECAAAECBAgQIECAAAECBAgI3xwDBAgQIECAAAECBAgQIECAAAECBAoSEL4VBKtZAgQIECBAgAABAgQIECBAgAABAsI3xwABAgQIECBAgAABAgQIECBAgACBggSEbwXBapYAAQIECBAgQIAAAQIECBAgQICA8M0xQIAAAQIECBAgQIAAAQIECBAgQKAgAeFbQbCaJUCAAAECBAgQIECAAAECBAgQICB8cwwQIECAAAECBAgQIECAAAECBAgQKEhA+FYQrGYJECBAgAABAgQIECBAgAABAgQICN8cAwQIECBAgAABAgQIECBAgAABAgQKEhC+FQSrWQIECBAgQIAAAQIECBAgQIAAAQLCN8cAAQIECDRE4NRTT02vf/3r274WLFiQtbtmzZr0iU98IsXzMV144YXZMvG9dnrsscfSEUccsdn6tct4TIAAAQIECBAgQIAAgaoJDK1aweolQIAAgfIJRJB22223pauvvjptt912adGiRWn69OlZ4BaBXD5FwHbppZemb37zm2ny5Mn57Oz7L37xi9Ta2pouuuiidPPNN2fLvOpVr8ra22RBPxAgQIAAAQIECBAgQKBCAka+VaizlEqAAIEyCuSB2rve9a62oGzixIlZuPaTn/wkrV27tq3sPGCrDeTyJz/4wQ+mc845Jw0fPjw98MAD+WzfCRAgQIAAAQIECBAgUGkBI98q3X2KJ0CAQHkEXv7yl29SzG677ZYeeeSRtnk///nP06hRo9KsWbOygK3tiXYP4nLVs88+O02ZMqUtzGu3iB8JECBAgAABAgQIECBQGQEj3yrTVQolQIBAuQXaj1a77777Nik4wrRp06Zll6PGZakxxefAxSi4+Ky3GEEXwduxxx6b9t133/T5z39+k/X9QIAAAQIECBAgQIAAgSoKCN+q2GtqJkCAQIkE4jPe4pLT+Cy3CNBiinAtgrT3ve99adiwYW3Vvv3tb89Gv8XItrgRQ4Rv8flul19+eVqxYkX2c4R0+eWnbSt6QIAAAQIECBAgQIAAgYoKuOy0oh2nbAIECJRJID6vLabDDjusraz8pgoRsuVTHtRF+BahW+1NF2bPnp1WrVqV4vLU+Bo3blw677zzXHqa4/lOgAABAgQIECBAgEAlBVo2bNiwsZKVK5oAAQIECBAgQIAAAQIECBAgQIBAyQVcdlryDlIeAQIECBAgQIAAAQIECBAgQIBAdQWEb9XtO5UTIECAAAECBAgQIECAAAECBAiUXED4VvIOUh4BAgQIECBAgAABAgQIECBAgEB1BYRv1e07lRMgQIAAAQIECBAgQIAAAQIECJRcQPhW8g5SHgECBAgQIECAAAECBAgQIECAQHUFhG/V7TuVEyBAgAABAgQIECBAgAABAgQIlFxA+FbyDlIeAQIE+ltgzZo16ROf+ES68MILs03nP7/+9a9P8bVgwYLN5h9xxBHpsccey+YvWrQoHXTQQdmyp556ajavu3+izdo28uXztvJt5j9HHbVtx+OYF9uNZUwECBAgQIAAAQIECBAoi4DwrSw9oQ4CBAiUQCCCtuOOOy797ne/a6vm5ptvTsuXL09XX311OuaYY9JPfvKTFMvNmTMnWyaCsb333jt9+9vfzuafffbZadq0adnyt912W1tY9+c//zlbPta95ZZb2tqP9Y899ti2n/MHsVy0tWrVqrb1Omo71o/tRH2x3Vgm1jURIECAAAECBAgQIECgDAJDy1CEGggQIECgHAKnn3562m233bKwrbuK7rvvvrTjjjum4cOHZ+v85je/SY8//ni27stf/vJsfmtra3rggQeyrwjFDjzwwLR69eos3PvmN7+Ztt9++/S9730v/eM//mO68cYbN9lkhHsjRoxIo0aNyuZHoBYhYPu248nYTtQRz1166aVZ+BY/mwgQIECAAAECBAgQIDDQAsK3ge4B2ydAgECJBOLyzbh8tDYImzx5chaeHXbYYWncuHHpvPPOy4Kuesr+4Ac/mAVjMcItwrQf/vCHaeLEiVkT8Ti/xDVvM2qIMO9973vfJqPk8ud9J0CAAAECBAgQIECAQFUEXHZalZ5SJwECBAZIIIKxGE0Wl3VGePbRj3607fPdelpShGkx0i2muIy0u0tD4xLWCN5iZJyJAAECBAgQIECAAAECVRYQvlW599ROgACBARSIy1MfeeSR7BLP/BLUF7/4xdkloHGpae1lon/4wx+ySiPAi5FucelpZ5/LFkFdfIZbBH0f+MAHsrAuRuQ9+OCDHbYdl5rG5ajRXmw3vwR1AGlsmgABAgQIECBAgAABAm0CLjtto/CAAAECBDoSmDp1anYJaFx2GlOMYNtuu+1SPj8uS629HDVuyjB9+vRsdNuUKVNSPB9T/j3WjQCusymev/zyy7On486l0VaEb/vss092w4eO2v7lL3+Zor64pHXWrFl1XxbbWS3mEyBAgAABAgQIECBAoK8CLRs2bNjY10asT4AAAQIECBAgQIAAAQIECBAgQIDA5gIuO93cxBwCBAgQIECAAAECBAgQIECAAAECDREQvjWEUSMECBAgQIAAAQIECBAgQIAAAQIENhcQvm1uYg4BAgQIECBAgAABAgQIECBAgACBhggI3xrCqBECBAgQIECAAAECBAgQIECAAAECmwu42+nmJuY0UOCiiy7qVWuvfOUre7WelQgQIECAAIGBE7jhhhvSM888U3cBBx10UN3rWIEAAQIECFRR4LHHHksrV66su/T3v//9da9jhfIICN/K0xeDspL4xdLbAG5QgtgpAgQIECBAYDOBSy+9dLN5ZhAgQIAAAQJ/E9h5552T8K3aR4Pwrdr9p3oCBAaRwMaNG9Pzzz8/iPaoeXelpaUlDRnikx2a9wiw5wQIECBAgAABAgReEBC+vWDhEQECBAZUYOLEiemuu+4a0BpsvDECr3vd69Jtt93WmMa0QoAAAQIECBAgQIBApQWEb5XuPsUTIDDYBE499dTBtktNuT/z5s1ryv220wQIECBAgAABAgQIbC4gfNvcxBwCBAgMiMDYsWPTlClTBmTbNtpYgWXLlqUbb7yxsY1qjQABAgQIECBAgACBSgr4QJpKdpuiCRAgQIAAAQIECBAgQIAAAQIEqiAgfKtCL6mRAAECBAgQIECAAAECBAgQIECgkgLCt0p2m6IJECBAgAABAgQIECBAgAABAgSqIOAz36rQS2okQKApBNauXZsefPDBptjXwb6Tq1atGuy7aP8IECBAgAABAgQIEOihgPCth1AWI0CAQNECEb4deeSRRW9G+/0g8PrXv74ftmITBAgQIECAAAECBAhUQcBlp1XoJTUSINAUAosWLWqK/WyGnbz1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E4sXL05nnXVWth9GvnVJ5UkCBAgQ6KVAvNkUV1cdddRRXbYQn/k2e/bstmXib9o4V44dO7ZtngfNJyB8a74+r9wetw/hKrcDCiZAgAABAoNIoNGhW3ua9iFc++f9TIAAAQIEqiAgdKtCL/VfjcK3/rO2pT4K1IZwfWzK6gQIECBAgEAvBb7+9a83ZKRbd5uvDeG6W9bzBAgQIECgTAJf/epXjXQrU4eUoBbhWwk6QQn1CUQIZyJAgAABAgT6X+Cd73xnv280QjgTAQIECBCoisABBxxQlVLV2Y8CbgfVj9g2RYAAAQIECBAgQIAAAQIECBAg0FwCwrfm6u9K7O2oUaMqUaciCRAgQIAAgU0FenOzg0bcrGHTKvxEgAABAgQIECiXgPCtXP3R9NXE3WP23nvvpncAQKAqAnEr9SK/quKgTgIE/iYwZcqUtGrVqro4dt1117TlllvWtY6FCRDYXKDI83G0bSJAoDECRxxxRHr88ccb05hWKiMgfKtMVymUAAECzSfgxX7z9bk9JkCAAIH6BfrjfNkf26h/z61BgACBagi44UI1+kmVBAgQKLXAueeem+644462GnfZZZd0zDHHpDvvvDNdcMEF2fx83rBhw1K+/NZbb52mT5+exo8fn9auXZvOPvvstHTp0jR69Oh0wgknZHeJihf7LS0tbW17QIAAAQIECHQssGTJkjRr1qy0fv36tgWmTZuW9ttvv7rOvQsXLmw7fx966KHp8MMPb2vPAwIECBCoX8DIt/rNrEGAAAEC7QSOPvro9J3vfCeddtppWXA2YcKEbIl58+aleNEe85944oksjIsX9BGwxby4G9Qll1ySBW/XXnttts6ZZ56ZIqi7+OKL223FjwQIECBAgEBXAvFm1owZM7Jzcpx/482smFfPuXflypXpsssuSxHaHXvssemmm25KEerFZPRbV/qeI0CAQOcCwrfObTxDgAABAnUKRGA2ZsyYdMghh3S65vLly7NlYgRca2trFsrFqLeYH38k5POffPLJLJTrtCFPECBAgAABAplA+xHiEZbNnz8/HXnkkdko8nrOvbFsTGPHjs2+4nEEciYCBAgQ6L2A8K33dtYkQIBA0wvEi/38BX+80F+8eHE68MADswAtQrSPfexj2Tvmp5xyStp///2zy16aHg0AAQIECBAoQCA/H0fTc+fOTTvttFN69atfXcCWNEmAAAEC9Qr4zLd6xSxPgAABApsI5Jeg3H333Zu80I93yc8444wsdIuRcPF5biYCBAgQIECgWIE4/8bHO8Sot3gjzESAAAECAy9g5NvA94EKCBAgUHmBuGz0nnvuabtstKsdan+paVym2v5S09pLULtqy3MECBAgQIDA3wTyN8NiJPq6devaLhmNZ+s598ayMUWIl19uGpegmggQIECg9wJGvvXezpoECBAg0E4gf8Ees+OFerzrHnc7veaaa7KbKMQIuAjabr311hSXouZ3O4158VwEeMcdd1wW4sXdTk0ECBAgQIBA/QLbbLPNJuFb3O20p+fe2vN3bDlu3BA3bYip9tLWbIZ/CBAgQKBHAsK3HjFZiAABAgS6Eojw7MQTT9xskXixH1/tp7g7avupsza80G8v5WcCBAgQINC5QCPOvZ210flWPUOAAAECXQm47LQrHc8RIECAQLcCHYVjMa+j+Z011tmync3vrB3zCRAgQIBAswp0ds6sd35nfp2109ny5hMgQIDACwJGvr1g4REBAgQI9FKgsxfknc3vaDP1LNvR+uYRIECAAIFmF+jsXFrv/GZ3tP8ECBBotICRb40W1R4BAgQIECBAgAABAgQIECBAgACB/xcQvjkUCBAgQIAAAQIECBAgQIAAAQIECBQkIHwrCFazBAgQIECAAAECBAgQIECAAAECBIRvjgECBAgQIECAAAECBAgQIECAAAECBQkI3wqC1SwBAgQIECBAgAABAgQIECBAgAAB4ZtjgAABAgQIECBAgAABAgQIECBAgEBBAsK3gmA1S4AAAQIECBAgQIAAAQIECBAgQED45hggQIAAAQIECBAgQIAAAQIECBAgUJCA8K0gWM0SIECAAAECBAgQIECAAAECBAgQEL45BggQIECAAAECBAgQIECAAAECBAgUJCB8KwhWswQIECBAgAABAgQIECBAgAABAgSEb44BAgQIECBAgAABAgQIECBAgAABAgUJCN8KgtUsAQIECBAgQIAAAQIECBAgQIAAAeGbY4AAAQIECBAgQIAAAQIECBAgQIBAQQLCt4JgNUuAAAECBAgQIECAAAECBAgQIEBA+OYYIECAAAECBAgQIECAAAECBAgQIFCQgPCtIFjNEiBAgAABAgQIECBAgAABAgQIEBC+OQYIECBAgAABAgQIECBAgAABAgQIFCQgfCsIVrMECBAgQIAAAQIECBAgQIAAAQIEhG+OAQIECBAgQIAAAQIECBAgQIAAAQIFCQjfCoLVLAECBAgQIECAAAECBAgQIECAAAHhm2OAAAECBAgQIECAAAECBAgQIECAQEECwreCYDVLgAABAgQIECBAgAABAgQIECBAQPjmGCBAgAABAgQIECBAgAABAgQIECBQkIDwrSBYzRIgQIAAAQIECBAgQIAAAQIECBAQvjkGCBAgQIAAAQIECBAgQIAAAQIECBQkIHwrCFazBAgQIECAAAECBAgQIECAAAECBIRvjgECBAgQIECAAAECBAgQIECAAAECBQkI3wqC1SwBAgQIECBAgAABAgQIECBAgAAB4ZtjgAABAgQIECBAgAABAgQIECBAgEBBAsK3gmA1S4AAAQIECBAgQIAAAQIECBAgQED45hggQIAAAQIECBAgQIAAAQIECBAgUJCA8K0gWM0SIECAAAECBAgQIECAAAECBAgQEL45BggQIECAAAECBAgQIECAAAECBAgUJCB8KwhWswQIECBAgAABAgQIECBAgAABAgSEb44BAgQIECBAgAABAgQIECBAgAABAgUJCN8KgtUsAQIECBAgQIAAAQIECBAgQIAAAeGbY4AAAQIECBAgQIAAAQIECBAgQIBAQQLCt4JgNUuAAAECBAgQIECAAAECBAgQIEBA+OYYIECAAAECBAgQIECAAAECBAgQIFCQgPCtIFjNEiBAgAABAgQIECBAgAABAgQIEBC+OQYIECBAgAABAgQIECBAgAABAgQIFCQgfCsIVrMECBAgQIAAAQIECBAgQIAAAQIEhG+OAQIECBAgQIAAAQIECBAgQIAAAQIFCQjfCoLVLAECBAgQIECAAAECBAgQIECAAAHhm2OAAAECBAgQIECAAAECBAgQIECAQEECwreCYDVLgAABAgQIECBAgAABAgQIECBAQPjmGCBAgAABAgQIECBAgAABAgQIECBQkIDwrSBYzRIgQIAAAQIECBAgQIAAAQIECBAQvjkGCBAgQIAAAQIECBAgQIAAAQIECBQkIHwrCFazBAgQIECAAAECBAgQIECAAAECBIRvjgECBAgQIECAAAECBAgQIECAAAECBQkI3wqC1SwBAgQIECBAgAABAgQIECBAgAAB4ZtjgAABAgQIECBAgAABAgQIECBAgEBBAsK3gmA1S4AAAQIECBAgQIAAAQIECBAgQED45hggQIAAAQIECBAgQIAAAQIECBAgUJCA8K0gWM0SIECAAAECBAgQIECAAAECBAgQEL45BggQIECAAAECBAgQIECAAAECBAgUJCB8KwhWswQIECBAgAABAgQIECBAgAABAgSEb44BAgQIECBAgAABAgQIECBAgAABAgUJCN8KgtUsAQIECBAgQIAAAQIECBAgQIAAAeGbY4AAAQIECBAgQIAAAQIECBAgQIBAQQLCt4JgNUuAAAECBAgQIECAAAECBAgQIEBA+OYYIECAAAECBAgQIECAAAECBAgQIFCQgPCtIFjNEiBAgAABAgQIECBAgAABAgQIEBC+OQYIECBAgAABAgQIECBAgAABAgQIFCQgfCsIVrMECBAgQIAAAQIECBAgQIAAAQIEhG+OAQIECBAgQIAAAQIECBAgQIAAAQIFCQjfCoLVLAECBAgQIECAAAECBAgQIECAAAHhm2OAAAECBAgQIECAAAECBAgQIECAQEECwreCYDVLgAABAgQIECBAgAABAgQIECBAQPjmGCBAgAABAgQIECBAgAABAgQIECBQkIDwrSBYzRIgQIAAAQIECBAgQIAAAQIECBAQvjkGCBAgQIAAAQIECBAgQIAAAQIECBQkMLSgdjVLgAABAgQIECDQB4GNGzf2Ye2uV21pael6Ac8SIECAAAECBAg0TMDIt4ZRaogAAQIECBAg0BiBIoO3qLDo9hujoBUCBAgQIECAwOAQMPJtcPSjvSBAgAABAgQGocC5556b7rjjjmzPdtlll3TMMcekZcuWpVmzZqX169enrbfeOk2fPj2NHz8+LVmypG3+a17zmnT00Udn6+Vt1C47CKnsEgECBAgQIECgtALCt9J2jcIIECBAgACBZhZYuXJlWrp0aZo2bVrab7/92ijmzp2b9thjjyxcu+KKK9Ill1ySPv7xj2ffDzjggPSWt7wlnXHGGWnhwoXZOtHGaaedlq6//vpsmQjwhg0b1taeBwQIECBAgAABAsUKuOy0WF+tEyBAgAABAgTqEsgvCY3wbd26demCCy5In/zkJ9vCtBjRlo9qW758edb22rVr0xNPPJFaW1uzYG3MmDEpnouveBxhWzwXy8SyJgIECBAgQIAAgf4TEL71n7UtESBAgAABAgR6LBDh2zbbbJONWovRb5dddlmKefkUo97iktQJEyZky+XzfSdAgAABAgQIECiXgMtOy9UfqiFAgAABAgQIZAJxqWl+uenYsWOzeRG+xeMI3q655poUn+12+OGHbxLK4SNAgAABAgQIECiXgJFv5eoP1RAgQIAAAQIEMoEI2E466aQsWMtHvEXwFp/lFsHboYce2nb5aVxWml9qWnsJau2lprWXoCImQIAAAQIECBDoPwEj3/rP2pYIECBAgAABAj0WOOSQQ9I999yTTjnllGyduPQ0QrZ58+ZlP0cAF1/5XVDf/e53Z3c7zUfE5aPmbr311qyN/G6nbrbQ4y6wIAECBAgQIECgIQLCt4YwaoQAAQIECBAg0BiBlpaWFDddiJDsxBNP3KzRjubFQuPHj08zZszYbPn85gy1T8Q2TAQIECBAgAABAv0j4LLT/nG2FQIECBAgQIBAjwWKDMeKbLvHO2hBAgQIECBAgEATCRj51kSdbVcJECBAgACB6ggIyarTVyolQIAAAQIECHQlYORbVzqeI0CAAAECBAgQIECAAAECBAgQINAHAeFbH/CsSoAAAQIECBAgQIAAAQIECBAgQKArAeFbVzqeI0CAAAECBAgQIECAAAECBAgQINAHAeFbH/CsSoAAAQIECBAgQIAAAQIECBAgQKArAeFbVzqeI0CAAAECBAgQIECAAAECBAgQINAHAeFbH/CsSoAAAQIECBAgQIAAAQIECBAgQKArAeFbVzqeI0CAAAECBAgQIECAAAECBAgQINAHAeFbH/CsSoAAAQIECBAgQIAAAQIECBAgQKArAeFbVzqeI0CAAAECBAgQIECAAAECBAgQINAHAeFbH/CsSoAAAQIECBAgQIAAAQIECBAgQKArAeFbVzqeI0CAAAECBAgQIECAAAECBAgQINAHAeFbH/CsSoAAAQIECBAgQIAAAQIECBAgQKArAeFbVzqeI0CAAAECBAgQIECAAAECBAgQINAHgaF9WNeqBAgQIECAAAECfRT4/e9/nx566KE+ttK31VesWJHWrl2bfvazn/WpoQcffDBt3Lix0zZaWlo6fc4TBAgQIECAAIHBKiB8G6w9a78IECBAgACB0gusXLkyXXnlldnXQBa7xx57ZOHb7NmzCyvjH/7hH9LIkSM3a3/SpEmbzTODAAECBAgQIDCYBIRvg6k37QsBAgQIECBQKYGnnnoqC9522GGHdNhhhw1Y7TFibeutt04HHHBAYTUcccQR6WUve1mH7cdoOaPiOqQxkwABAgQIEBgEAsK3QdCJdoEAAQIECBCopsCwYcOywrfddtv0mc98ZsB2YubMmam1tTVNnTq11zV0dblprxu1IgECBAgQIEBgEAi44cIg6ES7QIAAAQIECFRTYPjw4Vnh69atq+YOqJoAAQIECBAgQKBbAeFbt0QWIECAAAECBAgUI5CPfIubHZgIECBAgAABAgQGp4DwbXD2q70iQIAAAQIEKiCwxRZbpK222iq72UEFylUiAQIECBAgQIBALwSEb71AswoBAgQIECBAoFECY8eOTatXr07r169vVJPaIUCAAAECBAgQKJGA8K1EnaEUAgQIECBAoPkEXvrSl6a4WcHDDz/cfDtvjwkQIECAAAECTSAgfGuCTraLBAgQIECAQHkFxo0blxX30EMPlbdIlREgQIAAAQIECPRaQPjWazorEiBAgAABAgT6LvCSl7wka0T41ndLLRAgQIAAAQIEyiggfCtjr6iJAAECBAgQaBoBI9+apqvtKAECBAgQINCkAsK3Ju14u02AAAECBAiUQyA+8y0mI9/K0R+qIECAAAECBAg0WkD41mhR7REgQIAAAQIE6hDYY4890pAhQ9LixYvrWMuiBAgQIECAAAECVREQvlWlp9RJgAABAgQIDEqBrbbaKk2cODGtWLEiLV26dFDuo50iQIAAAQIECDSzgPCtmXvfvhMgQIAAAQKlENhnn32yOm655ZZS1KMIAgQIECBAgACBxgkI3xpnqSUCBAgQIECAQK8EXvva12brCd96xWclAgQIECBAgECpBYRvpe4exREgQIAAAQLNILDvvvtmuyl8a4beto8ECBAgQIBAswkI35qtx+0vAQIECBAgUDqB4cOHp/Hjx2ef+7Zo0aLS1acgAgQIECBAgACB3gsI33pvZ00CBAgQIECAQMMEJk+enLV19dVXN6xNDREgQIAAAQIECAy8gPBt4PtABQQIECBAgACBdMQRR2QKv/jFL9LGjRuJECBAgAABAgQIDBIB4dsg6Ui70b1A/CFT1Ff3W7cEAQIECBDoWuClL31pmjhxYlq5cmW69dZbu17Ys90KFHXOF4x2S28BAgQI9KuA3/f9ym1jvRQQvvUSzmrVEij6hXLR7VdLW7UECBAg0FuBt7/97dmqV111VW+bsN7/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uCAde+yxac2aNfU2Y3kCBAgQIECAAIEGCwjfGgyqOQIECBAgQIBAe4EIwVavXp2233779k+lL3/5y+mAAw5IO+64Yxo+fPhmz9czY/z48ekHP/hBeslLXpJ+9atfpX/6p39KS5YsqacJyxIgQIAAAQIECDRYQPjWYFDNESBAgAABAgR6IhAj3g4//PD0xz/+MX32s5/NgrK+hm+x3QjefvzjH6f9998/LVu2LH3gAx9IV199dU9KsgwBAgQIECBAgEABAsK3AlA1SYAAAQIECBCoFfjpT3+afv7zn6e4OUJ8v+6667IRb1dccUUWlMXlqP/yL//Sp8tOa7c3atSoNGvWrPSZz3wmPffcc+nkk09OX/nKV9IzzzxTu5jHBAgQIECAAAEC/SAgfOsHZJsgQIAAAQIEmlvgRS96UfrRj36Ubrnlluz7iBEj2kDistOYH0Hcdttt1za/EQ8++MEPZpehxiWtl19+eXrPe96TfvOb3zSiaW0QIECAAAECBAj0UED41kMoixEgQIAAAQIEeiswderUNHHixGz1+H7CCSf0tqm614vtxQ0d4vPfHn744fSpT30qHXfccemRRx6puy0rECBAgAABAgQI1C8gfKvfzBoECBAgQIAAgUoJxGfJReB30UUXpQkTJqT58+enI488Mp133nkuRa1UTyqWAAECBAgQqKKA8K2KvaZmAgQIECBAgEAvBHbffffssteTTjopbbnllumcc85J73znO7MRcc8++2wvWrQKAQIECBAgQIBAdwLCt+6EPE+AAAECBAgQGEQCLS0tKS6DjRs/fPSjH03r1q1LS5cuTZdddlmaMWOGy1EHUV/bFQIECBAgQKAcAsK3cvSDKggQIECAAAEC/SowcuTI9IlPfCL94he/SC972cvSkCFDslFxU6ZMGXWJHAAAQABJREFUyT4X7qqrrkrr16/v15psjAABAgQIECAwGAWGDsadsk8ECBAgQIAAAQI9E4jPg3vpS1+a9tlnn7Rx48Z0/vnnZ3dEjbuibrPNNunAAw9Mf//3f59e97rXZT/3rFVLESBAgAABAgQI5ALCt1zCdwIECBAgQIBAEwtsscUW2eWocUnqb3/723TNNdekefPmpRgBF1/x/B577JGFdHvvvXf2fdttt21iMbtOgAABAgQIEOiZgPCtZ06WIkCAAAECBAg0hcDQoUPTm970puzrmWeeSQsWLEg33XRTuv3229Mf/vCH7OvHP/5xZjFmzJg0bty4tq8YQdfa2ppiNN2wYcM2+dpqq62aws9OEiBAgAABAgTaCwjf2ov4mQABAgQIECBAIBOIwOzggw/OvmLGqlWr0h133JFuu+22dPfdd2c3arjrrrtSfHU3zZ49O+28886bLRYj6uLLRIAAAQIECBAYrALCt8Has/aLAAECBAgQ6BeBGBkW4dN9992XPvKRj2R3Ed11113T/fffnz784Q+nmTNnph133DHtueeeafLkyW01rVmzJn3xi19M+++/fzay7J//+Z/T3Llzs+fjpgdxN9K8nfzneDIeT5w4sa2d/nwwatSo9OY3vzn7qt3un//857Rs2bK0cOHC7KYN8Vx8flw+xeP3v//9Ke602n6aNm1aduOH9vP9TIAAAQIECBAYLALudjpYetJ+ECBAgAABAgMiECFbBGuvfvWr00MPPZRWr16d/RzfH3zwwTRixIjs51hu0aJF2Q0MvvSlL2WXZn7jG99IkyZNysK5p556Ku2www7ZV/t24uf8uRUrVgzIfna10bhb6hve8IZs3+KuqfGVj2iL73Epa0fBW1dteo4AAQIECBAgMFgEhG+DpSftBwECBAgQIDAgAh/60IfSo48+mu68885utx/B2ciRI9PTTz+dYuRbhHFf/epXsxFy3a5sAQIECBAgQIAAgUoKCN8q2W2KJkCAAAECBMoiEAHarFmz0p/+9KfsDqBRV1xCuttuu2WfcXbDDTekGOm23377ZZedXnnllSlGvMX0rW99KwvgTjnllCyUu+CCC9Kll166WTtxU4P8uVe96lXZuv4hQIAAAQIECBCohoDPfKtGP6mSAAECBAgQKKlAfP7avHnz2qr78pe/nOIrn6644or84Sbf446g55577ibzumqn9rlNVvIDAQIECBAgQIBAqQWMfCt19yiOAAECBAgQIECAAAECBAgQIECgygLCtyr3ntoJECBAgAABAgQIECBAgAABAgRKLSB8K3X3KI4AAQIECBAgQIAAAQIECBAgQKDKAsK3Kvee2gkQIECAAAECBAgQIECAAAECBEotIHwrdfcojgABAgQIECBAgAABAgQIECBAoMoCwrcq957aCRAgQIAAAQIECBAgQIAAAQIESi0gfCt19yiOAAECBAgQIECAAAECBAgQIECgygLCtyr3ntoJECBAgAABAgQIECBAgAABAgRKLSB8K3X3KI4AAQIECBAgQIAAAQIECBAgQKDKAsK3Kvee2gkQIECAAAECBAgQIECAAAECBEotIHwrdfcojgABAgQIECBAgAABAgQIECBAoMoCwrcq957aCRAgQIAAAQIECBAgQIAAAQIESi0gfCt19yiOAAECBAgQIECAAAECBAgQIECgygLCtyr3ntoJECBAgAABAgQIECBAgAABAgRKLSB8K3X3KI4AAQIECBAgQIAAAQIECBAgQKDKAsK3Kvee2gkQIECAAAECBAgQIECAAAECBEotIHwrdfcojgABAgQIECBAgAABAgQIECBAoMoCwrcq957aCRAgQIAAAQIECBAgQIAAAQIESi0gfCt19yiOAAECBAgQIECAAAECBAgQIECgygLCtyr3ntoJECBAgAABAgQIECBAgAABAgRKLSB8K3X3KI4AAQIECBAgQIAAAQIECBAgQKDKAsK3Kvee2gkQIECAAAECBAgQIECAAAECBEotIHwrdfcojgABAgQIECBAgAABAgQIECBAoMoCwrcq957aCRAgQIAAAQIECBAgQIAAAQIESi0gfCt19yiOAAECBAgQIECAAAECBAgQIECgygLCtyr3ntoJECBAgAABAgQIECBAgAABAgRKLSB8K3X3KI4AAQIECBAgQIAAAQIECBAgQKDKAsK3Kvee2gkQIECAAAECBAgQIECAAAECBEotIHwrdfcojgABAgQIECBAgAABAgQIECBAoMoCwrcq957aCRAgQIAAAQIECBAgQIAAAQIESi0gfCt19yiOAAECBAgQIECAAAECBAgQIECgygLCtyr3ntoJECBAgAABAgQIECBAgAABAgRKLSB8K3X3KI4AAQIECBAgQIAAAQIECBAgQKDKAsK3Kvee2gkQIECAAAECBAgQIECAAAECBEotIHwrdfcojgABAgQIECBAgAABAgQIECBAoMoCwrcq957aCRAgQIAAAQIECBAgQIAAAQIESi0gfCt19yiOAAECBAgQIECAAAECBAgQIECgygLCtyr3ntoJECBAgAABAgQIECBAgAABAgRKLSB8K3X3KI4AAQIECBAgQIAAAQIECBAgQKDKAsK3Kvee2gkQIECAAAECBAgQIECAAAECBEotIHwrdfcojgABAgQIECBAgAABAgQIECBAoMoCwrcq957aCRAgQIAAAQIECBAgQIAAAQIESi0gfCt19yiOAAECBAgQIECAAAECBAgQIECgygLCtyr3ntoJECBAgAABAgQIECBAgAABAgRKLSB8K3X3KI4AAQIECBAgQIAAAQIECBAgQKDKAsK3Kvee2gkQIECAAAECBAgQIECAAAECBEotIHwrdfcojgABAgQIECBAgAABAgQIECBAoMoCwrcq957aCRAgQIAAAQIECBAgQIAAAQIESi0gfCt19yiOAAECBAgQIECAAAECBAgQIECgygLCtyr3ntoJECBAgAABAgQIECBAgAABAgRKLSB8K3X3KI4AAQIECBAgQIAAAQIECBAgQKDKAsK3Kvee2gkQIECAAAECBAgQIECAAAECBEotIHwrdfcojgABAgQIECBAgAABAgQIECBAoMoCwrcq957aCRAgQIAAAQIECBAgQIAAAQIESi0gfCt19yiOAAECBAgQIECAAAECBAgQIECgygLCtyr3ntoJECBAgAABAgQIECBAgAABAgRKLSB8K3X3KI4AAQIECBAgQIAAAQIECBAgQKDKAsK3Kvee2gkQIECAAAECBAgQIECAAAECBEotIHwrdfcojgABAgQIECBAgAABAgQIECBAoMoCwrcq957aCRAgQIAAAQIECBAgQIAAAQIESi0gfCt19yiOAAECBAgQIECAAAECBAgQIECgygLCtyr3ntoJECBAgAABAgQIECBAgAABAgRKLSB8K3X3KI4AAQIECBAgQIAAAQIECBAgQKDKAsK3Kvee2gkQIECAAAECBAgQIECAAAECBEotIHwrdfcojgABAgQIECBAgAABAgQIECBAoMoCwrcq957aCRAgQIAAAQIECBAgQIAAAQIESi0gfCt19yiOAAECBAgQIECAAAECBAgQIECgygLCtyr3ntoJECBAgAABAgQIECBAgAABAgRKLSB8K3X3KI4AAQIECBAgQIAAAQIECBAgQKDKAsK3Kvee2gkQIECAAAECBAgQIECAAAECBEotIHwrdfcojgABAgQIECBAgAABAgQIECBAoMoCwrcq957aCRAgQIAAAQIECBAgQIAAAQIESi0gfCt19yiOAAECBAgQIECAAAECBAgQIECgygLCtyr3ntoJECBAgAABAgQIECBAgAABAgRKLSB8K3X3KI4AAQIECBAgQIAAAQIECBAgQKDKAsK3Kvee2gkQIECAAAECBAgQIECAAAECBEotIHwrdfcojgABAgQIECBAgAABAgQIECBAoMoCwrcq957aCRAgQIAAAQIECBAgQIAAAQIESi0gfCt19yiOAAECBAgQIECAAAECBAgQIECgygLCtyr3ntoJECBAgAABAgQIECBAgAABAgRKLSB8K3X3KI4AAQIECBAgQIAAAQIECBAgQKDKAsK3Kvee2gkQIECAAAECBAgQIECAAAECBEotIHwrdfcojgABAgQIECBAgAABAgQIECBAoMoCwrcq957aCRAgQIAAAQIECBAgQIAAAQIESi0gfCt19yiOAAECBAgQIECAAAECBAgQIECgygLCtyr3ntoJECBAgAABAgQIECBAgAABAgRKLSB8K3X3KI4AAQIECBAgQIAAAQIECBAgQKDKAsK3Kvee2gkQIECAAAECBAgQIECAAAECBEotIHwrdfcojgABAgQIECBAgAABAgQIECBAoMoCwrcq957aCRAgQIAAAQIECBAgQIAAAQIESi0wtNTVKY4AAQIESi2wcePGQutraWkptH2NEyBAgACBwSLgnDxYetJ+ECAwGAWMfBuMvWqfCBAgMEgEiv5DYpAw2Q0CBAgQaHKB/jhf9sc2mrwb7T4BAoNYwMi3Qdy5do0AAQL9JXDuueemO+64o21zu+yySzrmmGPSnXfemS644IJsfj5v2LBhKV9+6623TtOnT0/jx49Pa9euTWeffXZaunRpGj16dDrhhBPS2LFjU7zYNwKujdYDAgQIECDQqcCSJUvSrFmz0vr169uWmTZtWtpvv/3qOvcuXLiw7fx96KGHpsMPP7ytPQ8IECBAoH4BI9/qN7MGAQIECLQTOProo9N3vvOddNppp2XB2YQJE7Il5s2bl+JFe8x/4oknsjAuXtBHwBbzDjjggHTJJZdkwdu1116brXPmmWemCOouvvjidlvxIwECBAgQINCVQLyZNWPGjOycHOffeDMr5tVz7l25cmW67LLLUoR2xx57bLrppptShHoxGf3Wlb7nCBAg0LmA8K1zG88QIECAQJ0CEZiNGTMmHXLIIZ2uuXz58myZGAHX2tqahXIx6i3mxx8J+fwnn3wyC+U6bcgTBAgQIECAQCbQfoR4hGXz589PRx55ZDaKvJ5zbywbU4w+j6+YIpAzESBAgEDvBYRvvbezJgECBJpe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6DeBCN9WW221fju/ExMg8D8Czz33XLr00ktTzDRrLHGJSfxt9+23395YlYYPH17NQJs3b17L9vE04mOOOabaJp46fPXVV1ev991333TggQe27NvZF0888UR175vVV1+9+hv6zu5vewIEekYg/jcYs1osBAj0nUDcZy3uexzBXNwDOS4R7crSfAlpfD/vtNNOqb0QLy5d3X777avzdeVc9iFAgACB/xMw8+3/LLwiQIAAgf8VGDt2bDr//PPTZZddliI0i5At1kV4FuvOPffctPnmm1c/a621Vop7u+yxxx7p9NNPT7Nnz04RukUgd/PNN1f3hZk8eXJ64IEHUoR6sXR29tuCBQtSHCMC+rgPzsiRI/+3Ur8IECBAgMDAFYjLPxuXmjZfgtq41DRmrzUuQY3XcY+2uC9bXE4aM+HauzQ0tr3//vur+7vtt99+1T3f4l5vca+5xqWmsU3jEtTmS02bL0EduJ0xcgIECLQWMPOttYd3BAgQGNACMZulORiLsOzuu++uLjlZf/31W2zuuOOO9NZbb6W//du/TYsWLapex3+MRxC37rrrVv8x3tg+fjdeRyDX2aURuMW+EyZMSJ/5zGc6ewjbEyBAgACBWgvE7LSYgR5/ERXLAQcckHbffffq9YwZM1IEZHG/tpi1HpeRxndlhGexTdyvberUqdXTwX/xi19U+8Q/4lLT9pbGpajxeeNhDAcffHDaZ599quPFLLwI45rriNoa9cUlre3NqGvvnNYTIECgZAHhW8ndNTYCBAh0QaA5gJs+fXoaNWpUddlJ41ARgsUstl133bUK1boSqDWO1ZHfV1xxRXr00UfTpptumr73ve91ZBfbECBAgACBWgvEPd6ag7IYzBFHHFH9LD+wuBQ1fpqX5vCsef3KXkdYFkHe8svytbS3XQR98TRyCwECBAisKOCy0xVNrCFAgACBPwtEqBaXkMaDDWJGW2NpXDr6iU98orGq135PmzYtXXXVVWnNNdesLoON3xYCBAgQIECAAAECBAjUSUD4VqduqZUAAQJ9INC47DRCtvfee6/lktHGqWMWWlxa2gjkmi81bb4EtflS08bsuMa6xrFW9vvee++tHqwQM/HOOeec9MEPfnBlm/uMAAECBAgQIECAAAECWQq47DTLtiiKAAECeQjETLO2ArN4AENz+HbIIYdU95mJJ6HG00533nnnagAHHXRQq6edxkMbYlnVkxIfeeSR6imqcb+30047Le22227Vfv5BgAABAgQIECBAgACBugkI3+rWMfUSIECgjwQiQGuEaM2nPOaYY5rfVq8bT0dd/oP2jrH8ds3vn3zyyRQ3an7//ffTsccem/bff//mj1f6Op7e9sILL1Sz5O66665W94j7p3/6p2pf941bKaEPCRAgQIAAAQIECBDoYQGXnfYwqMMRIECg7gLtzUpra32sa2v9ygxWtv3jjz9eBW5xuWs8qe2oo45a2aFW+KwRvK3wwZ9XfO5zn0vrrLNOWx9ZR4AAAQIECBAgQIAAgV4TEL71Gq0DEyBAoL4CjVCt+XeMpvl9c4i2/PqVvW9P5Te/+U2KWXXvvvtu2nvvvdNJJ53U3qYdXh8z4XbccccUvy0ECBAgQIAAAQIECBDoDwGXnfaHunMSIECAQCuBX/3qV+m73/1uinu8TZgwIZ1xxhmtPu/Im1mzZlX3l1uwYEG1+ZgxY9Lxxx+f4v5xscTnFgIECBAgQIAAAQIECPS1gPCtr8WdjwABAgRaCVx99dXp4osvrtZ98YtfTN/4xjdafd6ZN8cdd1x1uerChQvTWWed1WrXrbfeOsWPhQABAgQIECBAgAABAn0pIHzrS23nIkCAAIEWgcWLF6fvf//7adq0adW6uMw07vPW1aU5XBs6dGirhy109Zj2I0CAAAECBAgQIECAQHcFhG/dFbQ/AQIECHRa4KWXXkqTJ0+unkw6ePDg6jLTuNzUQoAAAQIECBAgQIAAgdIEPHChtI4aDwECBDIXmD59evr85z9fBW8jRoxIV111VXWft8zLVh4BAgQIECBAgAABAgS6JGDmW5fY7ESAAAECnRWYP39+dR+2O++8s9p11113rWa8DRs2rLOHsj0BAgQIECBAgAABAgRqIyB8q02rFEqAAIF6CixbtizdcMMN6ZJLLkl//OMf02qrrZbiwQhHHnlkPQekagIECBAgQIAAAQIECHRCQPjWCSybEiBAgEDnBJ5//vl06qmnpieffLLacdttt63eb7nllp07kK0JECBAgAABAgQIECBQUwHhW00bp2wCBAjkLPDyyy+nn/70p+lXv/pVWrp0aYpLS48//vh00EEHpUGDBuVcutoIECBAgAABAgQIECDQowLCtx7ldDACBAgMbIHZs2enH//4xynu6xahWywHHHBA9WTT4cOHD2wcoydAgAABAgQIECBAYEAKCN8GZNsNmgABAj0rEJeXRuh21113pbjHW8xu22uvvdLRRx+dxo4d27MnczQCBAgQIECAAAECBAjUSED4VqNmKZUAAQI5Cbz55pvpjjvuSLfffnt64oknqtIGDx6c9t133/TVr341bb755j1W7qxZs9Ktt95aPbBh7733Ti+88EJae+21q/MeddRRaerUqWnkyJFpu+22S7vvvnvLeRcuXJi++93vpniy6gMPPJBOOOGEVtt29DgtB/SCAAECBAgQIECAAAECnRQQvnUSzOYECBAYyAIRgj322GPp7rvvTo888kgriokTJ6avfOUraZNNNmm1vifevPHGG2mjjTZKu+yySxW8/eEPf6hm1kXo98orr6R11lmnCt4iTBs/fnx1meucOXPSlVdemX70ox+lqDs+i6etNm+7suM0h3g9MQbHIECAAAECBAgQIEBgYAoI3wZm342aAAECqxSI8Oqll15Kv/vd79LMmTOrn8WLF7fa76Mf/Wjab7/90oQJE9K6667b6rOefNMIwuKy1lU9KTVmuzVCtgjt4ucHP/hBuuCCC6rXPVmXYxEgQIAAAQIECBAgQGBVAsK3VQn5nAABAgUKPPTQQ+nZZ59NixYtavmZO3duevXVV6uZZPHghLaWeGrpuHHj0k477ZT22WeftOGGG7a1WY+vi9rOPffctGDBgvS5z30uPfjgg9WlrfEwh7/6q79KZ555ZrrtttvSZZddlkaMGJH+9V//taohgrjJkydXM99OPvnk9I//+I/pvvvua9l2Zcfp8UE4IAECBAgQIECAAAECA1JA+DYg227QBAgMZIE111wznXPOOaskiKBtzJgx6UMf+lD6yEc+knbYYYe0xRZbrHK/3tggArVbbrml5dBbb711OvLII1veN3/WsvLPL4YOHZquuOKK5lVdOk6rA3hDgAABAgQIECBAgACBTggI3zqBZVMCBAjUXeDyyy9PZ511VopLStdaa62Wnwjk4rLRjTfeuArcInSLBxpYCBAgQIAAAQIECBAgQKB7AsK37vnZmwABArUTOPHEE2tXs4IJECBAgAABAgQIECBQV4HBdS1c3QQIECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxC+5d4h9REgQIAAAQIECBAgQIAAAQIECNRWQPhW29YpnAABAgQIECBAgAABAgQIECBAIHcB4VvuHVIfAQIECBAgQIAAAQIECBAgQIBAbQWEb7VtncIJECBAgAABAgQIECBAgAABAgRyFxiSe4HqI9CTAsuWLevJw7Uca9CgQS2vvSBAgAABAp0V6K3vp6jDd1Rnu2F7AgQIECBAgEDPCgjfetbT0TIV6M0/1MSQ4/j+cJNp8wdIWXPnzk1f/vKX08svv9zuiD/96U+n0047rd3PfUCAQP8I+I7qH3dnJUCAAAECBAj0lYDwra+knScLgeeeey5deumlafHixWmHHXZIxxxzTFXXFVdckR5//PG0xhprpOOOOy6NHTs2tbftgw8+mK6++upqv3333TcdeOCBWYxNEQQIECBQP4Hm4K0nvovaOkb9VFRMgAABAgQIEChLwD3fyuqn0axEYNGiRenGG29Me+yxR5o8eXKaPXt2FUOwlQQAADULSURBVLBFmBavTz/99Oqz2Gb+/Pkt28b6+Dy2mzdvXrr55pvTpEmTqmM88MAD1THitM1/gFpJGT4iQIAAAQIrCDR/F2211VZp+vTpqfl7qyPfRc3HiO+6+D6LY1gIECBAgAABAgT6V8DMt/71d/Y+EGiEYq+++mp666230rbbblvNbDvjjDOqs99yyy1p3XXXTWuttVYaPXp0ikAtwrfYNt7H+vh8zpw5af3116/2id+N1xHIWQjkJPD3f//3VUDcXk0LFy5MsU38Qb2xtHdJaszyvOCCCxqbpU033TT98z//cxoxYkT6j//4j3TCCSe0fLb8i8a2F154YfrlL3+Zdt555+pYQ4cOrTZtPnZsE//bbFw6u/wYTjnllFUeo3H+5fd96qmnqlmuCxYsaGzS6nec+//9v//Xap03BPpa4NFHH02bb7559d3SmJUd3y+d+S6K76nlv88ifIvvMQsBAgQIECBAgED/CZj51n/2ztxPAldeeWX62te+luLSHAuBgSYQQdR+++3XKngLgwjHIoCLe8c1lgi8moO3WB/3lDv44INTHKc7S+x/1VVXdecQ1eXfy9cXB4x1EezFEkFjvG8veKs28g8CmQi89tpr1ffTN77xjZZZ1ZmUpgwCBAgQIECAAIFuCAjfuoFn13oK/M3f/E11iWnjUtJ6jkLVBDov0BxExay0uKxt5syZ6ec//3kaNmxYFazFLLBYYlZbBHKxxEyy5u0iyLr22mur2WKxPn5im1iajxv7xwy5tpbYvzuBWISEcUldLFFz1PDb3/62ml0X6+J1jPfFF19MTz/9dKxqGUfzWKoP/INAJgKjRo1Kl112WcstEN57771MKlMGAQIECBAgQIBAdwSEb93Rs28tBBpPIW3vMtG4tDQu64lLcxqX7Ky33notl5rG+sZlP83HaFxu2lhXCwxFDmiB5iDqH/7hH1qCsW222SZ95StfqWwimIpgK4K5WOJS0UMPPbR6vcUWW6QPf/jDVYjVnaemNgd71YG78I8I9SLci3rjktE45m677bbCjL4uHNouBPpFIL6L3n777Vb3aGu+7UFHvova+j5zyWm/tNNJCRAgQIAAAQKtBNzzrRWHNyULREgWs96an3YawUIsca+dk08+ueVppxG+HXLIIdW2t99+e/Vk1Ma2Bx10UMslbfG003gyaiyNkK964x8EMhR44403qtlmMcttww03bFXhBz/4wep9/OH/D3/4Q6vPGm/iXm0/+clPGm+79Dtq+NGPflTNtDv++OPTxRdf3OYMuLhUtK1LSptPuqp7zsW2jcAw7m/XkWM2H99rAn0pEE/Ojr8AmjJlSre+i5b/PhO+9WUXnYsAAQIECBAg0LaA8K1tF2sLE4hgLB68EEHZ+eefv8LoGje3bv6gvW0jhGsEcc3be02AwKoFYrZa3Dcu7i8XD1jo6hL3jIt70jWWuPR0p512qmblNT9IIgLDCN3istjm9Y39/CbQ3wKN76eooye+i9o6hr8c6u8uOz8BAgQIECAw0AVcdjrQ/w0YQOPvzB8+OrNtEHZ2+wHEbqgZCcRst5j1FvdaixlozcsLL7xQvR0+fHjaaKONWj6KmThx77TGEoHXV7/61VbrGp+t6neEX1OnTq3uC7eyp6TGcRr3mYvLSuMnwrrmpTGLr3GPuZU9rTQCuJEjR1a7x/jjHneN+9w1H9NrAv0l0N53SHvrO1NnTxyjM+ezLQECBAgQIECAwIoCwrcVTawpWCD+ENKRnyDoyHaNbQomM7SCBBqXYMaQ4tLPxpNNm588Om7cuOpecBMmTKhGHrPUbr311up1bB9BWIRoEY41h3LVBh38R/P95jq4S7ubRX1PPvlk9flDDz3U5uy25nvMxb3q4h53FgK5CTS+T5p/R43N77vyOrdxqocAAQIECBAgMBAFXHY6ELtuzAQIDEiBmAEWoVlclhahVSNga2DE5dQnnXRS9TZmksVss7hMtK17pX3hC19IcbzOLnGOuDy0u0tcshqz3mIcK5tFF4FhBI2x9NS5u1u7/QkQIECAAAECBAgQGFgCZr4NrH4bLQECA1wgZn1NmzZthfsWRtAWD1NoDtRilliEdc1L47LNlV3m2bx98+vYN47XfI7mzzvzOp52etZZZ1WX0Tb2i2PHvd9iefrpp1M83TXeR0DXk+dunM9vAgQIECBAgAABAgQIdERg0JIlS5Z1ZEPbEOiKwIwZM9J3vvOdTu0al6R99rOf7dQ+y28cl8XdcMMN6eyzz17+I+8JECBAgMCAFIj7PZ544onV07032WSTbhn88Ic/TLfcckunjnH99denzTbbrFP72JgAAQIECBAgUIKAmW8ldNEYCBAgQIAAAQIECBAgQIAAAQIEshQQvmXZFkURIECAAAECBAgQIECAAAECBAiUICB8K6GLxkCAAAECBAgQIECAAAECBAgQIJClgPAty7YoigABAgQIECBAgAABAgQIECBAoAQB4VsJXTQGAgQIECBAgAABAgQIECBAgACBLAWEb1m2RVEECBAgQIAAAQIECBAgQIAAAQIlCAjfSuiiMRAgQIAAAQIECBAgQIAAAQIECGQpIHzLsi2KIkCAAAECBAgQIECAAAECBAgQKEFA+FZCF42BAAECBAgQIECAAAECBAgQIEAgSwHhW5ZtURQBAgQIECBAgAABAgQIECBAgEAJAsK3ErpoDAQIECBAgAABAgQIECBAgAABAlkKCN+ybIuiCBAgQIAAAQIECBAgQIAAAQIEShAQvpXQRWMgQIAAAQIECBAgQIAAAQIECBDIUkD4lmVbFEWAAAECBAgQIECAAAECBAgQIFCCgPCthC4aAwECBAgQIECAAAECBAgQIECAQJYCwrcs26IoAgQIECBAgAABAgQIECBAgACBEgSEbyV00RgIECBAgAABAgQIECBAgAABAgSyFBC+ZdkWRREgQIAAAQIECBAgQIAAAQIECJQgIHwroYvGQIAAAQIECBAgQIAAAQIECBAgkKWA8C3LtiiKAAECBAgQIECAAAECBAgQIECgBAHhWwldNAYCBAgQIECAAAECBAgQIECAAIEsBYRvWbZFUQQIECBAgAABAgQIECBAgAABAiUICN9K6KIxECBAgAABAgQIECBAgAABAgQIZCkgfMuyLYoiQIAAAQIECBAgQIAAAQIECBAoQUD4VkIXjYEAAQIECBAgQIAAAQIECBAgQCBLAeFblm1RFAECBAgQIECAAAECBAgQIECAQAkCwrcSumgMBAgQIECAAAECBAgQIECAAAECWQoI37Jsi6IIECBAgAABAgQIECBAgAABAgRKEBC+ldBFYyBAgAABAgQIECBAgAABAgQIEMhSQPiWZVsURYAAAQIECBAgQIAAAQIECBAgUIKA8K2ELhoDAQIECBAgQIAAAQIECBAgQIBAlgLCtyzboigCBAgQIECAAAECBAgQIECAAIESBIRvJXTRGAgQIECAAAECBAgQIECAAAECBLIUEL5l2RZFESBAgAABAgQIECBAgAABAgQIlCAgfCuhi8ZAgAABAgQIECBAgAABAgQIECCQpYDwLcu2KIoAAQIECBAgQIAAAQIECBAgQKAEAeFbCV00BgIECBAgQIAAAQIECBAgQIAAgSwFhG9ZtkVRBAgQIECAAAECBAgQIECAAAECJQgI30roojEQIECAAAECBAgQIECAAAECBAhkKSB8y7ItiiJAgAABAgQIECBAgAABAgQIEChBQPhWQheNgQABAgQIECBAgAABAgQIECBAIEsB4VuWbVEUAQIECBAgQIAAAQIECBAgQIBACQLCtxK6aAwECBAgQIAAAQIECBAgQIAAAQJZCgjfsmyLoggQIECAAAECBAgQIECAAAECBEoQEL6V0EVjIECAAAECBAgQIECAAAECBAgQyFJA+JZlWxRFgAABAgQIECBAgAABAgQIECBQgoDwrYQuGgMBAgQIECBAgAABAgQIECBAgECWAsK3LNuiKAIECBAgQIAAAQIECBAgQIAAgRIEhG8ldNEYCBAgQIAAAQIECBAgQIAAAQIEshQQvmXZFkURIECAAAECBAgQIECAAAECBAiUICB8K6GLxkCAAAECBAgQIECAAAECBAgQIJClgPAty7YoigABAgQIECBAgAABAgQIECBAoAQB4VsJXTQGAgQIECBAgAABAgQIECBAgACBLAWEb1m2RVEECBAgQIAAAQIECBAgQIAAAQIlCAjfSuiiMRAgQIAAAQIECBAgQIAAAQIECGQpIHzLsi2KIkCAAAECBAgQIECAAAECBAgQKEFA+FZCF42BAAECBAgQIECAAAECBAgQIEAgSwHhW5ZtURQBAgQIECBAgAABAgQIECBAgEAJAsK3ErpoDAQIECBAgAABAgQIECBAgAABAlkKCN+ybIuiCBAgQIAAAQIECBAgQIAAAQIEShAQvpXQRWMgQIAAAQIECBAgQIAAAQIECBDIUkD4lmVbFEWAAAECBAgQIECAAAECBAgQIFCCgPCthC4aAwECBAgQIECAAAECBAgQIECAQJYCwrcs26IoAgQIECBAgAABAgQIECBAgACBEgSEbyV00RgIECBAgAABAgQIECBAgAABAgSyFBC+ZdkWRREgQIAAAQIECBAgQIAAAQIECJQgIHwroYvGQIAAAQIECBAgQIAAAQIECBAgkKWA8C3LtiiKAAECBAgQIECAAAECBAgQIECgBAHhWwldNAYCBAgQIECAAAECBAgQIECAAIEsBYRvWbZFUQQIECBAgAABAgQIECBAgAABAiUICN9K6KIxECBAgAABAgQIECBAgAABAgQIZCkgfMuyLYoiQIAAAQIECBAgQIAAAQIECBAoQUD4VkIXjYEAAQIECBAgQIAAAQIECBAgQCBLAeFblm1RFAECBAgQIECAAAECBAgQIECAQAkCwrcSumgMBAgQIECAAAECBAgQIECAAAECWQoI37Jsi6IIECBAgAABAgQIECBAgAABAgRKEBC+ldBFYyBAgAABAgQIECBAgAABAgQIEMhSQPiWZVsURYAAAQIECBAgQIAAAQIECBAgUIKA8K2ELhoDAQIECBAgQIAAAQIECBAgQIBAlgLCtyzboigCBAgQIECAAAECBAgQIECAAIESBIRvJXTRGAgQIECAAAECBAgQIECAAAECBLIUEL5l2RZFESBAgAABAgQIECBAgAABAgQIlCAgfCuhi8ZAgAABAgQIECBAgAABAgQIECCQpYDwLcu2KIoAAQIECBAgQIAAAQIECBAgQKAEAeFbCV00BgIECBAgQIAAAQIECBAgQIAAgSwFhG9ZtkVRBAgQIECAAAECBAgQIECAAAECJQgI30roojEQIECAAAECBAgQIECAAAECBAhkKSB8y7ItiiJAgAABAgQIECBAgAABAgQIEChBQPhWQheNgQABAgQIECBAgAABAgQIECBAIEsB4VuWbVEUAQIECBAgQIAAAQIECBAgQIBACQLCtxK6aAwECBAgQIAAAQIECBAgQIAAAQJZCgjfsmyLoggQIECAAAECBAgQIECAAAECBEoQEL6V0EVjIECAAAECBAgQIECAAAECBAgQyFJA+JZlWxRFgAABAgQIECBAgAABAgQIECBQgoDwrYQuGgMBAgQIECBAgAABAgQIECBAgECWAsK3LNuiKAIECBAgQIAAAQIECBAgQIAAgRIEhG8ldNEYCBAgQIAAAQIECBAgQIAAAQIEshQQvmXZFkURIECAAAECBAgQIECAAAECBAiUICB8K6GLxkCAAAECBAgQIECAAAECBAgQIJClgPAty7YoigABAgQIECBAgAABAgQIECBAoAQB4VsJXTQGAgQIECBAgAABAgQIECBAgACBLAWEb1m2RVEECBAgQIAAAQIECBAgQIAAAQIlCAjfSuiiMRAgQIAAAQIECBAgQIAAAQIECGQpIHzLsi2KIkCAAAECBAgQIECAAAECBAgQKEFA+FZCF42BAAECBAgQIECAAAECBAgQIEAgSwHhW5ZtURQBAgQIECBAgAABAgQIECBAgEAJAsK3ErpoDAQIECBAgAABAgQIECBAgAABAlkKCN+ybIuiCBAgQIAAAQIECBAgQIAAAQIEShAQvpXQRWMgQIAAAQIECBAgQIAAAQIECBDIUkD4lmVbFEWAAAECBAgQIECAAAECBAgQIFCCgPCthC4aAwECBAgQIECAAAECBAgQIECAQJYCwrcs26IoAgQIECBAgAABAgQIECBAgACBEgSEbyV00RgIECBAgAABAgQIECBAgAABAgSyFBC+ZdkWRREgQIAAAQIECBAgQIAAAQIECJQgIHwroYvGQIAAAQIECBAgQIAAAQIECBAgkKWA8C3LtiiKAAECBAgQIECAAAECBAgQIECgBAHhWwldNAYCBAgQIECAAAECBAgQIECAAIEsBYRvWbZFUQQIECBAgAABAgQIECBAgAABAiUICN9K6KIxECBAgAABAgQIECBAgAABAgQIZCkgfMuyLYoiQIAAAQIECBAgQIAAAQIECBAoQUD4VkIXjYEAAQIECBAgQIAAAQIECBAgQCBLAeFblm1RFAECBAgQIECAAAECBAgQIECAQAkCwrcSumgMBAgQIECAAAECBAgQIECAAAECWQoI37Jsi6IIECBAgAABAgQIECBAgAABAgRKEBC+ldBFYyBAgAABAgQIECBAgAABAgQIEMhSQPiWZVsURYAAAQIECBAgQIAAAQIECBAgUIKA8K2ELhoDAQIECBAgQIAAAQIECBAgQIBAlgLCtyzboigCBAgQIECAAAECBAgQIECAAIESBIRvJXTRGAgQIECAAAECBAgQIECAAAECBLIUEL5l2RZFESBAgAABAgQIECBAgAABAgQIlCAgfCuhi8ZAgAABAgQIECBAgAABAgQIECCQpYDwLcu2KIoAAQIECBAgQIAAAQIECBAgQKAEAeFbCV00BgIECBAgQIAAAQIECBAgQIAAgSwFhG9ZtkVRBAgQIECAAAECBAgQIECAAAECJQgI30roojEQIECAAAECBAgQIECAAAECBAhkKSB8y7ItiiJAgAABAgQIECBAgAABAgQIEChBQPhWQheNgQABAgQIECBAgAABAgQIECBAIEsB4VuWbVEUAQIECBAgQIAAAQIECBAgQIBACQLCtxK6aAwECBAgQIAAAQIECBAgQIAAAQJZCgjfsmyLoggQIECAAAECBAgQIECAAAECBEoQEL6V0EVjIECAAAECBAgQIECAAAECBAgQyFJA+JZlWxRFgAABAgQIECBAgAABAgQIECBQgoDwrYQuGgMBAgQIECBAgAABAgQIECBAgECWAkOyrEpRBAgQIJCtwLJly3q1tkGDBvXq8R2cAAECBAgQIECAAAECfSlg5ltfajsXAQIECKxSoLfDvVUWYAMCBAgQIECAAAECBAj0oICZbz2I6VAECBAYKALz5s1L55xzTnr77bdbhrzvvvumbbfdNl166aVp8eLFLesnTZqUtt9++3TRRRel2bNnp+HDh6dvfvObaf3110/PPfdcy/Y77LBDOuaYY6r9IoAzA66F0AsCBAgQIECAAAECBGosYOZbjZundAIECPSXQARnZ5xxRrrssstShGtrrLFGFbyNHTs2nX/++dX6COMiaIt1d9xxR1XqueeemzbffPN0/fXXp0WLFqUbb7wx7bHHHun000+vgrkHH3ywv4bkvAQIECBAgAABAgQIEOgVAeFbr7A6KAECBAaGQMyAu/nmm6sALUK2xhIz2u6+++500EEHVTPc5syZUwVxa621Vho9enQ1Y27+/Pnprbfeqt7H+nXXXTfFdhYCBAgQIECAAAECBAiUJCB8K6mbxkKAAIE+EGi+HPTee++tzviJT3yi1ZmnT5+eRo0aVV1u2uoDbwgQIECAAAECBAgQIDDABIRvA6zhhkuAAIGeEojLRp9++um06667VrPbGseN2XBxb7c999wzxYw2CwECBAgQIECAAAECBAaygPBtIHff2AkQINANgVdffTW99tpr1WWjzYeJS07fe++9VoFc41LTCOwal6Cut956LZeaxvrGJajNx/KaAAECBAgQIECAAAECdRcQvtW9g+onQIBAPwqsueaarUK2RinLr//kJz9ZfTRlypRqVtyhhx5azYo75JBDqnvDnXzyydWDGHbeeedqu+ZLWxvH9JsAAQIECBAgQIAAAQJ1FBhSx6LVTIAAAQL9LxAPWIgnni6/RIDWCNEan8XlpyeeeGLjbcvvxtNRW1Z4QYAAAQIECBAgQIAAgcIEzHwrrKGGQ4AAgf4SaG+2Wk+t769xOS8BAgQIECBAgAABAgS6I2DmW3f07EuAAIEBKtBTgVp7xxmgrIZNgAABAgQIECBAgECBAma+FdhUQyJAgAABAgQIECBAgAABAgQI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xBDc782/AwQIECBAgAABAgQItCXgstO2VKwjQIAAAQIECBAgQIAAAQIECBAg0AMCwrceQHQIAgQIECBAgAABAgQIECBAgAABAm0JCN/aUrGOAAECBAgQIECAAAECBAgQIECAQA8IuOdbDyA6BAECBLoq8Lvf/S5NnTq1q7vbLyOBN998M6NqlEKAAAECBAgQIECAQC4CwrdcOqEOAgQGrMAVV1wxYMde0sC32267koZjLAQIECBAgAABAgQI9JCA8K2HIB2GAAECXRF49NFHk6dkdkUuv31mzZqll/m1RUUECBAgQIAAAQIE+l1A+NbvLVAAAQIDWWDwYLfeHMj9N3YCBAgQIECAAAECBMoXGLRkyZJl5Q/TCPtL4OGHH+7SqUeNGtWl/exEgAABAgQI9L7Aa6+91qWTjB8/vkv72YkAAQIECBAgUGcB4Vudu6d2AgQIECBAgAABAgQIECBAgACBrAVc75R1exRHgAABAgQIECBAgAABAgQIECBQZwHhW527p3YCBAgQIECAAAECBAgQIECAAIGsBYRvWbdHcQQIECBAgAABAgQIECBAgAABAnUWEL7VuXtqJ0CAAAECBAgQIECAAAECBAgQyFpA+JZ1exRHgAABAgQIECBAgAABAgQIECBQZwHhW527p3YCBAj0ocCsWbPSXnvtlcaPH1/9HHvssWnhwoVVBffcc0/1WWwzd+7cNHHixOonXre1XHPNNal5/7a2sY4AAQIECBAgQIAAAQIlCAjfSuiiMRAgQKCXBSJEO+mkk9KkSZPSww8/XP2MHDkyTZkypSWAa5Rw2223pdGjR6ef//znacSIEY3VLb8jeLvooota3ntBgAABAgQIECBAgACBkgWEbyV319gIECDQQwIRqMWy//77txzxsMMOS88880wVxDVWvvHGG+mmm25Khx9+eBo6dGhjdcvvmCF3//33pz333LNlnRcECBAgQIAAAQIECBAoWUD4VnJ3jY0AAQI9KBCz2ZoDtQ033DANGzas5QwLFixIkydPTuPGjUu77757y/rmF7H+8ssvT2uvvXbzaq8JECBAgAABAgQIECBQrIDwrdjWGhgBAgR6VmDOnDmtLjGNWW4RuDWWCOLOO++8NHPmzHTqqadWq5vvExeXm1oIECBAgAABAgQIECAw0ASEbwOt48ZLgACBLgg0LjdtXH4ah7juuuvSVlttVT18oXHImA138MEHp1tvvTXFJaZbb711mjFjRnVp6hFHHNHYzG8CBAgQIECAAAECBAgMGAHh24BptYESIECg6wLx4ISpU6dW93NrPO309ddfT+eee26rS1HjDBHUjRkzJl177bWtZsp1/ez2JECAAAECBAgQIECAQH0FBi1ZsmRZfctXOQECBAgQIECAAAECBAgQIECAAIF8Bcx8y7c3KiNAgAABAgQIECBAgAABAgQIEKi5gPCt5g1UPgECBAgQIECAAAECBAgQIECAQL4Cwrd8e6MyAgQIECBAgAABAgQIECBAgACBmgsI32reQOUTIECAAAECBAgQIECAAAECBAjkKyB8y7c3KiNAgAABAgQIECBAgAABAgQIEKi5gPCt5g1UPgECBAgQIECAAAECBAgQIECAQL4Cwrd8e6MyAgQI9JrAPffckyZOnJjmzp1bnSN+x/vx48envfbaK82aNataH7/jfaw/9dRTW+qJ18tv2/JhOy+uueaadOyxx6aFCxe22iLWN9fS1rFjn9g3ztm8basDeUOAAAECBAgQIECAAIEMBYRvGTZFSQQIEOhNgQjeJk+e3OoUt912Wxo9enSKz3bfffd03XXXVSHZRRddlCZNmpSmTZuWZs6cWX0e28TrWBefxTYRjsVPc5j39NNPt5wjArbYbvklwr2rr766ZXV7x77hhhuqbeLzcePGpUsuuaRlHy8IECBAgAABAgQIECCQs4DwLefuqI0AAQI9LBBh109/+tN02GGHrfLIEabNmTMnbbHFFmno0KFVOPfiiy+m+ImgLtbFZ7FNbHv22Wen/fbbL51zzjnpqKOOSl/72teqGXQRmN1///1pzz33bHXO2Oeqq65KO+64Y8v69o79/PPPp5EjR1bn3HLLLdPrr79enbNlRy8IECBAgAABAgQIECCQqYDwLdPGKIsAAQK9IbD11lunn/3sZ1WQ1Xz8I444oloXs94i2PrWt77V/HGHXsflol//+terWXOxw/XXX5/ifHHMyy+/PK299tqtjvPwww9X67bffvtW670hQIAAAQIECBAgQIBASQLCt5K6aSwECBDookAEZxG6xSy1j3/842nKlClp0aJFnTpa8yWkr7zyykovDY3LU6+99tr0d3/3d506h40JECBAgAABAgQIECBQNwHhW906pl4CBAj0kUDzpabNl6A2X2rafJnoQw89lLbaaqsqwDvvvPNWemnoU089lWL7uEw17gUXYd0pp5xSXc7auIy1+djNl5o2X4LaRxROQ4AAAQIECBAgQIAAgS4LDOnynnYkQIAAgWIEYgZa3KctLhEdNmxYuvTSS9MGG2xQXUZ63HHHVQHZAQccUH0eg54xY0YVnDW2jaAuLl2Nn1jiOPHT3hKfxWWnscTDGG666aZ02mmnpREjRqTf/OY3Kxz7M5/5THXfuNhvzJgxaerUqe0d2noCBAgQIECAAAECBAhkJTBoyZIly7KqSDEECBAgQIAAAQIECBAgQIAAAQIEChFw2WkhjTQMAgQIECBAgAABAgQIECBAgACB/ASEb/n1REUECBAgQIAAAQIECBAgQIAAAQKFCAjfCmmkYRAgQIAAAQIECBAgQIAAAQIECOQnIHzLrycqIkCAAAECBAgQIECAAAECBAgQKERA+FZIIw2DAAECBAgQIECAAAECBAgQIEAgPwHhW349UREBAgQIECBAgAABAgQIECBAgEAhAsK3QhppGAQIECBAgAABAgQIECBAgAABAvkJCN/y64mKCBAgQIAAAQIECBAgQIAAAQIEChEQvhXSSMMgQIAAAQIECBAgQIAAAQIECBDIT0D4ll9PVESAAAECBAgQIECAAAECBAgQIFCIgPCtkEYaBgECBAgQIECAAAECBAgQIECAQH4Cwrf8eqIiAgQIECBAgAABAgQIECBAgACBQgSEb4U00jAIECBAgAABAgQIECBAgAABAgTyExC+5dcTFREgQIAAAQIECBAgQIAAAQIECBQiIHwrpJGGQYAAAQIECBAgQIAAAQIECBAgkJ+A8C2/nqiIAAECBAgQIECAAAECBAgQIECgEAHhWyGNNAwCBAgQIECAAAECBAgQIECAAIH8BIRv+fVERQQIECBAgAABAgQIECBAgAABAoUICN8KaaRhECBAgAABAgQIECBAgAABAgQI5CcgfMuvJyoiQIAAAQIECBAgQIAAAQIECBAoRED4VkgjDYMAAQIECBAgQIAAAQIECBAgQCA/AeFbfj1REQECBAgQIECAAAECBAgQIECAQCECwrdCGmkYBAgQIECAAAECBAgQIECAAAEC+QkI3/LriYoIECBAgAABAgQIECBAgAABAgQKERC+FdJIwyBAgAABAgQIECBAgAABAgQIEMhPQPiWX09URIAAAQIECBAgQIAAAQIECBAgUIiA8K2QRhoGAQIECBAgQIAAAQIECBAgQIBAfgLCt/x6oiICBAgQIECAAAECBAgQIECAAIFCBIRvhTTSMAgQIECAAAECBAgQIECAAAECBPITEL7l1xMVESBAgAABAgQIECBAgAABAgQIFCIgfCukkYZBgAABAgQIECBAgAABAgQIECCQn4DwLb+eqIgAAQIECBAgQIAAAQIECBAgQKAQAeFbIY00DAIECBAgQIAAAQIECBAgQIAAgfwEhG/59URFBAgQIECAAAECBAgQIECAAAEChQgI3wpppGEQIECAAAECBAgQIECAAAECBAjkJyB8y68nKiJAgAABAgQIECBAgAABAgQIEChEQPhWSCMNgwABAgQIECBAgAABAgQIECBAID8B4Vt+PVERAQIECBAgQIAAAQIECBAgQIBAIQLCt0IaaRgECBAgQIAAAQIECBAgQIAAAQL5CQjf8uuJiggQIECAAAECBAgQIECAAAECBAoREL4V0kjDIECAAAECBAgQIECAAAECBAgQyE9A+JZfT1REgAABAgQIECBAgAABAgQIECBQiIDwrZBGGgYBAgQIECBAgAABAgQIECBAgEB+AsK3/HqiIgIECBAgQIAAAQIECBAgQIAAgUIEhG+FNNIwCBAgQIAAAQIECBAgQIAAAQIE8hMQvuXXExURIECAAAECBAgQIECAAAECBAgUIiB8K6SRhkGAAAECBAgQIECAAAECBAgQIJCfgPAtv56oiAABAgQIECBAgAABAgQIECBAoBAB4VshjTQMAgQIECBAgAABAgQIECBAgACB/ASEb/n1REUECBAgQIAAAQIECBAgQIAAAQKFCAjfCmmkYRAgQIAAAQIECBAgQIAAAQIECOQnIHzLrycqIkCAAAECBAgQIECAAAECBAgQKERA+FZIIw2DAAECBAgQIECAAAECBAgQIEAgPwHhW349UREBAgQIECBAgAABAgQIECBAgEAhAsK3QhppGAQIECBAgAABAgQIECBAgAABAvkJCN/y64mKCBAgQIAAAQIECBAgQIAAAQIEChEQvhXSSMMgQIAAAQIECBAgQIAAAQIECBDIT0D4ll9PVESAAAECBAgQIECAAAECBAgQIFCIgPCtkEYaBgECBAgQIECAAAECBAgQIECAQH4Cwrf8eqIiAgQIECBAgAABAgQIECBAgACBQgSEb4U00jAIECBAgAABAgQIECBAgAABAgTyExC+5dcTFREgQIAAAQIECBAgQIAAAQIECBQiIHwrpJGGQYAAAQIECBAgQIAAAQIECBAgkJ+A8C2/nqiIAAECBAgQIECAAAECBAgQIECgEAHhWyGNNAwCBAgQIECAAAECBAgQIECAAIH8BIRv+fVERQQIECBAgAABAgQIECBAgAABAoUICN8KaaRhECBAgAABAgQIECBAgAABAgQI5CcgfMuvJyoiQIAAAQIECBAgQIAAAQIECBAoRED4VkgjDYMAAQIECBAgQIAAAQIECBAgQCA/AeFbfj1REQECBAgQIECAAAECBAgQIECAQCECwrdCGmkYBAgQIECAAAECBAgQIECAAAEC+QkI3/LriYoIECBAgAABAgQIECBAgAABAgQKERC+FdJIwyBAgAABAgQIECBAgAABAgQIEMhPQPiWX09URIAAAQIECBAgQIAAAQIECBAgUIiA8K2QRhoGAQIECBAgQIAAAQIECBAgQIBAfgLCt/x6oiICBAgQIECAAAECBAgQIECAAIFCBIRvhTTSMAgQIECAAAECBAgQIECAAAECBPITEL7l1xMVESBAgAABAgQIECBAgAABAgQIFCIgfCukkYZBgAABAgQIECBAgAABAgQIECCQn4DwLb+eqIgAAQIECBAgQIAAAQIECBAgQKAQAeFbIY00DAIECBAgQIAAAQIECBAgQIAAgfwEhG/59URFBAgQIECAAAECBAgQIECAAAEChQgI3wpppGEQIECAAAECBAgQIECAAAECBAjkJyB8y68nKiJAgAABAgQIECBAgAABAgQIEChEQPhWSCMNgwABAgQIECBAgAABAgQIECBAID8B4Vt+PVERAQIECBAgQIAAAQIECBAgQIBAIQLCt0IaaRgECBAgQIAAAQIECBAgQIAAAQL5CQjf8uuJiggQIECAAAECBAgQIECAAAECBAoREL4V0kjDIECAAAECBAgQIECAAAECBAgQyE9A+JZfT1REgAABAgQIECBAgAABAgQIECBQiIDwrZBGGgYBAgQIECBAgAABAgQIECBAgEB+AsK3/HqiIgIECBAgQIAAAQIECBAgQIAAgUIEhG+FNNIwCBAgQIAAAQIECBAgQIAAAQIE8hMQvuXXExURIECAAAECBAgQIECAAAECBAgUIiB8K6SRhkGAAAECBAgQIECAAAECBAgQIJCfgPAtv56oiAABAgQIECBAgAABAgQIECBAoBAB4VshjTQMAgQIECBAgAABAgQIECBAgACB/ASEb/n1REUECBAgQIAAAQIECBAgQIAAAQKFCAjfCmmkYRAgQIAAAQIECBAgQIAAAQIECOQnIHzLrycqIkCAAAECBAgQIECAAAECBAgQKERA+FZIIw2DAAECBAgQIECAAAECBAgQIEAgPwHhW349UREBAgQIECBAgAABAgQIECBAgEAhAsK3QhppGAQIECBAgAABAgQIECBAgAABAvkJCN/y64mKCBAgQIAAAQIECBAgQIAAAQIEChEQvhXSSMMgQIAAAQIECBAgQIAAAQIECBDIT0D4ll9PVESAAAECBAgQIECAAAECBAgQIFCIgPCtkEYaBgECBAgQIECAAAECBAgQIECAQH4Cwrf8eqIiAgQIECBAgAABAgQIECBAgACBQgSEb4U00jAIECBAgAABAgQIECBAgAABAgTyExC+5dcTFREgQIAAAQIECBAgQIAAAQIECBQiIHwrpJGGQYAAAQIECBAgQIAAAQIECBAgkJ+A8C2/nqiIAAECBAgQIECAAAECBAgQIECgEAHhWyGNNAwCBAgQIECAAAECBAgQIECAAIH8BIRv+fVERQQIECBAgAABAgQIECBAgAABAoUICN8KaaRhECBAgAABAgQIECBAgAABAgQI5CcgfMuvJyoiQIAAAQIECBAgQIAAAQIECBAoRED4VkgjDYMAAQIECBAgQIAAAQIECBAgQCA/AeFbfj1REQECBAgQIECAAAECBAgQIECAQCECwrdCGmkYBAgQIECAAAECBAgQIECAAAEC+QkI3/LriYoIECBAgAABAgQIECBAgAABAgQKERC+FdJIwyBAgAABAgQIECBAgAABAgQIEMhPQPiWX09URIAAAQIECBAgQIAAAQIECBAgUIiA8K2QRhoGAQIECBAgQIAAAQIECBAgQIBAfgLCt/x6oiICBAgQIECAAAECBAgQIECAAIFCBIRvhTTSMAgQIECAAAECBAgQIECAAAECBPITEL7l1xMVESBAgAABAgQIECBAgAABAgQIFCIgfCukkYZBgAABAgQIECBAgAABAgQIECCQn4DwLb+eqIgAAQIECBAgQIAAAQIECBAgQKAQAeFbIY00DAIECBAgQIAAAQIECBAgQIAAgfwEhG/59URFBAgQIECAAAECBAgQIECAAAEChQgI3wpppGEQIECAAAECBAgQIECAAAECBAjkJ/D/AeLSxNvfXEeJAAAAAElFTkSuQmCC" alt="Исходный план объекта"></details></section>
+<section><details><summary>Строки без отклонений выше установленных порогов (19)</summary>
+<div class="table-wrap"><table><thead><tr><th>Позиция</th><th>Строка Excel</th><th>Работа</th><th>Контрольное значение</th><th>Результат количества</th><th>Отклонение</th></tr></thead><tbody><tr><td>2</td><td>3</td><td>Грунтовка стен</td><td>72,4</td><td>Точное совпадение</td><td>0%</td></tr><tr><td>3</td><td>4</td><td>Устройство пола</td><td>46,2</td><td>Точное совпадение</td><td>0%</td></tr><tr><td>4</td><td>5</td><td>Отделка потолка</td><td>46,2</td><td>Точное совпадение</td><td>0%</td></tr><tr><td>5</td><td>6</td><td>Монтаж плинтуса</td><td>26,5</td><td>Точное совпадение</td><td>0%</td></tr><tr><td>6</td><td>7</td><td>Установка дверей</td><td>В составе суммы по объекту: смета 2 · план 2</td><td>Точное совпадение</td><td>0%</td></tr><tr><td>13</td><td>14</td><td>Установка дверей</td><td>В составе суммы по объекту: смета 2 · план 2</td><td>Точное совпадение</td><td>0%</td></tr><tr><td>20</td><td>21</td><td>Установка дверей</td><td>В составе суммы по объекту: смета 2 · план 2</td><td>Точное совпадение</td><td>0%</td></tr><tr><td>7</td><td>8</td><td>Установка окон</td><td>1</td><td>Точное совпадение</td><td>0%</td></tr><tr><td>8</td><td>9</td><td>Окраска стен</td><td>66,68</td><td>Точное совпадение</td><td>0%</td></tr><tr><td>9</td><td>10</td><td>Грунтовка стен</td><td>66,68</td><td>Точное совпадение</td><td>0%</td></tr><tr><td>11</td><td>12</td><td>Отделка потолка</td><td>40,56</td><td>Точное совпадение</td><td>0%</td></tr><tr><td>12</td><td>13</td><td>Монтаж плинтуса</td><td>24,2</td><td>Точное совпадение</td><td>0%</td></tr><tr><td>14</td><td>15</td><td>Установка окон</td><td>1</td><td>Точное совпадение</td><td>0%</td></tr><tr><td>15</td><td>16</td><td>Окраска стен</td><td>64</td><td>Точное совпадение</td><td>0%</td></tr><tr><td>16</td><td>17</td><td>Грунтовка стен</td><td>64</td><td>Точное совпадение</td><td>0%</td></tr><tr><td>17</td><td>18</td><td>Устройство пола</td><td>36,4</td><td>Точное совпадение</td><td>0%</td></tr><tr><td>18</td><td>19</td><td>Отделка потолка</td><td>36,4</td><td>Точное совпадение</td><td>0%</td></tr><tr><td>19</td><td>20</td><td>Монтаж плинтуса</td><td>23,5</td><td>Точное совпадение</td><td>0%</td></tr><tr><td>21</td><td>22</td><td>Установка окон</td><td>1</td><td>Точное совпадение</td><td>0%</td></tr></tbody></table></div></details></section>
+
+<section><h2>Ограничения анализа</h2><ul>
+<li>Контрольные значения рассчитаны по распознанной и подтверждённой геометрии, но не являются натурным обмером.</li>
+<li>Отсутствующие размеры не заменяются предположениями; зависимые проверки остаются непроверенными.</li>
+<li>Один межкомнатный дверной проём учитывается в геометрии каждого смежного помещения, но в уникальном итоге объекта дедуплицируется по element_id.</li>
+<li>Сметная привязка установки дверей к помещениям принимается как заявленная и отдельно по комнатам не проверяется.</li>
+<li>Python сопоставил точные названия и совместимые единицы; mapping-субагент не использовался. Результат детерминированно проверен по допустимым значениям, покрытию строк и совместимости единиц.</li>
+<li>Расчётное финансовое влияние является арифметическим ориентиром и не учитывает договорные условия, налоги и дополнительные работы.</li>
+<li>Фото-анализ относится только к видимым участкам и не подтверждает выполнение, невыполнение или качество скрытых работ.</li>
+</ul></section>
+
+<section><h2>Техническое приложение</h2>
+<details><summary>Использованные документы и SHA-256</summary><ul>
+<li>XLSX: 176296e97d5a4850a62a6d6799a270c0_6_1.xlsx · 378f1cbb8dde3602cc14ba5455bc0275704aa33f047a033ddb67d02595a543e9</li>
+<li>План: cf5053849baa4c6f9bfa6fac52286a2d_6.png · be350769bfd155e04d5a6268d797137af0d7c067a3fd7233ce78e6884bb79416</li></ul></details>
+<details><summary>Visual insights</summary><pre>{
+  &quot;analyzed_count&quot;: 0,
+  &quot;items&quot;: [],
+  &quot;photos&quot;: [],
+  &quot;photos_count&quot;: 0,
+  &quot;schema_version&quot;: 1,
+  &quot;status&quot;: &quot;skipped&quot;
+}</pre></details>
+<details><summary>Подтверждение и provenance</summary><pre>{
+  &quot;confirmed_geometry_sha256&quot;: &quot;2e1b36f5752af0a6af784d4c6ac6ce080289374fccbddecd7b9a835a83a49e09&quot;,
+  &quot;geometry_confirmed_revision&quot;: 2,
+  &quot;geometry_revision&quot;: 2,
+  &quot;llm_context_sha256&quot;: &quot;3c9027545254c3692290f8de3f1b04a34275e9474b0af0d8ee5146d370a2d225&quot;,
+  &quot;llm_insights_sha256&quot;: &quot;f7c96cd0259a8524e8e414f2d02cb624e16e75bd5c8478b2ded01a288faa802d&quot;,
+  &quot;llm_insights_task_id&quot;: &quot;fcc0cbba&quot;,
+  &quot;mapping_sha256&quot;: &quot;1b763ae3ef3cdd4926ff2cc5e2363dadada31a190f125053219467b8ac8188c0&quot;,
+  &quot;mapping_task_id&quot;: &quot;deterministic_mapping&quot;,
+  &quot;price_catalog_source_tool&quot;: &quot;mcp_construction_prices__get_supported_works&quot;,
+  &quot;vision_task_id&quot;: &quot;1ff71fff&quot;
+}</pre></details>
+<details><summary>Mapping помещений</summary><div class="table-wrap"><table><thead><tr><th>Помещение сметы</th><th>Geometry ID</th><th>Confidence</th><th>Основание</th></tr></thead><tbody><tr><td>Гостиная</td><td>room_003</td><td>1.0</td><td>Точное совпадение названия помещения.</td></tr><tr><td>Кухня</td><td>room_001</td><td>1.0</td><td>Точное совпадение названия помещения.</td></tr><tr><td>Спальня</td><td>room_002</td><td>1.0</td><td>Точное совпадение названия помещения.</td></tr></tbody></table></div></details>
+<details><summary>Mapping работ для количества</summary><div class="table-wrap"><table><thead><tr><th>Строка</th><th>Работа сметы</th><th>Canonical work</th><th>Confidence</th><th>Основание</th></tr></thead><tbody><tr><td>2</td><td>Окраска стен</td><td>Окраска стен</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>3</td><td>Грунтовка стен</td><td>Грунтовка стен</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>4</td><td>Устройство пола</td><td>Устройство пола</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>5</td><td>Отделка потолка</td><td>Отделка потолка</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>6</td><td>Монтаж плинтуса</td><td>Монтаж плинтуса</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>7</td><td>Установка дверей</td><td>Установка дверей</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>8</td><td>Установка окон</td><td>Установка окон</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>9</td><td>Окраска стен</td><td>Окраска стен</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>10</td><td>Грунтовка стен</td><td>Грунтовка стен</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>11</td><td>Устройство пола</td><td>Устройство пола</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>12</td><td>Отделка потолка</td><td>Отделка потолка</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>13</td><td>Монтаж плинтуса</td><td>Монтаж плинтуса</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>14</td><td>Установка дверей</td><td>Установка дверей</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>15</td><td>Установка окон</td><td>Установка окон</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>16</td><td>Окраска стен</td><td>Окраска стен</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>17</td><td>Грунтовка стен</td><td>Грунтовка стен</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>18</td><td>Устройство пола</td><td>Устройство пола</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>19</td><td>Отделка потолка</td><td>Отделка потолка</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>20</td><td>Монтаж плинтуса</td><td>Монтаж плинтуса</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>21</td><td>Установка дверей</td><td>Установка дверей</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr><tr><td>22</td><td>Установка окон</td><td>Установка окон</td><td>1.0</td><td>Точное совпадение работы и совместимая единица.</td></tr></tbody></table></div></details>
+<details><summary>Mapping с каталогом MCP</summary><div class="table-wrap"><table><thead><tr><th>Строка</th><th>Работа сметы</th><th>MCP ID</th><th>Confidence</th><th>Основание</th></tr></thead><tbody><tr><td>2</td><td>Окраска стен</td><td>wall_painting</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>3</td><td>Грунтовка стен</td><td>wall_priming</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>4</td><td>Устройство пола</td><td>floor_installation</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>5</td><td>Отделка потолка</td><td>ceiling_finishing</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>6</td><td>Монтаж плинтуса</td><td>baseboard_installation</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>7</td><td>Установка дверей</td><td>door_installation</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>8</td><td>Установка окон</td><td>window_installation</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>9</td><td>Окраска стен</td><td>wall_painting</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>10</td><td>Грунтовка стен</td><td>wall_priming</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>11</td><td>Устройство пола</td><td>floor_installation</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>12</td><td>Отделка потолка</td><td>ceiling_finishing</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>13</td><td>Монтаж плинтуса</td><td>baseboard_installation</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>14</td><td>Установка дверей</td><td>door_installation</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>15</td><td>Установка окон</td><td>window_installation</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>16</td><td>Окраска стен</td><td>wall_painting</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>17</td><td>Грунтовка стен</td><td>wall_priming</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>18</td><td>Устройство пола</td><td>floor_installation</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>19</td><td>Отделка потолка</td><td>ceiling_finishing</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>20</td><td>Монтаж плинтуса</td><td>baseboard_installation</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>21</td><td>Установка дверей</td><td>door_installation</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr><tr><td>22</td><td>Установка окон</td><td>window_installation</td><td>1.0</td><td>Точное совпадение работы и единицы каталога.</td></tr></tbody></table></div></details>
+<details><summary>Каталог MCP</summary><div class="table-wrap"><table><thead><tr><th>MCP ID</th><th>Название</th><th>Единица</th><th>Цена</th></tr></thead><tbody><tr><td>wall_priming</td><td>Грунтовка стен</td><td>м²</td><td>120</td></tr><tr><td>wall_painting</td><td>Окраска стен</td><td>м²</td><td>450</td></tr><tr><td>floor_installation</td><td>Устройство пола</td><td>м²</td><td>1 700</td></tr><tr><td>ceiling_finishing</td><td>Отделка потолка</td><td>м²</td><td>650</td></tr><tr><td>baseboard_installation</td><td>Монтаж плинтуса</td><td>м</td><td>350</td></tr><tr><td>window_installation</td><td>Установка окон</td><td>шт.</td><td>9 000</td></tr><tr><td>door_installation</td><td>Установка дверей</td><td>шт.</td><td>7 000</td></tr></tbody></table></div></details>
+<details><summary>Расчётные основания (Calculation trace)</summary><p class="muted">Формулы ниже построены Python из сохранённых входных данных. Исходный структурированный trace сохранён без изменений.</p><details><summary>Кухня</summary><div class="table-wrap"><table><thead><tr><th>Расчёт</th><th>Как получено</th><th>Результат</th></tr></thead><tbody><tr><td>Площадь пола</td><td>Принято по подтверждённой геометрии: 40,56 м²</td><td>40,56 м²</td></tr><tr><td>Площадь потолка</td><td>Равна площади пола: 40,56 м²</td><td>40,56 м²</td></tr><tr><td>Площадь стен до вычета проёмов</td><td>26 м × 2,8 м</td><td>72,8 м²</td></tr><tr><td>Площадь дверей</td><td>0,9 × 2 + 0,9 × 2</td><td>3,6 м²</td></tr><tr><td>Площадь окон</td><td>1,8 × 1,4</td><td>2,52 м²</td></tr><tr><td>Площадь проёмов</td><td>Двери 3,6 м² + окна 2,52 м²</td><td>6,12 м²</td></tr><tr><td>Чистая площадь стен</td><td>72,8 м² − 6,12 м²</td><td>66,68 м²</td></tr><tr><td>Длина плинтуса</td><td>26 м − (0,9 + 0,9) м</td><td>24,2 м</td></tr><tr><td>Количество дверей</td><td>Проёмы: Д-1, Д-2</td><td>2 шт.</td></tr><tr><td>Количество окон</td><td>Проёмы: ОК-2</td><td>1 шт.</td></tr></tbody></table></div></details><details><summary>Спальня</summary><div class="table-wrap"><table><thead><tr><th>Расчёт</th><th>Как получено</th><th>Результат</th></tr></thead><tbody><tr><td>Площадь пола</td><td>Принято по подтверждённой геометрии: 36,4 м²</td><td>36,4 м²</td></tr><tr><td>Площадь потолка</td><td>Равна площади пола: 36,4 м²</td><td>36,4 м²</td></tr><tr><td>Площадь стен до вычета проёмов</td><td>24,4 м × 2,8 м</td><td>68,32 м²</td></tr><tr><td>Площадь дверей</td><td>0,9 × 2</td><td>1,8 м²</td></tr><tr><td>Площадь окон</td><td>1,8 × 1,4</td><td>2,52 м²</td></tr><tr><td>Площадь проёмов</td><td>Двери 1,8 м² + окна 2,52 м²</td><td>4,32 м²</td></tr><tr><td>Чистая площадь стен</td><td>68,32 м² − 4,32 м²</td><td>64 м²</td></tr><tr><td>Длина плинтуса</td><td>24,4 м − (0,9) м</td><td>23,5 м</td></tr><tr><td>Количество дверей</td><td>Проёмы: Д-2</td><td>1 шт.</td></tr><tr><td>Количество окон</td><td>Проёмы: ОК-3</td><td>1 шт.</td></tr></tbody></table></div></details><details><summary>Гостиная</summary><div class="table-wrap"><table><thead><tr><th>Расчёт</th><th>Как получено</th><th>Результат</th></tr></thead><tbody><tr><td>Площадь пола</td><td>Принято по подтверждённой геометрии: 46,2 м²</td><td>46,2 м²</td></tr><tr><td>Площадь потолка</td><td>Равна площади пола: 46,2 м²</td><td>46,2 м²</td></tr><tr><td>Площадь стен до вычета проёмов</td><td>27,4 м × 2,8 м</td><td>76,72 м²</td></tr><tr><td>Площадь дверей</td><td>0,9 × 2</td><td>1,8 м²</td></tr><tr><td>Площадь окон</td><td>1,8 × 1,4</td><td>2,52 м²</td></tr><tr><td>Площадь проёмов</td><td>Двери 1,8 м² + окна 2,52 м²</td><td>4,32 м²</td></tr><tr><td>Чистая площадь стен</td><td>76,72 м² − 4,32 м²</td><td>72,4 м²</td></tr><tr><td>Длина плинтуса</td><td>27,4 м − (0,9) м</td><td>26,5 м</td></tr><tr><td>Количество дверей</td><td>Проёмы: Д-1</td><td>1 шт.</td></tr><tr><td>Количество окон</td><td>Проёмы: ОК-1</td><td>1 шт.</td></tr></tbody></table></div></details><details><summary>Итоги по объекту</summary><div class="table-wrap"><table><thead><tr><th>Расчёт</th><th>Как получено</th><th>Результат</th></tr></thead><tbody><tr><td>Площадь пола</td><td>Сумма по помещениям: 40,56 + 36,4 + 46,2</td><td>123,16 м²</td></tr><tr><td>Площадь потолка</td><td>Сумма по помещениям: 40,56 + 36,4 + 46,2</td><td>123,16 м²</td></tr><tr><td>Площадь стен до вычета проёмов</td><td>Сумма по помещениям: 72,8 + 68,32 + 76,72</td><td>217,84 м²</td></tr><tr><td>Площадь дверей</td><td>Сумма по помещениям: 3,6 + 1,8 + 1,8</td><td>7,2 м²</td></tr><tr><td>Площадь окон</td><td>Сумма по помещениям: 2,52 + 2,52 + 2,52</td><td>7,56 м²</td></tr><tr><td>Площадь проёмов</td><td>Сумма по помещениям: 6,12 + 4,32 + 4,32</td><td>14,76 м²</td></tr><tr><td>Чистая площадь стен</td><td>Сумма по помещениям: 66,68 + 64 + 72,4</td><td>203,08 м²</td></tr><tr><td>Длина плинтуса</td><td>Сумма по помещениям: 24,2 + 23,5 + 26,5</td><td>74,2 м</td></tr><tr><td>Количество дверей</td><td>Уникальные проёмы: Д-1, Д-2</td><td>2 шт.</td></tr><tr><td>Количество окон</td><td>Уникальные проёмы: ОК-1, ОК-2, ОК-3</td><td>3 шт.</td></tr></tbody></table></div></details><h4>Расчёты по строкам с отклонениями</h4><h5>Количество</h5><div class="table-wrap"><table><thead><tr><th>Строки Excel</th><th>Работа</th><th>Сравнение</th><th>Результат</th></tr></thead><tbody><tr><td>11</td><td>Устройство пола</td><td>Смета: 24,16 м²; контроль: 40,56 м²</td><td>Отклонение 40,4%; порог 5%</td></tr></tbody></table></div><h5>Цена и стоимость</h5><div class="table-wrap"><table><thead><tr><th>Строка Excel</th><th>Работа</th><th>Контрольный расчёт</th><th>Результат</th></tr></thead><tbody><tr><td>2</td><td>Окраска стен</td><td>72,4 × 450 = 32 580</td><td>В смете: 32 580; влияние цены: 7 964</td></tr><tr><td>11</td><td>Устройство пола</td><td>24,16 × 1 700 = 41 072</td><td>В смете: 68 952; разница стоимости: 27 880</td></tr></tbody></table></div><details><summary>Исходный структурированный trace</summary><pre>{
+  &quot;entries&quot;: [
+    {
+      &quot;formula&quot;: &quot;explicit floor_area_m2&quot;,
+      &quot;inputs&quot;: {
+        &quot;floor_area_m2&quot;: &quot;40.56&quot;
+      },
+      &quot;metric&quot;: &quot;floor_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;40.56&quot;,
+      &quot;room_id&quot;: &quot;room_001&quot;,
+      &quot;room_name&quot;: &quot;Кухня&quot;,
+      &quot;rounded_result&quot;: &quot;40.56&quot;,
+      &quot;trace_id&quot;: &quot;room:room_001:floor_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;floor_area_m2&quot;,
+      &quot;inputs&quot;: {
+        &quot;floor_area_m2&quot;: &quot;40.56&quot;
+      },
+      &quot;metric&quot;: &quot;ceiling_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;40.56&quot;,
+      &quot;room_id&quot;: &quot;room_001&quot;,
+      &quot;room_name&quot;: &quot;Кухня&quot;,
+      &quot;rounded_result&quot;: &quot;40.56&quot;,
+      &quot;trace_id&quot;: &quot;room:room_001:ceiling_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;perimeter_m * height_m&quot;,
+      &quot;inputs&quot;: {
+        &quot;height_m&quot;: &quot;2.8&quot;,
+        &quot;perimeter_m&quot;: &quot;26&quot;
+      },
+      &quot;metric&quot;: &quot;gross_wall_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;72.8&quot;,
+      &quot;room_id&quot;: &quot;room_001&quot;,
+      &quot;room_name&quot;: &quot;Кухня&quot;,
+      &quot;rounded_result&quot;: &quot;72.80&quot;,
+      &quot;trace_id&quot;: &quot;room:room_001:gross_wall_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;sum(doors.width_m * doors.height_m)&quot;,
+      &quot;inputs&quot;: {
+        &quot;doors&quot;: [
+          {
+            &quot;element_id&quot;: &quot;Д-1&quot;,
+            &quot;height_m&quot;: &quot;2&quot;,
+            &quot;width_m&quot;: &quot;0.9&quot;
+          },
+          {
+            &quot;element_id&quot;: &quot;Д-2&quot;,
+            &quot;height_m&quot;: &quot;2&quot;,
+            &quot;width_m&quot;: &quot;0.9&quot;
+          }
+        ]
+      },
+      &quot;metric&quot;: &quot;doors_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;3.6&quot;,
+      &quot;room_id&quot;: &quot;room_001&quot;,
+      &quot;room_name&quot;: &quot;Кухня&quot;,
+      &quot;rounded_result&quot;: &quot;3.60&quot;,
+      &quot;trace_id&quot;: &quot;room:room_001:doors_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;sum(windows.width_m * windows.height_m)&quot;,
+      &quot;inputs&quot;: {
+        &quot;windows&quot;: [
+          {
+            &quot;element_id&quot;: &quot;ОК-2&quot;,
+            &quot;height_m&quot;: &quot;1.4&quot;,
+            &quot;width_m&quot;: &quot;1.8&quot;
+          }
+        ]
+      },
+      &quot;metric&quot;: &quot;windows_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;2.52&quot;,
+      &quot;room_id&quot;: &quot;room_001&quot;,
+      &quot;room_name&quot;: &quot;Кухня&quot;,
+      &quot;rounded_result&quot;: &quot;2.52&quot;,
+      &quot;trace_id&quot;: &quot;room:room_001:windows_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;doors_area_m2 + windows_area_m2&quot;,
+      &quot;inputs&quot;: {
+        &quot;doors_area_m2&quot;: &quot;3.6&quot;,
+        &quot;windows_area_m2&quot;: &quot;2.52&quot;
+      },
+      &quot;metric&quot;: &quot;openings_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;6.12&quot;,
+      &quot;room_id&quot;: &quot;room_001&quot;,
+      &quot;room_name&quot;: &quot;Кухня&quot;,
+      &quot;rounded_result&quot;: &quot;6.12&quot;,
+      &quot;trace_id&quot;: &quot;room:room_001:openings_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;gross_wall_area_m2 - openings_area_m2&quot;,
+      &quot;inputs&quot;: {
+        &quot;gross_wall_area_m2&quot;: &quot;72.8&quot;,
+        &quot;openings_area_m2&quot;: &quot;6.12&quot;
+      },
+      &quot;metric&quot;: &quot;net_wall_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;66.68&quot;,
+      &quot;room_id&quot;: &quot;room_001&quot;,
+      &quot;room_name&quot;: &quot;Кухня&quot;,
+      &quot;rounded_result&quot;: &quot;66.68&quot;,
+      &quot;trace_id&quot;: &quot;room:room_001:net_wall_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;perimeter_m - sum(unique room door widths)&quot;,
+      &quot;inputs&quot;: {
+        &quot;doors&quot;: [
+          {
+            &quot;element_id&quot;: &quot;Д-1&quot;,
+            &quot;width_m&quot;: &quot;0.9&quot;
+          },
+          {
+            &quot;element_id&quot;: &quot;Д-2&quot;,
+            &quot;width_m&quot;: &quot;0.9&quot;
+          }
+        ],
+        &quot;perimeter_m&quot;: &quot;26&quot;
+      },
+      &quot;metric&quot;: &quot;baseboard_length_m&quot;,
+      &quot;raw_result&quot;: &quot;24.2&quot;,
+      &quot;room_id&quot;: &quot;room_001&quot;,
+      &quot;room_name&quot;: &quot;Кухня&quot;,
+      &quot;rounded_result&quot;: &quot;24.20&quot;,
+      &quot;trace_id&quot;: &quot;room:room_001:baseboard_length_m&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;len(room doors)&quot;,
+      &quot;inputs&quot;: {
+        &quot;element_ids&quot;: [
+          &quot;Д-1&quot;,
+          &quot;Д-2&quot;
+        ]
+      },
+      &quot;metric&quot;: &quot;door_count&quot;,
+      &quot;raw_result&quot;: &quot;2&quot;,
+      &quot;room_id&quot;: &quot;room_001&quot;,
+      &quot;room_name&quot;: &quot;Кухня&quot;,
+      &quot;rounded_result&quot;: &quot;2&quot;,
+      &quot;trace_id&quot;: &quot;room:room_001:door_count&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;len(room windows)&quot;,
+      &quot;inputs&quot;: {
+        &quot;element_ids&quot;: [
+          &quot;ОК-2&quot;
+        ]
+      },
+      &quot;metric&quot;: &quot;window_count&quot;,
+      &quot;raw_result&quot;: &quot;1&quot;,
+      &quot;room_id&quot;: &quot;room_001&quot;,
+      &quot;room_name&quot;: &quot;Кухня&quot;,
+      &quot;rounded_result&quot;: &quot;1&quot;,
+      &quot;trace_id&quot;: &quot;room:room_001:window_count&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;explicit floor_area_m2&quot;,
+      &quot;inputs&quot;: {
+        &quot;floor_area_m2&quot;: &quot;36.4&quot;
+      },
+      &quot;metric&quot;: &quot;floor_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;36.4&quot;,
+      &quot;room_id&quot;: &quot;room_002&quot;,
+      &quot;room_name&quot;: &quot;Спальня&quot;,
+      &quot;rounded_result&quot;: &quot;36.40&quot;,
+      &quot;trace_id&quot;: &quot;room:room_002:floor_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;floor_area_m2&quot;,
+      &quot;inputs&quot;: {
+        &quot;floor_area_m2&quot;: &quot;36.4&quot;
+      },
+      &quot;metric&quot;: &quot;ceiling_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;36.4&quot;,
+      &quot;room_id&quot;: &quot;room_002&quot;,
+      &quot;room_name&quot;: &quot;Спальня&quot;,
+      &quot;rounded_result&quot;: &quot;36.40&quot;,
+      &quot;trace_id&quot;: &quot;room:room_002:ceiling_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;perimeter_m * height_m&quot;,
+      &quot;inputs&quot;: {
+        &quot;height_m&quot;: &quot;2.8&quot;,
+        &quot;perimeter_m&quot;: &quot;24.4&quot;
+      },
+      &quot;metric&quot;: &quot;gross_wall_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;68.32&quot;,
+      &quot;room_id&quot;: &quot;room_002&quot;,
+      &quot;room_name&quot;: &quot;Спальня&quot;,
+      &quot;rounded_result&quot;: &quot;68.32&quot;,
+      &quot;trace_id&quot;: &quot;room:room_002:gross_wall_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;sum(doors.width_m * doors.height_m)&quot;,
+      &quot;inputs&quot;: {
+        &quot;doors&quot;: [
+          {
+            &quot;element_id&quot;: &quot;Д-2&quot;,
+            &quot;height_m&quot;: &quot;2&quot;,
+            &quot;width_m&quot;: &quot;0.9&quot;
+          }
+        ]
+      },
+      &quot;metric&quot;: &quot;doors_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;1.8&quot;,
+      &quot;room_id&quot;: &quot;room_002&quot;,
+      &quot;room_name&quot;: &quot;Спальня&quot;,
+      &quot;rounded_result&quot;: &quot;1.80&quot;,
+      &quot;trace_id&quot;: &quot;room:room_002:doors_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;sum(windows.width_m * windows.height_m)&quot;,
+      &quot;inputs&quot;: {
+        &quot;windows&quot;: [
+          {
+            &quot;element_id&quot;: &quot;ОК-3&quot;,
+            &quot;height_m&quot;: &quot;1.4&quot;,
+            &quot;width_m&quot;: &quot;1.8&quot;
+          }
+        ]
+      },
+      &quot;metric&quot;: &quot;windows_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;2.52&quot;,
+      &quot;room_id&quot;: &quot;room_002&quot;,
+      &quot;room_name&quot;: &quot;Спальня&quot;,
+      &quot;rounded_result&quot;: &quot;2.52&quot;,
+      &quot;trace_id&quot;: &quot;room:room_002:windows_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;doors_area_m2 + windows_area_m2&quot;,
+      &quot;inputs&quot;: {
+        &quot;doors_area_m2&quot;: &quot;1.8&quot;,
+        &quot;windows_area_m2&quot;: &quot;2.52&quot;
+      },
+      &quot;metric&quot;: &quot;openings_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;4.32&quot;,
+      &quot;room_id&quot;: &quot;room_002&quot;,
+      &quot;room_name&quot;: &quot;Спальня&quot;,
+      &quot;rounded_result&quot;: &quot;4.32&quot;,
+      &quot;trace_id&quot;: &quot;room:room_002:openings_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;gross_wall_area_m2 - openings_area_m2&quot;,
+      &quot;inputs&quot;: {
+        &quot;gross_wall_area_m2&quot;: &quot;68.32&quot;,
+        &quot;openings_area_m2&quot;: &quot;4.32&quot;
+      },
+      &quot;metric&quot;: &quot;net_wall_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;64&quot;,
+      &quot;room_id&quot;: &quot;room_002&quot;,
+      &quot;room_name&quot;: &quot;Спальня&quot;,
+      &quot;rounded_result&quot;: &quot;64.00&quot;,
+      &quot;trace_id&quot;: &quot;room:room_002:net_wall_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;perimeter_m - sum(unique room door widths)&quot;,
+      &quot;inputs&quot;: {
+        &quot;doors&quot;: [
+          {
+            &quot;element_id&quot;: &quot;Д-2&quot;,
+            &quot;width_m&quot;: &quot;0.9&quot;
+          }
+        ],
+        &quot;perimeter_m&quot;: &quot;24.4&quot;
+      },
+      &quot;metric&quot;: &quot;baseboard_length_m&quot;,
+      &quot;raw_result&quot;: &quot;23.5&quot;,
+      &quot;room_id&quot;: &quot;room_002&quot;,
+      &quot;room_name&quot;: &quot;Спальня&quot;,
+      &quot;rounded_result&quot;: &quot;23.50&quot;,
+      &quot;trace_id&quot;: &quot;room:room_002:baseboard_length_m&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;len(room doors)&quot;,
+      &quot;inputs&quot;: {
+        &quot;element_ids&quot;: [
+          &quot;Д-2&quot;
+        ]
+      },
+      &quot;metric&quot;: &quot;door_count&quot;,
+      &quot;raw_result&quot;: &quot;1&quot;,
+      &quot;room_id&quot;: &quot;room_002&quot;,
+      &quot;room_name&quot;: &quot;Спальня&quot;,
+      &quot;rounded_result&quot;: &quot;1&quot;,
+      &quot;trace_id&quot;: &quot;room:room_002:door_count&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;len(room windows)&quot;,
+      &quot;inputs&quot;: {
+        &quot;element_ids&quot;: [
+          &quot;ОК-3&quot;
+        ]
+      },
+      &quot;metric&quot;: &quot;window_count&quot;,
+      &quot;raw_result&quot;: &quot;1&quot;,
+      &quot;room_id&quot;: &quot;room_002&quot;,
+      &quot;room_name&quot;: &quot;Спальня&quot;,
+      &quot;rounded_result&quot;: &quot;1&quot;,
+      &quot;trace_id&quot;: &quot;room:room_002:window_count&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;explicit floor_area_m2&quot;,
+      &quot;inputs&quot;: {
+        &quot;floor_area_m2&quot;: &quot;46.2&quot;
+      },
+      &quot;metric&quot;: &quot;floor_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;46.2&quot;,
+      &quot;room_id&quot;: &quot;room_003&quot;,
+      &quot;room_name&quot;: &quot;Гостиная&quot;,
+      &quot;rounded_result&quot;: &quot;46.20&quot;,
+      &quot;trace_id&quot;: &quot;room:room_003:floor_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;floor_area_m2&quot;,
+      &quot;inputs&quot;: {
+        &quot;floor_area_m2&quot;: &quot;46.2&quot;
+      },
+      &quot;metric&quot;: &quot;ceiling_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;46.2&quot;,
+      &quot;room_id&quot;: &quot;room_003&quot;,
+      &quot;room_name&quot;: &quot;Гостиная&quot;,
+      &quot;rounded_result&quot;: &quot;46.20&quot;,
+      &quot;trace_id&quot;: &quot;room:room_003:ceiling_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;perimeter_m * height_m&quot;,
+      &quot;inputs&quot;: {
+        &quot;height_m&quot;: &quot;2.8&quot;,
+        &quot;perimeter_m&quot;: &quot;27.4&quot;
+      },
+      &quot;metric&quot;: &quot;gross_wall_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;76.72&quot;,
+      &quot;room_id&quot;: &quot;room_003&quot;,
+      &quot;room_name&quot;: &quot;Гостиная&quot;,
+      &quot;rounded_result&quot;: &quot;76.72&quot;,
+      &quot;trace_id&quot;: &quot;room:room_003:gross_wall_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;sum(doors.width_m * doors.height_m)&quot;,
+      &quot;inputs&quot;: {
+        &quot;doors&quot;: [
+          {
+            &quot;element_id&quot;: &quot;Д-1&quot;,
+            &quot;height_m&quot;: &quot;2&quot;,
+            &quot;width_m&quot;: &quot;0.9&quot;
+          }
+        ]
+      },
+      &quot;metric&quot;: &quot;doors_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;1.8&quot;,
+      &quot;room_id&quot;: &quot;room_003&quot;,
+      &quot;room_name&quot;: &quot;Гостиная&quot;,
+      &quot;rounded_result&quot;: &quot;1.80&quot;,
+      &quot;trace_id&quot;: &quot;room:room_003:doors_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;sum(windows.width_m * windows.height_m)&quot;,
+      &quot;inputs&quot;: {
+        &quot;windows&quot;: [
+          {
+            &quot;element_id&quot;: &quot;ОК-1&quot;,
+            &quot;height_m&quot;: &quot;1.4&quot;,
+            &quot;width_m&quot;: &quot;1.8&quot;
+          }
+        ]
+      },
+      &quot;metric&quot;: &quot;windows_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;2.52&quot;,
+      &quot;room_id&quot;: &quot;room_003&quot;,
+      &quot;room_name&quot;: &quot;Гостиная&quot;,
+      &quot;rounded_result&quot;: &quot;2.52&quot;,
+      &quot;trace_id&quot;: &quot;room:room_003:windows_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;doors_area_m2 + windows_area_m2&quot;,
+      &quot;inputs&quot;: {
+        &quot;doors_area_m2&quot;: &quot;1.8&quot;,
+        &quot;windows_area_m2&quot;: &quot;2.52&quot;
+      },
+      &quot;metric&quot;: &quot;openings_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;4.32&quot;,
+      &quot;room_id&quot;: &quot;room_003&quot;,
+      &quot;room_name&quot;: &quot;Гостиная&quot;,
+      &quot;rounded_result&quot;: &quot;4.32&quot;,
+      &quot;trace_id&quot;: &quot;room:room_003:openings_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;gross_wall_area_m2 - openings_area_m2&quot;,
+      &quot;inputs&quot;: {
+        &quot;gross_wall_area_m2&quot;: &quot;76.72&quot;,
+        &quot;openings_area_m2&quot;: &quot;4.32&quot;
+      },
+      &quot;metric&quot;: &quot;net_wall_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;72.4&quot;,
+      &quot;room_id&quot;: &quot;room_003&quot;,
+      &quot;room_name&quot;: &quot;Гостиная&quot;,
+      &quot;rounded_result&quot;: &quot;72.40&quot;,
+      &quot;trace_id&quot;: &quot;room:room_003:net_wall_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;perimeter_m - sum(unique room door widths)&quot;,
+      &quot;inputs&quot;: {
+        &quot;doors&quot;: [
+          {
+            &quot;element_id&quot;: &quot;Д-1&quot;,
+            &quot;width_m&quot;: &quot;0.9&quot;
+          }
+        ],
+        &quot;perimeter_m&quot;: &quot;27.4&quot;
+      },
+      &quot;metric&quot;: &quot;baseboard_length_m&quot;,
+      &quot;raw_result&quot;: &quot;26.5&quot;,
+      &quot;room_id&quot;: &quot;room_003&quot;,
+      &quot;room_name&quot;: &quot;Гостиная&quot;,
+      &quot;rounded_result&quot;: &quot;26.50&quot;,
+      &quot;trace_id&quot;: &quot;room:room_003:baseboard_length_m&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;len(room doors)&quot;,
+      &quot;inputs&quot;: {
+        &quot;element_ids&quot;: [
+          &quot;Д-1&quot;
+        ]
+      },
+      &quot;metric&quot;: &quot;door_count&quot;,
+      &quot;raw_result&quot;: &quot;1&quot;,
+      &quot;room_id&quot;: &quot;room_003&quot;,
+      &quot;room_name&quot;: &quot;Гостиная&quot;,
+      &quot;rounded_result&quot;: &quot;1&quot;,
+      &quot;trace_id&quot;: &quot;room:room_003:door_count&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;len(room windows)&quot;,
+      &quot;inputs&quot;: {
+        &quot;element_ids&quot;: [
+          &quot;ОК-1&quot;
+        ]
+      },
+      &quot;metric&quot;: &quot;window_count&quot;,
+      &quot;raw_result&quot;: &quot;1&quot;,
+      &quot;room_id&quot;: &quot;room_003&quot;,
+      &quot;room_name&quot;: &quot;Гостиная&quot;,
+      &quot;rounded_result&quot;: &quot;1&quot;,
+      &quot;trace_id&quot;: &quot;room:room_003:window_count&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;sum(room metric)&quot;,
+      &quot;inputs&quot;: {
+        &quot;room_values&quot;: [
+          {
+            &quot;room_id&quot;: &quot;room_001&quot;,
+            &quot;value&quot;: &quot;40.56&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_002&quot;,
+            &quot;value&quot;: &quot;36.4&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_003&quot;,
+            &quot;value&quot;: &quot;46.2&quot;
+          }
+        ]
+      },
+      &quot;metric&quot;: &quot;floor_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;123.16&quot;,
+      &quot;room_id&quot;: null,
+      &quot;room_name&quot;: &quot;Весь объект&quot;,
+      &quot;rounded_result&quot;: &quot;123.16&quot;,
+      &quot;trace_id&quot;: &quot;object_total:floor_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;sum(room metric)&quot;,
+      &quot;inputs&quot;: {
+        &quot;room_values&quot;: [
+          {
+            &quot;room_id&quot;: &quot;room_001&quot;,
+            &quot;value&quot;: &quot;40.56&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_002&quot;,
+            &quot;value&quot;: &quot;36.4&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_003&quot;,
+            &quot;value&quot;: &quot;46.2&quot;
+          }
+        ]
+      },
+      &quot;metric&quot;: &quot;ceiling_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;123.16&quot;,
+      &quot;room_id&quot;: null,
+      &quot;room_name&quot;: &quot;Весь объект&quot;,
+      &quot;rounded_result&quot;: &quot;123.16&quot;,
+      &quot;trace_id&quot;: &quot;object_total:ceiling_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;sum(room metric)&quot;,
+      &quot;inputs&quot;: {
+        &quot;room_values&quot;: [
+          {
+            &quot;room_id&quot;: &quot;room_001&quot;,
+            &quot;value&quot;: &quot;72.8&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_002&quot;,
+            &quot;value&quot;: &quot;68.32&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_003&quot;,
+            &quot;value&quot;: &quot;76.72&quot;
+          }
+        ]
+      },
+      &quot;metric&quot;: &quot;gross_wall_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;217.84&quot;,
+      &quot;room_id&quot;: null,
+      &quot;room_name&quot;: &quot;Весь объект&quot;,
+      &quot;rounded_result&quot;: &quot;217.84&quot;,
+      &quot;trace_id&quot;: &quot;object_total:gross_wall_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;sum(room metric)&quot;,
+      &quot;inputs&quot;: {
+        &quot;room_values&quot;: [
+          {
+            &quot;room_id&quot;: &quot;room_001&quot;,
+            &quot;value&quot;: &quot;3.6&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_002&quot;,
+            &quot;value&quot;: &quot;1.8&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_003&quot;,
+            &quot;value&quot;: &quot;1.8&quot;
+          }
+        ]
+      },
+      &quot;metric&quot;: &quot;doors_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;7.2&quot;,
+      &quot;room_id&quot;: null,
+      &quot;room_name&quot;: &quot;Весь объект&quot;,
+      &quot;rounded_result&quot;: &quot;7.20&quot;,
+      &quot;trace_id&quot;: &quot;object_total:doors_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;sum(room metric)&quot;,
+      &quot;inputs&quot;: {
+        &quot;room_values&quot;: [
+          {
+            &quot;room_id&quot;: &quot;room_001&quot;,
+            &quot;value&quot;: &quot;2.52&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_002&quot;,
+            &quot;value&quot;: &quot;2.52&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_003&quot;,
+            &quot;value&quot;: &quot;2.52&quot;
+          }
+        ]
+      },
+      &quot;metric&quot;: &quot;windows_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;7.56&quot;,
+      &quot;room_id&quot;: null,
+      &quot;room_name&quot;: &quot;Весь объект&quot;,
+      &quot;rounded_result&quot;: &quot;7.56&quot;,
+      &quot;trace_id&quot;: &quot;object_total:windows_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;sum(room metric)&quot;,
+      &quot;inputs&quot;: {
+        &quot;room_values&quot;: [
+          {
+            &quot;room_id&quot;: &quot;room_001&quot;,
+            &quot;value&quot;: &quot;6.12&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_002&quot;,
+            &quot;value&quot;: &quot;4.32&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_003&quot;,
+            &quot;value&quot;: &quot;4.32&quot;
+          }
+        ]
+      },
+      &quot;metric&quot;: &quot;openings_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;14.76&quot;,
+      &quot;room_id&quot;: null,
+      &quot;room_name&quot;: &quot;Весь объект&quot;,
+      &quot;rounded_result&quot;: &quot;14.76&quot;,
+      &quot;trace_id&quot;: &quot;object_total:openings_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;sum(room metric)&quot;,
+      &quot;inputs&quot;: {
+        &quot;room_values&quot;: [
+          {
+            &quot;room_id&quot;: &quot;room_001&quot;,
+            &quot;value&quot;: &quot;66.68&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_002&quot;,
+            &quot;value&quot;: &quot;64&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_003&quot;,
+            &quot;value&quot;: &quot;72.4&quot;
+          }
+        ]
+      },
+      &quot;metric&quot;: &quot;net_wall_area_m2&quot;,
+      &quot;raw_result&quot;: &quot;203.08&quot;,
+      &quot;room_id&quot;: null,
+      &quot;room_name&quot;: &quot;Весь объект&quot;,
+      &quot;rounded_result&quot;: &quot;203.08&quot;,
+      &quot;trace_id&quot;: &quot;object_total:net_wall_area_m2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;sum(room metric)&quot;,
+      &quot;inputs&quot;: {
+        &quot;room_values&quot;: [
+          {
+            &quot;room_id&quot;: &quot;room_001&quot;,
+            &quot;value&quot;: &quot;24.2&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_002&quot;,
+            &quot;value&quot;: &quot;23.5&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_003&quot;,
+            &quot;value&quot;: &quot;26.5&quot;
+          }
+        ]
+      },
+      &quot;metric&quot;: &quot;baseboard_length_m&quot;,
+      &quot;raw_result&quot;: &quot;74.2&quot;,
+      &quot;room_id&quot;: null,
+      &quot;room_name&quot;: &quot;Весь объект&quot;,
+      &quot;rounded_result&quot;: &quot;74.20&quot;,
+      &quot;trace_id&quot;: &quot;object_total:baseboard_length_m&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;deduplicate by element_id&quot;,
+      &quot;inputs&quot;: {
+        &quot;element_ids&quot;: [
+          &quot;Д-1&quot;,
+          &quot;Д-2&quot;
+        ],
+        &quot;room_values&quot;: [
+          {
+            &quot;room_id&quot;: &quot;room_001&quot;,
+            &quot;value&quot;: &quot;2&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_002&quot;,
+            &quot;value&quot;: &quot;1&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_003&quot;,
+            &quot;value&quot;: &quot;1&quot;
+          }
+        ]
+      },
+      &quot;metric&quot;: &quot;door_count&quot;,
+      &quot;raw_result&quot;: &quot;2&quot;,
+      &quot;room_id&quot;: null,
+      &quot;room_name&quot;: &quot;Весь объект&quot;,
+      &quot;rounded_result&quot;: &quot;2&quot;,
+      &quot;trace_id&quot;: &quot;object_total:door_count&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;deduplicate by element_id&quot;,
+      &quot;inputs&quot;: {
+        &quot;element_ids&quot;: [
+          &quot;ОК-1&quot;,
+          &quot;ОК-2&quot;,
+          &quot;ОК-3&quot;
+        ],
+        &quot;room_values&quot;: [
+          {
+            &quot;room_id&quot;: &quot;room_001&quot;,
+            &quot;value&quot;: &quot;1&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_002&quot;,
+            &quot;value&quot;: &quot;1&quot;
+          },
+          {
+            &quot;room_id&quot;: &quot;room_003&quot;,
+            &quot;value&quot;: &quot;1&quot;
+          }
+        ]
+      },
+      &quot;metric&quot;: &quot;window_count&quot;,
+      &quot;raw_result&quot;: &quot;3&quot;,
+      &quot;room_id&quot;: null,
+      &quot;room_name&quot;: &quot;Весь объект&quot;,
+      &quot;rounded_result&quot;: &quot;3&quot;,
+      &quot;trace_id&quot;: &quot;object_total:window_count&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;72.40&quot;,
+        &quot;control_quantity_raw&quot;: &quot;72.4&quot;,
+        &quot;estimate_quantity&quot;: &quot;72.4&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;0&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;0&quot;,
+        &quot;deviation_signed&quot;: &quot;0&quot;,
+        &quot;status&quot;: &quot;exact_match&quot;,
+        &quot;threshold_exceeded&quot;: false
+      },
+      &quot;room_id&quot;: &quot;room_003&quot;,
+      &quot;source_rows&quot;: [
+        2
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:2&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;72.40&quot;,
+        &quot;control_quantity_raw&quot;: &quot;72.4&quot;,
+        &quot;estimate_quantity&quot;: &quot;72.4&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;0&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;0&quot;,
+        &quot;deviation_signed&quot;: &quot;0&quot;,
+        &quot;status&quot;: &quot;exact_match&quot;,
+        &quot;threshold_exceeded&quot;: false
+      },
+      &quot;room_id&quot;: &quot;room_003&quot;,
+      &quot;source_rows&quot;: [
+        3
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:3&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;46.20&quot;,
+        &quot;control_quantity_raw&quot;: &quot;46.2&quot;,
+        &quot;estimate_quantity&quot;: &quot;46.2&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;0&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;0&quot;,
+        &quot;deviation_signed&quot;: &quot;0&quot;,
+        &quot;status&quot;: &quot;exact_match&quot;,
+        &quot;threshold_exceeded&quot;: false
+      },
+      &quot;room_id&quot;: &quot;room_003&quot;,
+      &quot;source_rows&quot;: [
+        4
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:4&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;46.20&quot;,
+        &quot;control_quantity_raw&quot;: &quot;46.2&quot;,
+        &quot;estimate_quantity&quot;: &quot;46.2&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;0&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;0&quot;,
+        &quot;deviation_signed&quot;: &quot;0&quot;,
+        &quot;status&quot;: &quot;exact_match&quot;,
+        &quot;threshold_exceeded&quot;: false
+      },
+      &quot;room_id&quot;: &quot;room_003&quot;,
+      &quot;source_rows&quot;: [
+        5
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:5&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;26.50&quot;,
+        &quot;control_quantity_raw&quot;: &quot;26.5&quot;,
+        &quot;estimate_quantity&quot;: &quot;26.5&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;0&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;0&quot;,
+        &quot;deviation_signed&quot;: &quot;0&quot;,
+        &quot;status&quot;: &quot;exact_match&quot;,
+        &quot;threshold_exceeded&quot;: false
+      },
+      &quot;room_id&quot;: &quot;room_003&quot;,
+      &quot;source_rows&quot;: [
+        6
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:6&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;2&quot;,
+        &quot;control_quantity_raw&quot;: &quot;2&quot;,
+        &quot;estimate_quantity&quot;: &quot;2&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;0&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;0&quot;,
+        &quot;deviation_signed&quot;: &quot;0&quot;,
+        &quot;status&quot;: &quot;exact_match&quot;,
+        &quot;threshold_exceeded&quot;: false
+      },
+      &quot;room_id&quot;: null,
+      &quot;source_rows&quot;: [
+        7,
+        14,
+        21
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:7-14-21&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;1&quot;,
+        &quot;control_quantity_raw&quot;: &quot;1&quot;,
+        &quot;estimate_quantity&quot;: &quot;1&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;0&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;0&quot;,
+        &quot;deviation_signed&quot;: &quot;0&quot;,
+        &quot;status&quot;: &quot;exact_match&quot;,
+        &quot;threshold_exceeded&quot;: false
+      },
+      &quot;room_id&quot;: &quot;room_003&quot;,
+      &quot;source_rows&quot;: [
+        8
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:8&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;66.68&quot;,
+        &quot;control_quantity_raw&quot;: &quot;66.68&quot;,
+        &quot;estimate_quantity&quot;: &quot;66.68&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;0&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;0&quot;,
+        &quot;deviation_signed&quot;: &quot;0&quot;,
+        &quot;status&quot;: &quot;exact_match&quot;,
+        &quot;threshold_exceeded&quot;: false
+      },
+      &quot;room_id&quot;: &quot;room_001&quot;,
+      &quot;source_rows&quot;: [
+        9
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:9&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;66.68&quot;,
+        &quot;control_quantity_raw&quot;: &quot;66.68&quot;,
+        &quot;estimate_quantity&quot;: &quot;66.68&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;0&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;0&quot;,
+        &quot;deviation_signed&quot;: &quot;0&quot;,
+        &quot;status&quot;: &quot;exact_match&quot;,
+        &quot;threshold_exceeded&quot;: false
+      },
+      &quot;room_id&quot;: &quot;room_001&quot;,
+      &quot;source_rows&quot;: [
+        10
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:10&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;40.56&quot;,
+        &quot;control_quantity_raw&quot;: &quot;40.56&quot;,
+        &quot;estimate_quantity&quot;: &quot;24.16&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;16.4&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;40.4339250493096646942800789&quot;,
+        &quot;deviation_signed&quot;: &quot;-16.4&quot;,
+        &quot;status&quot;: &quot;deviation_found&quot;,
+        &quot;threshold_exceeded&quot;: true
+      },
+      &quot;room_id&quot;: &quot;room_001&quot;,
+      &quot;source_rows&quot;: [
+        11
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:11&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;40.56&quot;,
+        &quot;control_quantity_raw&quot;: &quot;40.56&quot;,
+        &quot;estimate_quantity&quot;: &quot;40.56&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;0&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;0&quot;,
+        &quot;deviation_signed&quot;: &quot;0&quot;,
+        &quot;status&quot;: &quot;exact_match&quot;,
+        &quot;threshold_exceeded&quot;: false
+      },
+      &quot;room_id&quot;: &quot;room_001&quot;,
+      &quot;source_rows&quot;: [
+        12
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:12&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;24.20&quot;,
+        &quot;control_quantity_raw&quot;: &quot;24.2&quot;,
+        &quot;estimate_quantity&quot;: &quot;24.2&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;0&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;0&quot;,
+        &quot;deviation_signed&quot;: &quot;0&quot;,
+        &quot;status&quot;: &quot;exact_match&quot;,
+        &quot;threshold_exceeded&quot;: false
+      },
+      &quot;room_id&quot;: &quot;room_001&quot;,
+      &quot;source_rows&quot;: [
+        13
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:13&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;1&quot;,
+        &quot;control_quantity_raw&quot;: &quot;1&quot;,
+        &quot;estimate_quantity&quot;: &quot;1&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;0&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;0&quot;,
+        &quot;deviation_signed&quot;: &quot;0&quot;,
+        &quot;status&quot;: &quot;exact_match&quot;,
+        &quot;threshold_exceeded&quot;: false
+      },
+      &quot;room_id&quot;: &quot;room_001&quot;,
+      &quot;source_rows&quot;: [
+        15
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:15&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;64.00&quot;,
+        &quot;control_quantity_raw&quot;: &quot;64&quot;,
+        &quot;estimate_quantity&quot;: &quot;64&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;0&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;0&quot;,
+        &quot;deviation_signed&quot;: &quot;0&quot;,
+        &quot;status&quot;: &quot;exact_match&quot;,
+        &quot;threshold_exceeded&quot;: false
+      },
+      &quot;room_id&quot;: &quot;room_002&quot;,
+      &quot;source_rows&quot;: [
+        16
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:16&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;64.00&quot;,
+        &quot;control_quantity_raw&quot;: &quot;64&quot;,
+        &quot;estimate_quantity&quot;: &quot;64&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;0&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;0&quot;,
+        &quot;deviation_signed&quot;: &quot;0&quot;,
+        &quot;status&quot;: &quot;exact_match&quot;,
+        &quot;threshold_exceeded&quot;: false
+      },
+      &quot;room_id&quot;: &quot;room_002&quot;,
+      &quot;source_rows&quot;: [
+        17
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:17&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;36.40&quot;,
+        &quot;control_quantity_raw&quot;: &quot;36.4&quot;,
+        &quot;estimate_quantity&quot;: &quot;36.4&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;0&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;0&quot;,
+        &quot;deviation_signed&quot;: &quot;0&quot;,
+        &quot;status&quot;: &quot;exact_match&quot;,
+        &quot;threshold_exceeded&quot;: false
+      },
+      &quot;room_id&quot;: &quot;room_002&quot;,
+      &quot;source_rows&quot;: [
+        18
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:18&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;36.40&quot;,
+        &quot;control_quantity_raw&quot;: &quot;36.4&quot;,
+        &quot;estimate_quantity&quot;: &quot;36.4&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;0&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;0&quot;,
+        &quot;deviation_signed&quot;: &quot;0&quot;,
+        &quot;status&quot;: &quot;exact_match&quot;,
+        &quot;threshold_exceeded&quot;: false
+      },
+      &quot;room_id&quot;: &quot;room_002&quot;,
+      &quot;source_rows&quot;: [
+        19
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:19&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;23.50&quot;,
+        &quot;control_quantity_raw&quot;: &quot;23.5&quot;,
+        &quot;estimate_quantity&quot;: &quot;23.5&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;0&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;0&quot;,
+        &quot;deviation_signed&quot;: &quot;0&quot;,
+        &quot;status&quot;: &quot;exact_match&quot;,
+        &quot;threshold_exceeded&quot;: false
+      },
+      &quot;room_id&quot;: &quot;room_002&quot;,
+      &quot;source_rows&quot;: [
+        20
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:20&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: &quot;abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 &gt; tolerance_percent&quot;,
+      &quot;inputs&quot;: {
+        &quot;comparison_operator&quot;: &quot;&gt;&quot;,
+        &quot;control_quantity_display&quot;: &quot;1&quot;,
+        &quot;control_quantity_raw&quot;: &quot;1&quot;,
+        &quot;estimate_quantity&quot;: &quot;1&quot;,
+        &quot;tolerance_percent&quot;: &quot;5&quot;
+      },
+      &quot;metric&quot;: &quot;quantity_threshold_check&quot;,
+      &quot;results&quot;: {
+        &quot;deviation_absolute&quot;: &quot;0&quot;,
+        &quot;deviation_percent_raw&quot;: &quot;0&quot;,
+        &quot;deviation_signed&quot;: &quot;0&quot;,
+        &quot;status&quot;: &quot;exact_match&quot;,
+        &quot;threshold_exceeded&quot;: false
+      },
+      &quot;room_id&quot;: &quot;room_002&quot;,
+      &quot;source_rows&quot;: [
+        22
+      ],
+      &quot;trace_id&quot;: &quot;quantity_check:rows:22&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;72.4&quot;,
+        &quot;estimate_total&quot;: &quot;32580&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;560&quot;,
+        &quot;mcp_unit_price&quot;: &quot;450&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;32580&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;7964&quot;
+      },
+      &quot;source_row&quot;: 2,
+      &quot;trace_id&quot;: &quot;price:row:2:wall_painting&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;72.4&quot;,
+        &quot;estimate_total&quot;: &quot;8688&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;120&quot;,
+        &quot;mcp_unit_price&quot;: &quot;120&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;8688&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 3,
+      &quot;trace_id&quot;: &quot;price:row:3:wall_priming&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;46.2&quot;,
+        &quot;estimate_total&quot;: &quot;78540&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;1700&quot;,
+        &quot;mcp_unit_price&quot;: &quot;1700&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;78540&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 4,
+      &quot;trace_id&quot;: &quot;price:row:4:floor_installation&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;46.2&quot;,
+        &quot;estimate_total&quot;: &quot;30030&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;650&quot;,
+        &quot;mcp_unit_price&quot;: &quot;650&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;30030&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 5,
+      &quot;trace_id&quot;: &quot;price:row:5:ceiling_finishing&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;26.5&quot;,
+        &quot;estimate_total&quot;: &quot;9275&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;350&quot;,
+        &quot;mcp_unit_price&quot;: &quot;350&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;9275&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 6,
+      &quot;trace_id&quot;: &quot;price:row:6:baseboard_installation&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;1&quot;,
+        &quot;estimate_total&quot;: &quot;7000&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;7000&quot;,
+        &quot;mcp_unit_price&quot;: &quot;7000&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;7000&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 7,
+      &quot;trace_id&quot;: &quot;price:row:7:door_installation&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;1&quot;,
+        &quot;estimate_total&quot;: &quot;9000&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;9000&quot;,
+        &quot;mcp_unit_price&quot;: &quot;9000&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;9000&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 8,
+      &quot;trace_id&quot;: &quot;price:row:8:window_installation&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;66.68&quot;,
+        &quot;estimate_total&quot;: &quot;30006&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;450&quot;,
+        &quot;mcp_unit_price&quot;: &quot;450&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;30006&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 9,
+      &quot;trace_id&quot;: &quot;price:row:9:wall_painting&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;66.68&quot;,
+        &quot;estimate_total&quot;: &quot;8001.6&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;120&quot;,
+        &quot;mcp_unit_price&quot;: &quot;120&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;8001.6&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 10,
+      &quot;trace_id&quot;: &quot;price:row:10:wall_priming&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;24.16&quot;,
+        &quot;estimate_total&quot;: &quot;68952&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;1700&quot;,
+        &quot;mcp_unit_price&quot;: &quot;1700&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;41072&quot;,
+        &quot;total_cost_impact&quot;: &quot;27880&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 11,
+      &quot;trace_id&quot;: &quot;price:row:11:floor_installation&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;40.56&quot;,
+        &quot;estimate_total&quot;: &quot;26364&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;650&quot;,
+        &quot;mcp_unit_price&quot;: &quot;650&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;26364&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 12,
+      &quot;trace_id&quot;: &quot;price:row:12:ceiling_finishing&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;24.2&quot;,
+        &quot;estimate_total&quot;: &quot;8470&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;350&quot;,
+        &quot;mcp_unit_price&quot;: &quot;350&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;8470&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 13,
+      &quot;trace_id&quot;: &quot;price:row:13:baseboard_installation&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;0&quot;,
+        &quot;estimate_total&quot;: &quot;0&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;7000&quot;,
+        &quot;mcp_unit_price&quot;: &quot;7000&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;0&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 14,
+      &quot;trace_id&quot;: &quot;price:row:14:door_installation&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;1&quot;,
+        &quot;estimate_total&quot;: &quot;9000&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;9000&quot;,
+        &quot;mcp_unit_price&quot;: &quot;9000&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;9000&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 15,
+      &quot;trace_id&quot;: &quot;price:row:15:window_installation&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;64&quot;,
+        &quot;estimate_total&quot;: &quot;28800&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;450&quot;,
+        &quot;mcp_unit_price&quot;: &quot;450&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;28800&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 16,
+      &quot;trace_id&quot;: &quot;price:row:16:wall_painting&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;64&quot;,
+        &quot;estimate_total&quot;: &quot;7680&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;120&quot;,
+        &quot;mcp_unit_price&quot;: &quot;120&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;7680&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 17,
+      &quot;trace_id&quot;: &quot;price:row:17:wall_priming&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;36.4&quot;,
+        &quot;estimate_total&quot;: &quot;61880&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;1700&quot;,
+        &quot;mcp_unit_price&quot;: &quot;1700&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;61880&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 18,
+      &quot;trace_id&quot;: &quot;price:row:18:floor_installation&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;36.4&quot;,
+        &quot;estimate_total&quot;: &quot;23660&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;650&quot;,
+        &quot;mcp_unit_price&quot;: &quot;650&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;23660&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 19,
+      &quot;trace_id&quot;: &quot;price:row:19:ceiling_finishing&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;23.5&quot;,
+        &quot;estimate_total&quot;: &quot;8225&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;350&quot;,
+        &quot;mcp_unit_price&quot;: &quot;350&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;8225&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 20,
+      &quot;trace_id&quot;: &quot;price:row:20:baseboard_installation&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;1&quot;,
+        &quot;estimate_total&quot;: &quot;7000&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;7000&quot;,
+        &quot;mcp_unit_price&quot;: &quot;7000&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;7000&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 21,
+      &quot;trace_id&quot;: &quot;price:row:21:door_installation&quot;,
+      &quot;warnings&quot;: []
+    },
+    {
+      &quot;formula&quot;: {
+        &quot;mcp_total&quot;: &quot;estimate_quantity * mcp_unit_price&quot;,
+        &quot;total_cost_impact&quot;: &quot;estimate_total - mcp_total&quot;,
+        &quot;unit_price_impact&quot;: &quot;(estimate_unit_price - mcp_unit_price) * estimate_quantity&quot;
+      },
+      &quot;inputs&quot;: {
+        &quot;estimate_quantity&quot;: &quot;1&quot;,
+        &quot;estimate_total&quot;: &quot;9000&quot;,
+        &quot;estimate_total_source&quot;: &quot;provided_or_cached&quot;,
+        &quot;estimate_unit_price&quot;: &quot;9000&quot;,
+        &quot;mcp_unit_price&quot;: &quot;9000&quot;
+      },
+      &quot;metric&quot;: &quot;price_and_total_check&quot;,
+      &quot;results&quot;: {
+        &quot;mcp_total&quot;: &quot;9000&quot;,
+        &quot;total_cost_impact&quot;: &quot;0&quot;,
+        &quot;unit_price_impact&quot;: &quot;0&quot;
+      },
+      &quot;source_row&quot;: 22,
+      &quot;trace_id&quot;: &quot;price:row:22:window_installation&quot;,
+      &quot;warnings&quot;: []
+    }
+  ],
+  &quot;schema_version&quot;: 1
+}</pre></details></details>
+<details><summary>Предупреждения (Warnings)</summary><div class="table-wrap"><table><thead><tr><th>Строка</th><th>Сообщение</th></tr></thead><tbody><tr><td colspan="2" class="empty">Нет данных</td></tr></tbody></table></div></details>
+<details><summary>Служебная информация</summary><div class="table-wrap"><table><thead><tr><th>Строка</th><th>Сообщение</th></tr></thead><tbody><tr><td colspan="2" class="empty">Нет данных</td></tr></tbody></table></div></details>
+<details><summary>Unsupported и not checked</summary><div class="table-wrap"><table><thead><tr><th>Строка</th><th>Статус</th><th>Причина</th></tr></thead><tbody><tr><td colspan="3" class="empty">Нет данных</td></tr></tbody></table></div><pre>{
+  &quot;price_unresolved&quot;: [],
+  &quot;price_unsupported&quot;: [],
+  &quot;room_unresolved&quot;: [],
+  &quot;work_unresolved&quot;: [],
+  &quot;work_unsupported&quot;: []
+}</pre></details>
+<details><summary>Geometry evidence, missing fields и conflicts</summary><pre>{
+  &quot;conflicts&quot;: [],
+  &quot;missing_fields&quot;: [],
+  &quot;rooms&quot;: [
+    {
+      &quot;doors&quot;: [
+        {
+          &quot;element_id&quot;: &quot;Д-1&quot;,
+          &quot;height_m&quot;: &quot;2&quot;,
+          &quot;measurements&quot;: {
+            &quot;height_m&quot;: {
+              &quot;confidence&quot;: 1.0,
+              &quot;evidence_text&quot;: &quot;подпись \&quot;Д-1 900×2000\&quot; у проёма между Гостиной и Кухней&quot;,
+              &quot;source_type&quot;: &quot;explicit_plan_label&quot;,
+              &quot;value&quot;: &quot;2&quot;
+            },
+            &quot;width_m&quot;: {
+              &quot;confidence&quot;: 1.0,
+              &quot;evidence_text&quot;: &quot;подпись \&quot;Д-1 900×2000\&quot; у проёма между Гостиной и Кухней&quot;,
+              &quot;source_type&quot;: &quot;explicit_plan_label&quot;,
+              &quot;value&quot;: &quot;0.9&quot;
+            }
+          },
+          &quot;width_m&quot;: &quot;0.9&quot;
+        },
+        {
+          &quot;element_id&quot;: &quot;Д-2&quot;,
+          &quot;height_m&quot;: &quot;2&quot;,
+          &quot;measurements&quot;: {
+            &quot;height_m&quot;: {
+              &quot;confidence&quot;: 1.0,
+              &quot;evidence_text&quot;: &quot;подпись \&quot;Д-2 900×2000\&quot; у проёма между Кухней и Спальней&quot;,
+              &quot;source_type&quot;: &quot;explicit_plan_label&quot;,
+              &quot;value&quot;: &quot;2&quot;
+            },
+            &quot;width_m&quot;: {
+              &quot;confidence&quot;: 1.0,
+              &quot;evidence_text&quot;: &quot;подпись \&quot;Д-2 900×2000\&quot; у проёма между Кухней и Спальней&quot;,
+              &quot;source_type&quot;: &quot;explicit_plan_label&quot;,
+              &quot;value&quot;: &quot;0.9&quot;
+            }
+          },
+          &quot;width_m&quot;: &quot;0.9&quot;
+        }
+      ],
+      &quot;floor_area_m2&quot;: &quot;40.56&quot;,
+      &quot;height_m&quot;: &quot;2.8&quot;,
+      &quot;length_m&quot;: &quot;7.8&quot;,
+      &quot;measurements&quot;: {
+        &quot;floor_area_m2&quot;: {
+          &quot;confidence&quot;: 1.0,
+          &quot;evidence_text&quot;: &quot;Рассчитано по длине и ширине помещения.&quot;,
+          &quot;source_type&quot;: &quot;derived_from_explicit_dimensions&quot;,
+          &quot;value&quot;: &quot;40.56&quot;
+        },
+        &quot;height_m&quot;: {
+          &quot;confidence&quot;: 1.0,
+          &quot;evidence_text&quot;: &quot;Высота всех помещений 2.8 метра&quot;,
+          &quot;source_type&quot;: &quot;user_correction&quot;,
+          &quot;value&quot;: &quot;2.8&quot;
+        },
+        &quot;length_m&quot;: {
+          &quot;confidence&quot;: 1.0,
+          &quot;evidence_text&quot;: &quot;размерная линия \&quot;7800\&quot; вдоль верхней и нижней стены Кухни&quot;,
+          &quot;source_type&quot;: &quot;explicit_dimension_line&quot;,
+          &quot;value&quot;: &quot;7.8&quot;
+        },
+        &quot;perimeter_m&quot;: {
+          &quot;confidence&quot;: 1.0,
+          &quot;evidence_text&quot;: &quot;Рассчитано по длине и ширине помещения.&quot;,
+          &quot;source_type&quot;: &quot;derived_from_explicit_dimensions&quot;,
+          &quot;value&quot;: &quot;26&quot;
+        },
+        &quot;width_m&quot;: {
+          &quot;confidence&quot;: 1.0,
+          &quot;evidence_text&quot;: &quot;размерная линия \&quot;5200\&quot; вдоль левой стены Кухни&quot;,
+          &quot;source_type&quot;: &quot;explicit_dimension_line&quot;,
+          &quot;value&quot;: &quot;5.2&quot;
+        }
+      },
+      &quot;name&quot;: &quot;Кухня&quot;,
+      &quot;perimeter_m&quot;: &quot;26&quot;,
+      &quot;room_id&quot;: &quot;room_001&quot;,
+      &quot;source_room_id&quot;: &quot;1&quot;,
+      &quot;warnings&quot;: [],
+      &quot;width_m&quot;: &quot;5.2&quot;,
+      &quot;windows&quot;: [
+        {
+          &quot;element_id&quot;: &quot;ОК-2&quot;,
+          &quot;height_m&quot;: &quot;1.4&quot;,
+          &quot;measurements&quot;: {
+            &quot;height_m&quot;: {
+              &quot;confidence&quot;: 1.0,
+              &quot;evidence_text&quot;: &quot;подпись \&quot;ОК-2 1800×1400\&quot; над верхней стеной Кухни&quot;,
+              &quot;source_type&quot;: &quot;explicit_plan_label&quot;,
+              &quot;value&quot;: &quot;1.4&quot;
+            },
+            &quot;width_m&quot;: {
+              &quot;confidence&quot;: 1.0,
+              &quot;evidence_text&quot;: &quot;подпись \&quot;ОК-2 1800×1400\&quot; над верхней стеной Кухни&quot;,
+              &quot;source_type&quot;: &quot;explicit_plan_label&quot;,
+              &quot;value&quot;: &quot;1.8&quot;
+            }
+          },
+          &quot;width_m&quot;: &quot;1.8&quot;
+        }
+      ]
+    },
+    {
+      &quot;doors&quot;: [
+        {
+          &quot;element_id&quot;: &quot;Д-2&quot;,
+          &quot;height_m&quot;: &quot;2&quot;,
+          &quot;measurements&quot;: {
+            &quot;height_m&quot;: {
+              &quot;confidence&quot;: 1.0,
+              &quot;evidence_text&quot;: &quot;подпись \&quot;Д-2 900×2000\&quot; у проёма между Кухней и Спальней&quot;,
+              &quot;source_type&quot;: &quot;explicit_plan_label&quot;,
+              &quot;value&quot;: &quot;2&quot;
+            },
+            &quot;width_m&quot;: {
+              &quot;confidence&quot;: 1.0,
+              &quot;evidence_text&quot;: &quot;подпись \&quot;Д-2 900×2000\&quot; у проёма между Кухней и Спальней&quot;,
+              &quot;source_type&quot;: &quot;explicit_plan_label&quot;,
+              &quot;value&quot;: &quot;0.9&quot;
+            }
+          },
+          &quot;width_m&quot;: &quot;0.9&quot;
+        }
+      ],
+      &quot;floor_area_m2&quot;: &quot;36.4&quot;,
+      &quot;height_m&quot;: &quot;2.8&quot;,
+      &quot;length_m&quot;: &quot;7&quot;,
+      &quot;measurements&quot;: {
+        &quot;floor_area_m2&quot;: {
+          &quot;confidence&quot;: 1.0,
+          &quot;evidence_text&quot;: &quot;Рассчитано по длине и ширине помещения.&quot;,
+          &quot;source_type&quot;: &quot;derived_from_explicit_dimensions&quot;,
+          &quot;value&quot;: &quot;36.4&quot;
+        },
+        &quot;height_m&quot;: {
+          &quot;confidence&quot;: 1.0,
+          &quot;evidence_text&quot;: &quot;Высота всех помещений 2.8 метра&quot;,
+          &quot;source_type&quot;: &quot;user_correction&quot;,
+          &quot;value&quot;: &quot;2.8&quot;
+        },
+        &quot;length_m&quot;: {
+          &quot;confidence&quot;: 1.0,
+          &quot;evidence_text&quot;: &quot;размерная линия \&quot;7000\&quot; вдоль верхней и нижней стены Спальни&quot;,
+          &quot;source_type&quot;: &quot;explicit_dimension_line&quot;,
+          &quot;value&quot;: &quot;7&quot;
+        },
+        &quot;perimeter_m&quot;: {
+          &quot;confidence&quot;: 1.0,
+          &quot;evidence_text&quot;: &quot;Рассчитано по длине и ширине помещения.&quot;,
+          &quot;source_type&quot;: &quot;derived_from_explicit_dimensions&quot;,
+          &quot;value&quot;: &quot;24.4&quot;
+        },
+        &quot;width_m&quot;: {
+          &quot;confidence&quot;: 1.0,
+          &quot;evidence_text&quot;: &quot;размерная линия \&quot;5200\&quot; вдоль левой и правой стены Спальни&quot;,
+          &quot;source_type&quot;: &quot;explicit_dimension_line&quot;,
+          &quot;value&quot;: &quot;5.2&quot;
+        }
+      },
+      &quot;name&quot;: &quot;Спальня&quot;,
+      &quot;perimeter_m&quot;: &quot;24.4&quot;,
+      &quot;room_id&quot;: &quot;room_002&quot;,
+      &quot;source_room_id&quot;: &quot;2&quot;,
+      &quot;warnings&quot;: [],
+      &quot;width_m&quot;: &quot;5.2&quot;,
+      &quot;windows&quot;: [
+        {
+          &quot;element_id&quot;: &quot;ОК-3&quot;,
+          &quot;height_m&quot;: &quot;1.4&quot;,
+          &quot;measurements&quot;: {
+            &quot;height_m&quot;: {
+              &quot;confidence&quot;: 1.0,
+              &quot;evidence_text&quot;: &quot;подпись \&quot;ОК-3 1800×1400\&quot; под нижней стеной Спальни&quot;,
+              &quot;source_type&quot;: &quot;explicit_plan_label&quot;,
+              &quot;value&quot;: &quot;1.4&quot;
+            },
+            &quot;width_m&quot;: {
+              &quot;confidence&quot;: 1.0,
+              &quot;evidence_text&quot;: &quot;подпись \&quot;ОК-3 1800×1400\&quot; под нижней стеной Спальни&quot;,
+              &quot;source_type&quot;: &quot;explicit_plan_label&quot;,
+              &quot;value&quot;: &quot;1.8&quot;
+            }
+          },
+          &quot;width_m&quot;: &quot;1.8&quot;
+        }
+      ]
+    },
+    {
+      &quot;doors&quot;: [
+        {
+          &quot;element_id&quot;: &quot;Д-1&quot;,
+          &quot;height_m&quot;: &quot;2&quot;,
+          &quot;measurements&quot;: {
+            &quot;height_m&quot;: {
+              &quot;confidence&quot;: 1.0,
+              &quot;evidence_text&quot;: &quot;подпись \&quot;Д-1 900×2000\&quot; у проёма между Гостиной и Кухней&quot;,
+              &quot;source_type&quot;: &quot;explicit_plan_label&quot;,
+              &quot;value&quot;: &quot;2&quot;
+            },
+            &quot;width_m&quot;: {
+              &quot;confidence&quot;: 1.0,
+              &quot;evidence_text&quot;: &quot;подпись \&quot;Д-1 900×2000\&quot; у проёма между Гостиной и Кухней&quot;,
+              &quot;source_type&quot;: &quot;explicit_plan_label&quot;,
+              &quot;value&quot;: &quot;0.9&quot;
+            }
+          },
+          &quot;width_m&quot;: &quot;0.9&quot;
+        }
+      ],
+      &quot;floor_area_m2&quot;: &quot;46.2&quot;,
+      &quot;height_m&quot;: &quot;2.8&quot;,
+      &quot;length_m&quot;: &quot;7.7&quot;,
+      &quot;measurements&quot;: {
+        &quot;floor_area_m2&quot;: {
+          &quot;confidence&quot;: 1.0,
+          &quot;evidence_text&quot;: &quot;Рассчитано по длине и ширине помещения.&quot;,
+          &quot;source_type&quot;: &quot;derived_from_explicit_dimensions&quot;,
+          &quot;value&quot;: &quot;46.2&quot;
+        },
+        &quot;height_m&quot;: {
+          &quot;confidence&quot;: 1.0,
+          &quot;evidence_text&quot;: &quot;Высота всех помещений 2.8 метра&quot;,
+          &quot;source_type&quot;: &quot;user_correction&quot;,
+          &quot;value&quot;: &quot;2.8&quot;
+        },
+        &quot;length_m&quot;: {
+          &quot;confidence&quot;: 1.0,
+          &quot;evidence_text&quot;: &quot;размерная линия \&quot;7700\&quot; вдоль верхней и нижней стены Гостиной&quot;,
+          &quot;source_type&quot;: &quot;explicit_dimension_line&quot;,
+          &quot;value&quot;: &quot;7.7&quot;
+        },
+        &quot;perimeter_m&quot;: {
+          &quot;confidence&quot;: 1.0,
+          &quot;evidence_text&quot;: &quot;Рассчитано по длине и ширине помещения.&quot;,
+          &quot;source_type&quot;: &quot;derived_from_explicit_dimensions&quot;,
+          &quot;value&quot;: &quot;27.4&quot;
+        },
+        &quot;width_m&quot;: {
+          &quot;confidence&quot;: 1.0,
+          &quot;evidence_text&quot;: &quot;размерная линия \&quot;6000\&quot; вдоль левой и правой стены Гостиной&quot;,
+          &quot;source_type&quot;: &quot;explicit_dimension_line&quot;,
+          &quot;value&quot;: &quot;6&quot;
+        }
+      },
+      &quot;name&quot;: &quot;Гостиная&quot;,
+      &quot;perimeter_m&quot;: &quot;27.4&quot;,
+      &quot;room_id&quot;: &quot;room_003&quot;,
+      &quot;source_room_id&quot;: &quot;3&quot;,
+      &quot;warnings&quot;: [],
+      &quot;width_m&quot;: &quot;6&quot;,
+      &quot;windows&quot;: [
+        {
+          &quot;element_id&quot;: &quot;ОК-1&quot;,
+          &quot;height_m&quot;: &quot;1.4&quot;,
+          &quot;measurements&quot;: {
+            &quot;height_m&quot;: {
+              &quot;confidence&quot;: 1.0,
+              &quot;evidence_text&quot;: &quot;подпись \&quot;ОК-1 1800×1400\&quot; под нижней стеной Гостиной&quot;,
+              &quot;source_type&quot;: &quot;explicit_plan_label&quot;,
+              &quot;value&quot;: &quot;1.4&quot;
+            },
+            &quot;width_m&quot;: {
+              &quot;confidence&quot;: 1.0,
+              &quot;evidence_text&quot;: &quot;подпись \&quot;ОК-1 1800×1400\&quot; под нижней стеной Гостиной&quot;,
+              &quot;source_type&quot;: &quot;explicit_plan_label&quot;,
+              &quot;value&quot;: &quot;1.8&quot;
+            }
+          },
+          &quot;width_m&quot;: &quot;1.8&quot;
+        }
+      ]
+    }
+  ]
+}</pre></details>
+</section>
+<p class="disclaimer">Результат является предварительным автоматизированным аудитом и требует проверки специалистом.</p>
+</main></body></html>

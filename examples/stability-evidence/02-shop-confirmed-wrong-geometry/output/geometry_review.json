@@ -1,0 +1,210 @@
+{
+  "object_name": "Магазин (Торговый зал + подсобные помещения)",
+  "image_quality": {
+    "usable": true,
+    "issues": []
+  },
+  "rooms": [
+    {
+      "room_id": "room_001",
+      "name": "Подсобное помещение",
+      "floor_area_m2": "18,60",
+      "length_m": "3,10",
+      "width_m": "6,00",
+      "perimeter_m": "18,20",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-3",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-4",
+          "width_m": "1,40",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_002",
+      "name": "Кассовая зона",
+      "floor_area_m2": "30,60",
+      "length_m": "5,10",
+      "width_m": "6,00",
+      "perimeter_m": "22,20",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-3",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-1",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-2",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-2",
+          "width_m": "1,80",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_003",
+      "name": "Торговый зал",
+      "floor_area_m2": "38,40",
+      "length_m": "6,40",
+      "width_m": "6,00",
+      "perimeter_m": "24,80",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-1",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-1",
+          "width_m": "1,80",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_004",
+      "name": "Склад",
+      "floor_area_m2": "21,32",
+      "length_m": "4,10",
+      "width_m": "5,20",
+      "perimeter_m": "18,60",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-4",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-5",
+          "width_m": "0,80",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-6",
+          "width_m": "0,70",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-3",
+          "width_m": "1,80",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_005",
+      "name": "Зона выдачи",
+      "floor_area_m2": "10,80",
+      "length_m": "4,00",
+      "width_m": "2,70",
+      "perimeter_m": "13,40",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-2",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-4",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-5",
+          "width_m": "0,80",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-7",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-5",
+          "width_m": "1,20",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    },
+    {
+      "room_id": "room_006",
+      "name": "Приёмка товара",
+      "floor_area_m2": "9,20",
+      "length_m": "4,00",
+      "width_m": "2,30",
+      "perimeter_m": "12,60",
+      "height_m": "2,80",
+      "doors": [
+        {
+          "element_id": "Д-7",
+          "width_m": "0,90",
+          "height_m": "2,00"
+        },
+        {
+          "element_id": "Д-6",
+          "width_m": "0,70",
+          "height_m": "2,00"
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-6",
+          "width_m": "1,10",
+          "height_m": "1,40"
+        }
+      ],
+      "warnings": [],
+      "missing_fields": []
+    }
+  ],
+  "totals": {
+    "rooms_count": 6,
+    "floor_area_m2": "128,92",
+    "unique_doors_count": 7,
+    "unique_windows_count": 6
+  },
+  "warnings": [
+    "Двери Д-5 и Д-6 расположены на стыке Склад/Зона выдачи/Приёмка товара; принадлежность определена по вертикальному положению на плане относительно диапазона Y каждого помещения, возможна неоднозначность из-за близости границ."
+  ],
+  "missing_fields": [],
+  "conflicts": []
+}

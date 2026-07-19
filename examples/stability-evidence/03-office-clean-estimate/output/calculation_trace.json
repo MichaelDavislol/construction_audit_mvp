@@ -1,0 +1,2758 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "trace_id": "room:room_001:floor_area_m2",
+      "room_id": "room_001",
+      "room_name": "Кабинет руководителя",
+      "metric": "floor_area_m2",
+      "formula": "explicit floor_area_m2",
+      "inputs": {
+        "floor_area_m2": "15.84"
+      },
+      "raw_result": "15.84",
+      "rounded_result": "15.84",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_001:ceiling_area_m2",
+      "room_id": "room_001",
+      "room_name": "Кабинет руководителя",
+      "metric": "ceiling_area_m2",
+      "formula": "floor_area_m2",
+      "inputs": {
+        "floor_area_m2": "15.84"
+      },
+      "raw_result": "15.84",
+      "rounded_result": "15.84",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_001:gross_wall_area_m2",
+      "room_id": "room_001",
+      "room_name": "Кабинет руководителя",
+      "metric": "gross_wall_area_m2",
+      "formula": "perimeter_m * height_m",
+      "inputs": {
+        "perimeter_m": "16.2",
+        "height_m": "2.8"
+      },
+      "raw_result": "45.36",
+      "rounded_result": "45.36",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_001:doors_area_m2",
+      "room_id": "room_001",
+      "room_name": "Кабинет руководителя",
+      "metric": "doors_area_m2",
+      "formula": "sum(doors.width_m * doors.height_m)",
+      "inputs": {
+        "doors": [
+          {
+            "element_id": "Д-1",
+            "width_m": "0.9",
+            "height_m": "2"
+          },
+          {
+            "element_id": "Д-4",
+            "width_m": "0.7",
+            "height_m": "2"
+          },
+          {
+            "element_id": "Д-5",
+            "width_m": "0.85",
+            "height_m": "2"
+          }
+        ]
+      },
+      "raw_result": "4.9",
+      "rounded_result": "4.90",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_001:windows_area_m2",
+      "room_id": "room_001",
+      "room_name": "Кабинет руководителя",
+      "metric": "windows_area_m2",
+      "formula": "sum(windows.width_m * windows.height_m)",
+      "inputs": {
+        "windows": [
+          {
+            "element_id": "ОК-3",
+            "width_m": "1.5",
+            "height_m": "1.4"
+          }
+        ]
+      },
+      "raw_result": "2.1",
+      "rounded_result": "2.10",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_001:openings_area_m2",
+      "room_id": "room_001",
+      "room_name": "Кабинет руководителя",
+      "metric": "openings_area_m2",
+      "formula": "doors_area_m2 + windows_area_m2",
+      "inputs": {
+        "doors_area_m2": "4.9",
+        "windows_area_m2": "2.1"
+      },
+      "raw_result": "7",
+      "rounded_result": "7.00",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_001:net_wall_area_m2",
+      "room_id": "room_001",
+      "room_name": "Кабинет руководителя",
+      "metric": "net_wall_area_m2",
+      "formula": "gross_wall_area_m2 - openings_area_m2",
+      "inputs": {
+        "gross_wall_area_m2": "45.36",
+        "openings_area_m2": "7"
+      },
+      "raw_result": "38.36",
+      "rounded_result": "38.36",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_001:baseboard_length_m",
+      "room_id": "room_001",
+      "room_name": "Кабинет руководителя",
+      "metric": "baseboard_length_m",
+      "formula": "perimeter_m - sum(unique room door widths)",
+      "inputs": {
+        "perimeter_m": "16.2",
+        "doors": [
+          {
+            "element_id": "Д-1",
+            "width_m": "0.9"
+          },
+          {
+            "element_id": "Д-4",
+            "width_m": "0.7"
+          },
+          {
+            "element_id": "Д-5",
+            "width_m": "0.85"
+          }
+        ]
+      },
+      "raw_result": "13.75",
+      "rounded_result": "13.75",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_001:door_count",
+      "room_id": "room_001",
+      "room_name": "Кабинет руководителя",
+      "metric": "door_count",
+      "formula": "len(room doors)",
+      "inputs": {
+        "element_ids": [
+          "Д-1",
+          "Д-4",
+          "Д-5"
+        ]
+      },
+      "raw_result": "3",
+      "rounded_result": "3",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_001:window_count",
+      "room_id": "room_001",
+      "room_name": "Кабинет руководителя",
+      "metric": "window_count",
+      "formula": "len(room windows)",
+      "inputs": {
+        "element_ids": [
+          "ОК-3"
+        ]
+      },
+      "raw_result": "1",
+      "rounded_result": "1",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_002:floor_area_m2",
+      "room_id": "room_002",
+      "room_name": "Архив",
+      "metric": "floor_area_m2",
+      "formula": "explicit floor_area_m2",
+      "inputs": {
+        "floor_area_m2": "6.66"
+      },
+      "raw_result": "6.66",
+      "rounded_result": "6.66",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_002:ceiling_area_m2",
+      "room_id": "room_002",
+      "room_name": "Архив",
+      "metric": "ceiling_area_m2",
+      "formula": "floor_area_m2",
+      "inputs": {
+        "floor_area_m2": "6.66"
+      },
+      "raw_result": "6.66",
+      "rounded_result": "6.66",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_002:gross_wall_area_m2",
+      "room_id": "room_002",
+      "room_name": "Архив",
+      "metric": "gross_wall_area_m2",
+      "formula": "perimeter_m * height_m",
+      "inputs": {
+        "perimeter_m": "11",
+        "height_m": "2.8"
+      },
+      "raw_result": "30.8",
+      "rounded_result": "30.80",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_002:doors_area_m2",
+      "room_id": "room_002",
+      "room_name": "Архив",
+      "metric": "doors_area_m2",
+      "formula": "sum(doors.width_m * doors.height_m)",
+      "inputs": {
+        "doors": [
+          {
+            "element_id": "Д-4",
+            "width_m": "0.7",
+            "height_m": "2"
+          },
+          {
+            "element_id": "Д-6",
+            "width_m": "0.9",
+            "height_m": "2"
+          }
+        ]
+      },
+      "raw_result": "3.2",
+      "rounded_result": "3.20",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_002:windows_area_m2",
+      "room_id": "room_002",
+      "room_name": "Архив",
+      "metric": "windows_area_m2",
+      "formula": "sum(windows.width_m * windows.height_m)",
+      "inputs": {
+        "windows": [
+          {
+            "element_id": "ОК-5",
+            "width_m": "0.9",
+            "height_m": "1.4"
+          }
+        ]
+      },
+      "raw_result": "1.26",
+      "rounded_result": "1.26",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_002:openings_area_m2",
+      "room_id": "room_002",
+      "room_name": "Архив",
+      "metric": "openings_area_m2",
+      "formula": "doors_area_m2 + windows_area_m2",
+      "inputs": {
+        "doors_area_m2": "3.2",
+        "windows_area_m2": "1.26"
+      },
+      "raw_result": "4.46",
+      "rounded_result": "4.46",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_002:net_wall_area_m2",
+      "room_id": "room_002",
+      "room_name": "Архив",
+      "metric": "net_wall_area_m2",
+      "formula": "gross_wall_area_m2 - openings_area_m2",
+      "inputs": {
+        "gross_wall_area_m2": "30.8",
+        "openings_area_m2": "4.46"
+      },
+      "raw_result": "26.34",
+      "rounded_result": "26.34",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_002:baseboard_length_m",
+      "room_id": "room_002",
+      "room_name": "Архив",
+      "metric": "baseboard_length_m",
+      "formula": "perimeter_m - sum(unique room door widths)",
+      "inputs": {
+        "perimeter_m": "11",
+        "doors": [
+          {
+            "element_id": "Д-4",
+            "width_m": "0.7"
+          },
+          {
+            "element_id": "Д-6",
+            "width_m": "0.9"
+          }
+        ]
+      },
+      "raw_result": "9.4",
+      "rounded_result": "9.40",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_002:door_count",
+      "room_id": "room_002",
+      "room_name": "Архив",
+      "metric": "door_count",
+      "formula": "len(room doors)",
+      "inputs": {
+        "element_ids": [
+          "Д-4",
+          "Д-6"
+        ]
+      },
+      "raw_result": "2",
+      "rounded_result": "2",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_002:window_count",
+      "room_id": "room_002",
+      "room_name": "Архив",
+      "metric": "window_count",
+      "formula": "len(room windows)",
+      "inputs": {
+        "element_ids": [
+          "ОК-5"
+        ]
+      },
+      "raw_result": "1",
+      "rounded_result": "1",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_003:floor_area_m2",
+      "room_id": "room_003",
+      "room_name": "Переговорная",
+      "metric": "floor_area_m2",
+      "formula": "explicit floor_area_m2",
+      "inputs": {
+        "floor_area_m2": "10.36"
+      },
+      "raw_result": "10.36",
+      "rounded_result": "10.36",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_003:ceiling_area_m2",
+      "room_id": "room_003",
+      "room_name": "Переговорная",
+      "metric": "ceiling_area_m2",
+      "formula": "floor_area_m2",
+      "inputs": {
+        "floor_area_m2": "10.36"
+      },
+      "raw_result": "10.36",
+      "rounded_result": "10.36",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_003:gross_wall_area_m2",
+      "room_id": "room_003",
+      "room_name": "Переговорная",
+      "metric": "gross_wall_area_m2",
+      "formula": "perimeter_m * height_m",
+      "inputs": {
+        "perimeter_m": "13",
+        "height_m": "2.8"
+      },
+      "raw_result": "36.4",
+      "rounded_result": "36.40",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_003:doors_area_m2",
+      "room_id": "room_003",
+      "room_name": "Переговорная",
+      "metric": "doors_area_m2",
+      "formula": "sum(doors.width_m * doors.height_m)",
+      "inputs": {
+        "doors": [
+          {
+            "element_id": "Д-5",
+            "width_m": "0.85",
+            "height_m": "2"
+          },
+          {
+            "element_id": "Д-6",
+            "width_m": "0.9",
+            "height_m": "2"
+          },
+          {
+            "element_id": "Д-2",
+            "width_m": "0.9",
+            "height_m": "2"
+          }
+        ]
+      },
+      "raw_result": "5.3",
+      "rounded_result": "5.30",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_003:windows_area_m2",
+      "room_id": "room_003",
+      "room_name": "Переговорная",
+      "metric": "windows_area_m2",
+      "formula": "sum(windows.width_m * windows.height_m)",
+      "inputs": {
+        "windows": [
+          {
+            "element_id": "ОК-4",
+            "width_m": "1.3",
+            "height_m": "1.4"
+          }
+        ]
+      },
+      "raw_result": "1.82",
+      "rounded_result": "1.82",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_003:openings_area_m2",
+      "room_id": "room_003",
+      "room_name": "Переговорная",
+      "metric": "openings_area_m2",
+      "formula": "doors_area_m2 + windows_area_m2",
+      "inputs": {
+        "doors_area_m2": "5.3",
+        "windows_area_m2": "1.82"
+      },
+      "raw_result": "7.12",
+      "rounded_result": "7.12",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_003:net_wall_area_m2",
+      "room_id": "room_003",
+      "room_name": "Переговорная",
+      "metric": "net_wall_area_m2",
+      "formula": "gross_wall_area_m2 - openings_area_m2",
+      "inputs": {
+        "gross_wall_area_m2": "36.4",
+        "openings_area_m2": "7.12"
+      },
+      "raw_result": "29.28",
+      "rounded_result": "29.28",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_003:baseboard_length_m",
+      "room_id": "room_003",
+      "room_name": "Переговорная",
+      "metric": "baseboard_length_m",
+      "formula": "perimeter_m - sum(unique room door widths)",
+      "inputs": {
+        "perimeter_m": "13",
+        "doors": [
+          {
+            "element_id": "Д-5",
+            "width_m": "0.85"
+          },
+          {
+            "element_id": "Д-6",
+            "width_m": "0.9"
+          },
+          {
+            "element_id": "Д-2",
+            "width_m": "0.9"
+          }
+        ]
+      },
+      "raw_result": "10.35",
+      "rounded_result": "10.35",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_003:door_count",
+      "room_id": "room_003",
+      "room_name": "Переговорная",
+      "metric": "door_count",
+      "formula": "len(room doors)",
+      "inputs": {
+        "element_ids": [
+          "Д-5",
+          "Д-6",
+          "Д-2"
+        ]
+      },
+      "raw_result": "3",
+      "rounded_result": "3",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_003:window_count",
+      "room_id": "room_003",
+      "room_name": "Переговорная",
+      "metric": "window_count",
+      "formula": "len(room windows)",
+      "inputs": {
+        "element_ids": [
+          "ОК-4"
+        ]
+      },
+      "raw_result": "1",
+      "rounded_result": "1",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_004:floor_area_m2",
+      "room_id": "room_004",
+      "room_name": "Ресепшен",
+      "metric": "floor_area_m2",
+      "formula": "explicit floor_area_m2",
+      "inputs": {
+        "floor_area_m2": "40.04"
+      },
+      "raw_result": "40.04",
+      "rounded_result": "40.04",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_004:ceiling_area_m2",
+      "room_id": "room_004",
+      "room_name": "Ресепшен",
+      "metric": "ceiling_area_m2",
+      "formula": "floor_area_m2",
+      "inputs": {
+        "floor_area_m2": "40.04"
+      },
+      "raw_result": "40.04",
+      "rounded_result": "40.04",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_004:gross_wall_area_m2",
+      "room_id": "room_004",
+      "room_name": "Ресепшен",
+      "metric": "gross_wall_area_m2",
+      "formula": "perimeter_m * height_m",
+      "inputs": {
+        "perimeter_m": "25.8",
+        "height_m": "2.8"
+      },
+      "raw_result": "72.24",
+      "rounded_result": "72.24",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_004:doors_area_m2",
+      "room_id": "room_004",
+      "room_name": "Ресепшен",
+      "metric": "doors_area_m2",
+      "formula": "sum(doors.width_m * doors.height_m)",
+      "inputs": {
+        "doors": [
+          {
+            "element_id": "Д-1",
+            "width_m": "0.9",
+            "height_m": "2"
+          },
+          {
+            "element_id": "Д-2",
+            "width_m": "0.9",
+            "height_m": "2"
+          },
+          {
+            "element_id": "Д-3",
+            "width_m": "0.9",
+            "height_m": "2"
+          }
+        ]
+      },
+      "raw_result": "5.4",
+      "rounded_result": "5.40",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_004:windows_area_m2",
+      "room_id": "room_004",
+      "room_name": "Ресепшен",
+      "metric": "windows_area_m2",
+      "formula": "sum(windows.width_m * windows.height_m)",
+      "inputs": {
+        "windows": [
+          {
+            "element_id": "ОК-1",
+            "width_m": "1.8",
+            "height_m": "1.4"
+          }
+        ]
+      },
+      "raw_result": "2.52",
+      "rounded_result": "2.52",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_004:openings_area_m2",
+      "room_id": "room_004",
+      "room_name": "Ресепшен",
+      "metric": "openings_area_m2",
+      "formula": "doors_area_m2 + windows_area_m2",
+      "inputs": {
+        "doors_area_m2": "5.4",
+        "windows_area_m2": "2.52"
+      },
+      "raw_result": "7.92",
+      "rounded_result": "7.92",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_004:net_wall_area_m2",
+      "room_id": "room_004",
+      "room_name": "Ресепшен",
+      "metric": "net_wall_area_m2",
+      "formula": "gross_wall_area_m2 - openings_area_m2",
+      "inputs": {
+        "gross_wall_area_m2": "72.24",
+        "openings_area_m2": "7.92"
+      },
+      "raw_result": "64.32",
+      "rounded_result": "64.32",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_004:baseboard_length_m",
+      "room_id": "room_004",
+      "room_name": "Ресепшен",
+      "metric": "baseboard_length_m",
+      "formula": "perimeter_m - sum(unique room door widths)",
+      "inputs": {
+        "perimeter_m": "25.8",
+        "doors": [
+          {
+            "element_id": "Д-1",
+            "width_m": "0.9"
+          },
+          {
+            "element_id": "Д-2",
+            "width_m": "0.9"
+          },
+          {
+            "element_id": "Д-3",
+            "width_m": "0.9"
+          }
+        ]
+      },
+      "raw_result": "23.1",
+      "rounded_result": "23.10",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_004:door_count",
+      "room_id": "room_004",
+      "room_name": "Ресепшен",
+      "metric": "door_count",
+      "formula": "len(room doors)",
+      "inputs": {
+        "element_ids": [
+          "Д-1",
+          "Д-2",
+          "Д-3"
+        ]
+      },
+      "raw_result": "3",
+      "rounded_result": "3",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_004:window_count",
+      "room_id": "room_004",
+      "room_name": "Ресепшен",
+      "metric": "window_count",
+      "formula": "len(room windows)",
+      "inputs": {
+        "element_ids": [
+          "ОК-1"
+        ]
+      },
+      "raw_result": "1",
+      "rounded_result": "1",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_005:floor_area_m2",
+      "room_id": "room_005",
+      "room_name": "Open space",
+      "metric": "floor_area_m2",
+      "formula": "explicit floor_area_m2",
+      "inputs": {
+        "floor_area_m2": "25.48"
+      },
+      "raw_result": "25.48",
+      "rounded_result": "25.48",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_005:ceiling_area_m2",
+      "room_id": "room_005",
+      "room_name": "Open space",
+      "metric": "ceiling_area_m2",
+      "formula": "floor_area_m2",
+      "inputs": {
+        "floor_area_m2": "25.48"
+      },
+      "raw_result": "25.48",
+      "rounded_result": "25.48",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_005:gross_wall_area_m2",
+      "room_id": "room_005",
+      "room_name": "Open space",
+      "metric": "gross_wall_area_m2",
+      "formula": "perimeter_m * height_m",
+      "inputs": {
+        "perimeter_m": "20.2",
+        "height_m": "2.8"
+      },
+      "raw_result": "56.56",
+      "rounded_result": "56.56",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_005:doors_area_m2",
+      "room_id": "room_005",
+      "room_name": "Open space",
+      "metric": "doors_area_m2",
+      "formula": "sum(doors.width_m * doors.height_m)",
+      "inputs": {
+        "doors": [
+          {
+            "element_id": "Д-3",
+            "width_m": "0.9",
+            "height_m": "2"
+          }
+        ]
+      },
+      "raw_result": "1.8",
+      "rounded_result": "1.80",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_005:windows_area_m2",
+      "room_id": "room_005",
+      "room_name": "Open space",
+      "metric": "windows_area_m2",
+      "formula": "sum(windows.width_m * windows.height_m)",
+      "inputs": {
+        "windows": [
+          {
+            "element_id": "ОК-2",
+            "width_m": "1.8",
+            "height_m": "1.4"
+          }
+        ]
+      },
+      "raw_result": "2.52",
+      "rounded_result": "2.52",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_005:openings_area_m2",
+      "room_id": "room_005",
+      "room_name": "Open space",
+      "metric": "openings_area_m2",
+      "formula": "doors_area_m2 + windows_area_m2",
+      "inputs": {
+        "doors_area_m2": "1.8",
+        "windows_area_m2": "2.52"
+      },
+      "raw_result": "4.32",
+      "rounded_result": "4.32",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_005:net_wall_area_m2",
+      "room_id": "room_005",
+      "room_name": "Open space",
+      "metric": "net_wall_area_m2",
+      "formula": "gross_wall_area_m2 - openings_area_m2",
+      "inputs": {
+        "gross_wall_area_m2": "56.56",
+        "openings_area_m2": "4.32"
+      },
+      "raw_result": "52.24",
+      "rounded_result": "52.24",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_005:baseboard_length_m",
+      "room_id": "room_005",
+      "room_name": "Open space",
+      "metric": "baseboard_length_m",
+      "formula": "perimeter_m - sum(unique room door widths)",
+      "inputs": {
+        "perimeter_m": "20.2",
+        "doors": [
+          {
+            "element_id": "Д-3",
+            "width_m": "0.9"
+          }
+        ]
+      },
+      "raw_result": "19.3",
+      "rounded_result": "19.30",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_005:door_count",
+      "room_id": "room_005",
+      "room_name": "Open space",
+      "metric": "door_count",
+      "formula": "len(room doors)",
+      "inputs": {
+        "element_ids": [
+          "Д-3"
+        ]
+      },
+      "raw_result": "1",
+      "rounded_result": "1",
+      "warnings": []
+    },
+    {
+      "trace_id": "room:room_005:window_count",
+      "room_id": "room_005",
+      "room_name": "Open space",
+      "metric": "window_count",
+      "formula": "len(room windows)",
+      "inputs": {
+        "element_ids": [
+          "ОК-2"
+        ]
+      },
+      "raw_result": "1",
+      "rounded_result": "1",
+      "warnings": []
+    },
+    {
+      "trace_id": "object_total:floor_area_m2",
+      "room_id": null,
+      "room_name": "Весь объект",
+      "metric": "floor_area_m2",
+      "formula": "sum(room metric)",
+      "inputs": {
+        "room_values": [
+          {
+            "room_id": "room_001",
+            "value": "15.84"
+          },
+          {
+            "room_id": "room_002",
+            "value": "6.66"
+          },
+          {
+            "room_id": "room_003",
+            "value": "10.36"
+          },
+          {
+            "room_id": "room_004",
+            "value": "40.04"
+          },
+          {
+            "room_id": "room_005",
+            "value": "25.48"
+          }
+        ]
+      },
+      "raw_result": "98.38",
+      "rounded_result": "98.38",
+      "warnings": []
+    },
+    {
+      "trace_id": "object_total:ceiling_area_m2",
+      "room_id": null,
+      "room_name": "Весь объект",
+      "metric": "ceiling_area_m2",
+      "formula": "sum(room metric)",
+      "inputs": {
+        "room_values": [
+          {
+            "room_id": "room_001",
+            "value": "15.84"
+          },
+          {
+            "room_id": "room_002",
+            "value": "6.66"
+          },
+          {
+            "room_id": "room_003",
+            "value": "10.36"
+          },
+          {
+            "room_id": "room_004",
+            "value": "40.04"
+          },
+          {
+            "room_id": "room_005",
+            "value": "25.48"
+          }
+        ]
+      },
+      "raw_result": "98.38",
+      "rounded_result": "98.38",
+      "warnings": []
+    },
+    {
+      "trace_id": "object_total:gross_wall_area_m2",
+      "room_id": null,
+      "room_name": "Весь объект",
+      "metric": "gross_wall_area_m2",
+      "formula": "sum(room metric)",
+      "inputs": {
+        "room_values": [
+          {
+            "room_id": "room_001",
+            "value": "45.36"
+          },
+          {
+            "room_id": "room_002",
+            "value": "30.8"
+          },
+          {
+            "room_id": "room_003",
+            "value": "36.4"
+          },
+          {
+            "room_id": "room_004",
+            "value": "72.24"
+          },
+          {
+            "room_id": "room_005",
+            "value": "56.56"
+          }
+        ]
+      },
+      "raw_result": "241.36",
+      "rounded_result": "241.36",
+      "warnings": []
+    },
+    {
+      "trace_id": "object_total:doors_area_m2",
+      "room_id": null,
+      "room_name": "Весь объект",
+      "metric": "doors_area_m2",
+      "formula": "sum(room metric)",
+      "inputs": {
+        "room_values": [
+          {
+            "room_id": "room_001",
+            "value": "4.9"
+          },
+          {
+            "room_id": "room_002",
+            "value": "3.2"
+          },
+          {
+            "room_id": "room_003",
+            "value": "5.3"
+          },
+          {
+            "room_id": "room_004",
+            "value": "5.4"
+          },
+          {
+            "room_id": "room_005",
+            "value": "1.8"
+          }
+        ]
+      },
+      "raw_result": "20.6",
+      "rounded_result": "20.60",
+      "warnings": []
+    },
+    {
+      "trace_id": "object_total:windows_area_m2",
+      "room_id": null,
+      "room_name": "Весь объект",
+      "metric": "windows_area_m2",
+      "formula": "sum(room metric)",
+      "inputs": {
+        "room_values": [
+          {
+            "room_id": "room_001",
+            "value": "2.1"
+          },
+          {
+            "room_id": "room_002",
+            "value": "1.26"
+          },
+          {
+            "room_id": "room_003",
+            "value": "1.82"
+          },
+          {
+            "room_id": "room_004",
+            "value": "2.52"
+          },
+          {
+            "room_id": "room_005",
+            "value": "2.52"
+          }
+        ]
+      },
+      "raw_result": "10.22",
+      "rounded_result": "10.22",
+      "warnings": []
+    },
+    {
+      "trace_id": "object_total:openings_area_m2",
+      "room_id": null,
+      "room_name": "Весь объект",
+      "metric": "openings_area_m2",
+      "formula": "sum(room metric)",
+      "inputs": {
+        "room_values": [
+          {
+            "room_id": "room_001",
+            "value": "7"
+          },
+          {
+            "room_id": "room_002",
+            "value": "4.46"
+          },
+          {
+            "room_id": "room_003",
+            "value": "7.12"
+          },
+          {
+            "room_id": "room_004",
+            "value": "7.92"
+          },
+          {
+            "room_id": "room_005",
+            "value": "4.32"
+          }
+        ]
+      },
+      "raw_result": "30.82",
+      "rounded_result": "30.82",
+      "warnings": []
+    },
+    {
+      "trace_id": "object_total:net_wall_area_m2",
+      "room_id": null,
+      "room_name": "Весь объект",
+      "metric": "net_wall_area_m2",
+      "formula": "sum(room metric)",
+      "inputs": {
+        "room_values": [
+          {
+            "room_id": "room_001",
+            "value": "38.36"
+          },
+          {
+            "room_id": "room_002",
+            "value": "26.34"
+          },
+          {
+            "room_id": "room_003",
+            "value": "29.28"
+          },
+          {
+            "room_id": "room_004",
+            "value": "64.32"
+          },
+          {
+            "room_id": "room_005",
+            "value": "52.24"
+          }
+        ]
+      },
+      "raw_result": "210.54",
+      "rounded_result": "210.54",
+      "warnings": []
+    },
+    {
+      "trace_id": "object_total:baseboard_length_m",
+      "room_id": null,
+      "room_name": "Весь объект",
+      "metric": "baseboard_length_m",
+      "formula": "sum(room metric)",
+      "inputs": {
+        "room_values": [
+          {
+            "room_id": "room_001",
+            "value": "13.75"
+          },
+          {
+            "room_id": "room_002",
+            "value": "9.4"
+          },
+          {
+            "room_id": "room_003",
+            "value": "10.35"
+          },
+          {
+            "room_id": "room_004",
+            "value": "23.1"
+          },
+          {
+            "room_id": "room_005",
+            "value": "19.3"
+          }
+        ]
+      },
+      "raw_result": "75.9",
+      "rounded_result": "75.90",
+      "warnings": []
+    },
+    {
+      "trace_id": "object_total:door_count",
+      "room_id": null,
+      "room_name": "Весь объект",
+      "metric": "door_count",
+      "formula": "deduplicate by element_id",
+      "inputs": {
+        "room_values": [
+          {
+            "room_id": "room_001",
+            "value": "3"
+          },
+          {
+            "room_id": "room_002",
+            "value": "2"
+          },
+          {
+            "room_id": "room_003",
+            "value": "3"
+          },
+          {
+            "room_id": "room_004",
+            "value": "3"
+          },
+          {
+            "room_id": "room_005",
+            "value": "1"
+          }
+        ],
+        "element_ids": [
+          "Д-1",
+          "Д-2",
+          "Д-3",
+          "Д-4",
+          "Д-5",
+          "Д-6"
+        ]
+      },
+      "raw_result": "6",
+      "rounded_result": "6",
+      "warnings": []
+    },
+    {
+      "trace_id": "object_total:window_count",
+      "room_id": null,
+      "room_name": "Весь объект",
+      "metric": "window_count",
+      "formula": "deduplicate by element_id",
+      "inputs": {
+        "room_values": [
+          {
+            "room_id": "room_001",
+            "value": "1"
+          },
+          {
+            "room_id": "room_002",
+            "value": "1"
+          },
+          {
+            "room_id": "room_003",
+            "value": "1"
+          },
+          {
+            "room_id": "room_004",
+            "value": "1"
+          },
+          {
+            "room_id": "room_005",
+            "value": "1"
+          }
+        ],
+        "element_ids": [
+          "ОК-1",
+          "ОК-2",
+          "ОК-3",
+          "ОК-4",
+          "ОК-5"
+        ]
+      },
+      "raw_result": "5",
+      "rounded_result": "5",
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:2",
+      "source_rows": [
+        2
+      ],
+      "room_id": "room_004",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "64.32",
+        "control_quantity_raw": "64.32",
+        "control_quantity_display": "64.32",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:3",
+      "source_rows": [
+        3
+      ],
+      "room_id": "room_004",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "64.32",
+        "control_quantity_raw": "64.32",
+        "control_quantity_display": "64.32",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:4",
+      "source_rows": [
+        4
+      ],
+      "room_id": "room_004",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "40.04",
+        "control_quantity_raw": "40.04",
+        "control_quantity_display": "40.04",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:5",
+      "source_rows": [
+        5
+      ],
+      "room_id": "room_004",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "40.04",
+        "control_quantity_raw": "40.04",
+        "control_quantity_display": "40.04",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:6",
+      "source_rows": [
+        6
+      ],
+      "room_id": "room_004",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "23.1",
+        "control_quantity_raw": "23.1",
+        "control_quantity_display": "23.10",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:7-14-22-29-35",
+      "source_rows": [
+        7,
+        14,
+        22,
+        29,
+        35
+      ],
+      "room_id": null,
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "6",
+        "control_quantity_raw": "6",
+        "control_quantity_display": "6",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:8",
+      "source_rows": [
+        8
+      ],
+      "room_id": "room_004",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "1",
+        "control_quantity_raw": "1",
+        "control_quantity_display": "1",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:9",
+      "source_rows": [
+        9
+      ],
+      "room_id": "room_005",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "52.24",
+        "control_quantity_raw": "52.24",
+        "control_quantity_display": "52.24",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:10",
+      "source_rows": [
+        10
+      ],
+      "room_id": "room_005",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "52.24",
+        "control_quantity_raw": "52.24",
+        "control_quantity_display": "52.24",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:11",
+      "source_rows": [
+        11
+      ],
+      "room_id": "room_005",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "25.48",
+        "control_quantity_raw": "25.48",
+        "control_quantity_display": "25.48",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:12",
+      "source_rows": [
+        12
+      ],
+      "room_id": "room_005",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "25.48",
+        "control_quantity_raw": "25.48",
+        "control_quantity_display": "25.48",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:13",
+      "source_rows": [
+        13
+      ],
+      "room_id": "room_005",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "19.3",
+        "control_quantity_raw": "19.3",
+        "control_quantity_display": "19.30",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:15",
+      "source_rows": [
+        15
+      ],
+      "room_id": "room_005",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "1",
+        "control_quantity_raw": "1",
+        "control_quantity_display": "1",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:16",
+      "source_rows": [
+        16
+      ],
+      "room_id": "room_001",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "38.36",
+        "control_quantity_raw": "38.36",
+        "control_quantity_display": "38.36",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:17",
+      "source_rows": [
+        17
+      ],
+      "room_id": "room_001",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "38.36",
+        "control_quantity_raw": "38.36",
+        "control_quantity_display": "38.36",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:18",
+      "source_rows": [
+        18
+      ],
+      "room_id": "room_001",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "15.84",
+        "control_quantity_raw": "15.84",
+        "control_quantity_display": "15.84",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:19",
+      "source_rows": [
+        19
+      ],
+      "room_id": "room_001",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "15.84",
+        "control_quantity_raw": "15.84",
+        "control_quantity_display": "15.84",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:20",
+      "source_rows": [
+        20
+      ],
+      "room_id": "room_001",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "13.75",
+        "control_quantity_raw": "13.75",
+        "control_quantity_display": "13.75",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:21",
+      "source_rows": [
+        21
+      ],
+      "room_id": "room_001",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "1",
+        "control_quantity_raw": "1",
+        "control_quantity_display": "1",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:23",
+      "source_rows": [
+        23
+      ],
+      "room_id": "room_003",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "29.28",
+        "control_quantity_raw": "29.28",
+        "control_quantity_display": "29.28",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:24",
+      "source_rows": [
+        24
+      ],
+      "room_id": "room_003",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "29.28",
+        "control_quantity_raw": "29.28",
+        "control_quantity_display": "29.28",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:25",
+      "source_rows": [
+        25
+      ],
+      "room_id": "room_003",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "10.36",
+        "control_quantity_raw": "10.36",
+        "control_quantity_display": "10.36",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:26",
+      "source_rows": [
+        26
+      ],
+      "room_id": "room_003",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "10.36",
+        "control_quantity_raw": "10.36",
+        "control_quantity_display": "10.36",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:27",
+      "source_rows": [
+        27
+      ],
+      "room_id": "room_003",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "10.35",
+        "control_quantity_raw": "10.35",
+        "control_quantity_display": "10.35",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:28",
+      "source_rows": [
+        28
+      ],
+      "room_id": "room_003",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "1",
+        "control_quantity_raw": "1",
+        "control_quantity_display": "1",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:30",
+      "source_rows": [
+        30
+      ],
+      "room_id": "room_002",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "26.34",
+        "control_quantity_raw": "26.34",
+        "control_quantity_display": "26.34",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:31",
+      "source_rows": [
+        31
+      ],
+      "room_id": "room_002",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "26.34",
+        "control_quantity_raw": "26.34",
+        "control_quantity_display": "26.34",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:32",
+      "source_rows": [
+        32
+      ],
+      "room_id": "room_002",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "6.66",
+        "control_quantity_raw": "6.66",
+        "control_quantity_display": "6.66",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:33",
+      "source_rows": [
+        33
+      ],
+      "room_id": "room_002",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "6.66",
+        "control_quantity_raw": "6.66",
+        "control_quantity_display": "6.66",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:34",
+      "source_rows": [
+        34
+      ],
+      "room_id": "room_002",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "9.4",
+        "control_quantity_raw": "9.4",
+        "control_quantity_display": "9.40",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "quantity_check:rows:36",
+      "source_rows": [
+        36
+      ],
+      "room_id": "room_002",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "1",
+        "control_quantity_raw": "1",
+        "control_quantity_display": "1",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "results": {
+        "deviation_signed": "0",
+        "deviation_absolute": "0",
+        "deviation_percent_raw": "0",
+        "threshold_exceeded": false,
+        "status": "exact_match"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:2:wall_painting",
+      "source_row": 2,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "64.32",
+        "estimate_unit_price": "450",
+        "mcp_unit_price": "450",
+        "estimate_total": "28944",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "28944",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:3:wall_priming",
+      "source_row": 3,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "64.32",
+        "estimate_unit_price": "120",
+        "mcp_unit_price": "120",
+        "estimate_total": "7718.4",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "7718.4",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:4:floor_installation",
+      "source_row": 4,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "40.04",
+        "estimate_unit_price": "1700",
+        "mcp_unit_price": "1700",
+        "estimate_total": "68068",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "68068",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:5:ceiling_finishing",
+      "source_row": 5,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "40.04",
+        "estimate_unit_price": "650",
+        "mcp_unit_price": "650",
+        "estimate_total": "26026",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "26026",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:6:baseboard_installation",
+      "source_row": 6,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "23.1",
+        "estimate_unit_price": "350",
+        "mcp_unit_price": "350",
+        "estimate_total": "8085",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "8085",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:7:door_installation",
+      "source_row": 7,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "2",
+        "estimate_unit_price": "7000",
+        "mcp_unit_price": "7000",
+        "estimate_total": "14000",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "14000",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:8:window_installation",
+      "source_row": 8,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "1",
+        "estimate_unit_price": "9000",
+        "mcp_unit_price": "9000",
+        "estimate_total": "9000",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "9000",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:9:wall_painting",
+      "source_row": 9,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "52.24",
+        "estimate_unit_price": "450",
+        "mcp_unit_price": "450",
+        "estimate_total": "23508",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "23508",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:10:wall_priming",
+      "source_row": 10,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "52.24",
+        "estimate_unit_price": "120",
+        "mcp_unit_price": "120",
+        "estimate_total": "6268.8",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "6268.8",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:11:floor_installation",
+      "source_row": 11,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "25.48",
+        "estimate_unit_price": "1700",
+        "mcp_unit_price": "1700",
+        "estimate_total": "43316",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "43316",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:12:ceiling_finishing",
+      "source_row": 12,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "25.48",
+        "estimate_unit_price": "650",
+        "mcp_unit_price": "650",
+        "estimate_total": "16562",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "16562",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:13:baseboard_installation",
+      "source_row": 13,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "19.3",
+        "estimate_unit_price": "350",
+        "mcp_unit_price": "350",
+        "estimate_total": "6755",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "6755",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:14:door_installation",
+      "source_row": 14,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "1",
+        "estimate_unit_price": "7000",
+        "mcp_unit_price": "7000",
+        "estimate_total": "7000",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "7000",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:15:window_installation",
+      "source_row": 15,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "1",
+        "estimate_unit_price": "9000",
+        "mcp_unit_price": "9000",
+        "estimate_total": "9000",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "9000",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:16:wall_painting",
+      "source_row": 16,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "38.36",
+        "estimate_unit_price": "450",
+        "mcp_unit_price": "450",
+        "estimate_total": "17262",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "17262",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:17:wall_priming",
+      "source_row": 17,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "38.36",
+        "estimate_unit_price": "120",
+        "mcp_unit_price": "120",
+        "estimate_total": "4603.2",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "4603.2",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:18:floor_installation",
+      "source_row": 18,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "15.84",
+        "estimate_unit_price": "1700",
+        "mcp_unit_price": "1700",
+        "estimate_total": "26928",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "26928",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:19:ceiling_finishing",
+      "source_row": 19,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "15.84",
+        "estimate_unit_price": "650",
+        "mcp_unit_price": "650",
+        "estimate_total": "10296",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "10296",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:20:baseboard_installation",
+      "source_row": 20,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "13.75",
+        "estimate_unit_price": "350",
+        "mcp_unit_price": "350",
+        "estimate_total": "4812.5",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "4812.5",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:21:window_installation",
+      "source_row": 21,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "1",
+        "estimate_unit_price": "9000",
+        "mcp_unit_price": "9000",
+        "estimate_total": "9000",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "9000",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:22:door_installation",
+      "source_row": 22,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "1",
+        "estimate_unit_price": "7000",
+        "mcp_unit_price": "7000",
+        "estimate_total": "7000",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "7000",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:23:wall_painting",
+      "source_row": 23,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "29.28",
+        "estimate_unit_price": "450",
+        "mcp_unit_price": "450",
+        "estimate_total": "13176",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "13176",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:24:wall_priming",
+      "source_row": 24,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "29.28",
+        "estimate_unit_price": "120",
+        "mcp_unit_price": "120",
+        "estimate_total": "3513.6",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "3513.6",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:25:floor_installation",
+      "source_row": 25,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "10.36",
+        "estimate_unit_price": "1700",
+        "mcp_unit_price": "1700",
+        "estimate_total": "17612",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "17612",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:26:ceiling_finishing",
+      "source_row": 26,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "10.36",
+        "estimate_unit_price": "650",
+        "mcp_unit_price": "650",
+        "estimate_total": "6734",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "6734",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:27:baseboard_installation",
+      "source_row": 27,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "10.35",
+        "estimate_unit_price": "350",
+        "mcp_unit_price": "350",
+        "estimate_total": "3622.5",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "3622.5",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:28:window_installation",
+      "source_row": 28,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "1",
+        "estimate_unit_price": "9000",
+        "mcp_unit_price": "9000",
+        "estimate_total": "9000",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "9000",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:29:door_installation",
+      "source_row": 29,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "1",
+        "estimate_unit_price": "7000",
+        "mcp_unit_price": "7000",
+        "estimate_total": "7000",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "7000",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:30:wall_painting",
+      "source_row": 30,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "26.34",
+        "estimate_unit_price": "450",
+        "mcp_unit_price": "450",
+        "estimate_total": "11853",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "11853",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:31:wall_priming",
+      "source_row": 31,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "26.34",
+        "estimate_unit_price": "120",
+        "mcp_unit_price": "120",
+        "estimate_total": "3160.8",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "3160.8",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:32:floor_installation",
+      "source_row": 32,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "6.66",
+        "estimate_unit_price": "1700",
+        "mcp_unit_price": "1700",
+        "estimate_total": "11322",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "11322",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:33:ceiling_finishing",
+      "source_row": 33,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "6.66",
+        "estimate_unit_price": "650",
+        "mcp_unit_price": "650",
+        "estimate_total": "4329",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "4329",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:34:baseboard_installation",
+      "source_row": 34,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "9.4",
+        "estimate_unit_price": "350",
+        "mcp_unit_price": "350",
+        "estimate_total": "3290",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "3290",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:35:door_installation",
+      "source_row": 35,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "1",
+        "estimate_unit_price": "7000",
+        "mcp_unit_price": "7000",
+        "estimate_total": "7000",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "7000",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    },
+    {
+      "trace_id": "price:row:36:window_installation",
+      "source_row": 36,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "1",
+        "estimate_unit_price": "9000",
+        "mcp_unit_price": "9000",
+        "estimate_total": "9000",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "results": {
+        "mcp_total": "9000",
+        "unit_price_impact": "0",
+        "total_cost_impact": "0"
+      },
+      "warnings": []
+    }
+  ]
+}

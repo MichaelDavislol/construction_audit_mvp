@@ -1,0 +1,47 @@
+{
+  "source": "real_run",
+  "job_id": "audit_10_20260719",
+  "skill_version": "0.7.7",
+  "input_mode": "estimate_and_plan",
+  "scenario": "missing_door_installation_work",
+  "known_test_setup": "cash_zone_door_installation_row_removed",
+  "expected_outcome": "object_level_door_understatement_detected_and_control_estimate_restores_count",
+  "reproducibility": "reproducible_with_confirmed_three_door_geometry",
+  "status": "completed",
+  "geometry": {
+    "revision": 1,
+    "confirmed": true,
+    "rooms_count": 3,
+    "floor_area_m2": "210.78",
+    "unique_doors_count": 3,
+    "unique_windows_count": 3
+  },
+  "audit": {
+    "estimate_rows": 20,
+    "quantity_coverage_percent": "100",
+    "price_coverage_percent": "100",
+    "quantity_deviation_rows": 2,
+    "price_deviation_rows": 0,
+    "door_installation_estimate_total": "2",
+    "door_installation_unique_plan_total": "3",
+    "door_installation_check_scope": "object_total_unique_doors",
+    "findings_count": 1,
+    "findings_by_severity": {
+      "high": 1,
+      "warning": 0
+    },
+    "door_finding_financial_impact_absolute": "7000"
+  },
+  "analyst": {
+    "status": "generated",
+    "hypotheses_count": 2,
+    "missing_position_presented_as_hypothesis": true
+  },
+  "generated_estimate": {
+    "rows_count": 19,
+    "skipped_count": 0,
+    "door_installation_quantity": "3",
+    "door_installation_unit_price": "7000",
+    "door_installation_total": "21000"
+  }
+}

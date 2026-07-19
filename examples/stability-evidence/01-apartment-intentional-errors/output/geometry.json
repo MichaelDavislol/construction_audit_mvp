@@ -1,0 +1,294 @@
+{
+  "schema_version": 1,
+  "plan_id": "plan_001",
+  "object_name": "Квартира План 6",
+  "object_name_suggestion": null,
+  "image_quality": {
+    "usable": true,
+    "issues": []
+  },
+  "source_room_id_map": {
+    "1": "room_001",
+    "2": "room_002",
+    "3": "room_003"
+  },
+  "rooms": [
+    {
+      "room_id": "room_001",
+      "source_room_id": "1",
+      "name": "Кухня",
+      "floor_area_m2": "40.56",
+      "length_m": "7.8",
+      "width_m": "5.2",
+      "perimeter_m": "26",
+      "height_m": "2.8",
+      "measurements": {
+        "floor_area_m2": {
+          "value": "40.56",
+          "confidence": 1.0,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "length_m": {
+          "value": "7.8",
+          "confidence": 1.0,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "размерная линия \"7800\" вдоль верхней и нижней стены Кухни"
+        },
+        "width_m": {
+          "value": "5.2",
+          "confidence": 1.0,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "размерная линия \"5200\" вдоль левой стены Кухни"
+        },
+        "perimeter_m": {
+          "value": "26",
+          "confidence": 1.0,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "height_m": {
+          "value": "2.8",
+          "confidence": 1.0,
+          "source_type": "user_correction",
+          "evidence_text": "Высота всех помещений 2.8 метра"
+        }
+      },
+      "doors": [
+        {
+          "element_id": "Д-1",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "подпись \"Д-1 900×2000\" у проёма между Гостиной и Кухней"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "подпись \"Д-1 900×2000\" у проёма между Гостиной и Кухней"
+            }
+          }
+        },
+        {
+          "element_id": "Д-2",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "подпись \"Д-2 900×2000\" у проёма между Кухней и Спальней"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "подпись \"Д-2 900×2000\" у проёма между Кухней и Спальней"
+            }
+          }
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-2",
+          "width_m": "1.8",
+          "height_m": "1.4",
+          "measurements": {
+            "width_m": {
+              "value": "1.8",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "подпись \"ОК-2 1800×1400\" над верхней стеной Кухни"
+            },
+            "height_m": {
+              "value": "1.4",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "подпись \"ОК-2 1800×1400\" над верхней стеной Кухни"
+            }
+          }
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "room_id": "room_002",
+      "source_room_id": "2",
+      "name": "Спальня",
+      "floor_area_m2": "36.4",
+      "length_m": "7",
+      "width_m": "5.2",
+      "perimeter_m": "24.4",
+      "height_m": "2.8",
+      "measurements": {
+        "floor_area_m2": {
+          "value": "36.4",
+          "confidence": 1.0,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "length_m": {
+          "value": "7",
+          "confidence": 1.0,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "размерная линия \"7000\" вдоль верхней и нижней стены Спальни"
+        },
+        "width_m": {
+          "value": "5.2",
+          "confidence": 1.0,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "размерная линия \"5200\" вдоль левой и правой стены Спальни"
+        },
+        "perimeter_m": {
+          "value": "24.4",
+          "confidence": 1.0,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "height_m": {
+          "value": "2.8",
+          "confidence": 1.0,
+          "source_type": "user_correction",
+          "evidence_text": "Высота всех помещений 2.8 метра"
+        }
+      },
+      "doors": [
+        {
+          "element_id": "Д-2",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "подпись \"Д-2 900×2000\" у проёма между Кухней и Спальней"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "подпись \"Д-2 900×2000\" у проёма между Кухней и Спальней"
+            }
+          }
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-3",
+          "width_m": "1.8",
+          "height_m": "1.4",
+          "measurements": {
+            "width_m": {
+              "value": "1.8",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "подпись \"ОК-3 1800×1400\" под нижней стеной Спальни"
+            },
+            "height_m": {
+              "value": "1.4",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "подпись \"ОК-3 1800×1400\" под нижней стеной Спальни"
+            }
+          }
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "room_id": "room_003",
+      "source_room_id": "3",
+      "name": "Гостиная",
+      "floor_area_m2": "46.2",
+      "length_m": "7.7",
+      "width_m": "6",
+      "perimeter_m": "27.4",
+      "height_m": "2.8",
+      "measurements": {
+        "floor_area_m2": {
+          "value": "46.2",
+          "confidence": 1.0,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "length_m": {
+          "value": "7.7",
+          "confidence": 1.0,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "размерная линия \"7700\" вдоль верхней и нижней стены Гостиной"
+        },
+        "width_m": {
+          "value": "6",
+          "confidence": 1.0,
+          "source_type": "explicit_dimension_line",
+          "evidence_text": "размерная линия \"6000\" вдоль левой и правой стены Гостиной"
+        },
+        "perimeter_m": {
+          "value": "27.4",
+          "confidence": 1.0,
+          "source_type": "derived_from_explicit_dimensions",
+          "evidence_text": "Рассчитано по длине и ширине помещения."
+        },
+        "height_m": {
+          "value": "2.8",
+          "confidence": 1.0,
+          "source_type": "user_correction",
+          "evidence_text": "Высота всех помещений 2.8 метра"
+        }
+      },
+      "doors": [
+        {
+          "element_id": "Д-1",
+          "width_m": "0.9",
+          "height_m": "2",
+          "measurements": {
+            "width_m": {
+              "value": "0.9",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "подпись \"Д-1 900×2000\" у проёма между Гостиной и Кухней"
+            },
+            "height_m": {
+              "value": "2",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "подпись \"Д-1 900×2000\" у проёма между Гостиной и Кухней"
+            }
+          }
+        }
+      ],
+      "windows": [
+        {
+          "element_id": "ОК-1",
+          "width_m": "1.8",
+          "height_m": "1.4",
+          "measurements": {
+            "width_m": {
+              "value": "1.8",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "подпись \"ОК-1 1800×1400\" под нижней стеной Гостиной"
+            },
+            "height_m": {
+              "value": "1.4",
+              "confidence": 1.0,
+              "source_type": "explicit_plan_label",
+              "evidence_text": "подпись \"ОК-1 1800×1400\" под нижней стеной Гостиной"
+            }
+          }
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "warnings": [],
+  "missing_fields": [],
+  "conflicts": []
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "rooms": [
+    {
+      "room_id": "room_001",
+      "room_name": "Кухня",
+      "metrics": {
+        "floor_area_m2": "40.56",
+        "ceiling_area_m2": "40.56",
+        "gross_wall_area_m2": "72.80",
+        "doors_area_m2": "3.60",
+        "windows_area_m2": "2.52",
+        "openings_area_m2": "6.12",
+        "net_wall_area_m2": "66.68",
+        "baseboard_length_m": "24.20",
+        "door_count": "2",
+        "window_count": "1"
+      }
+    },
+    {
+      "room_id": "room_002",
+      "room_name": "Спальня",
+      "metrics": {
+        "floor_area_m2": "36.40",
+        "ceiling_area_m2": "36.40",
+        "gross_wall_area_m2": "68.32",
+        "doors_area_m2": "1.80",
+        "windows_area_m2": "2.52",
+        "openings_area_m2": "4.32",
+        "net_wall_area_m2": "64.00",
+        "baseboard_length_m": "23.50",
+        "door_count": "1",
+        "window_count": "1"
+      }
+    },
+    {
+      "room_id": "room_003",
+      "room_name": "Гостиная",
+      "metrics": {
+        "floor_area_m2": "46.20",
+        "ceiling_area_m2": "46.20",
+        "gross_wall_area_m2": "76.72",
+        "doors_area_m2": "1.80",
+        "windows_area_m2": "2.52",
+        "openings_area_m2": "4.32",
+        "net_wall_area_m2": "72.40",
+        "baseboard_length_m": "26.50",
+        "door_count": "1",
+        "window_count": "1"
+      }
+    }
+  ],
+  "object_totals": {
+    "floor_area_m2": "123.16",
+    "ceiling_area_m2": "123.16",
+    "gross_wall_area_m2": "217.84",
+    "doors_area_m2": "7.20",
+    "windows_area_m2": "7.56",
+    "openings_area_m2": "14.76",
+    "net_wall_area_m2": "203.08",
+    "baseboard_length_m": "74.20",
+    "door_count": "2",
+    "window_count": "3"
+  }
+}

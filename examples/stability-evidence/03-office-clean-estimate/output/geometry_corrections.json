@@ -1,0 +1,30 @@
+[
+  {
+    "revision_from": 1,
+    "revision_to": 2,
+    "previous_geometry_sha256": "bb6b9599f33cf5033093c036ac5246d2c3c6ee49bda53f523fac6abf0273b494",
+    "geometry_sha256": "9c2440a972dfaf624bb6570c4d04fe1576c8c72e0374c0bc1c042523abb0cf33",
+    "user_statement": "Высота всех помещений 2.8 метра",
+    "corrections": [
+      {
+        "target": "rooms",
+        "room_ids": "all",
+        "element_ids": "all",
+        "field": "height_m",
+        "input_value": 2.8,
+        "normalized_value": "2.8",
+        "value": "2.8",
+        "applied_targets": [
+          "room_001.height_m",
+          "room_002.height_m",
+          "room_003.height_m",
+          "room_004.height_m",
+          "room_005.height_m"
+        ]
+      }
+    ],
+    "task_id": "43f020e0",
+    "client_message_id": "msg-1784413856341-2",
+    "created_at": "2026-07-18T22:31:07.291051+00:00"
+  }
+]

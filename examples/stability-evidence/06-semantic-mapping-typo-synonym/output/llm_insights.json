@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "status": "no_useful_observations",
+  "summary": "Самостоятельных наблюдений с достаточными основаниями нет.",
+  "items": [],
+  "context_sha256": "9dc6cf9dc272481df1798d0c3c548a3da642c635a7955974d3f984adbf4e034f",
+  "insights_task_id": "44fc34ea",
+  "generated_at": "2026-07-19T01:04:20.098023+00:00"
+}

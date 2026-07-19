@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "scope": "construction_audit_mvp_post_check_analysis",
+  "object": {
+    "name": "Квартира План 6",
+    "geometry_revision": 2,
+    "geometry_confirmed": true,
+    "confirmed_geometry_sha256": "2e1b36f5752af0a6af784d4c6ac6ce080289374fccbddecd7b9a835a83a49e09"
+  },
+  "estimate_rows": [
+    {
+      "source_row": 2,
+      "room": "Гостиная",
+      "work_name": "Окраска стен",
+      "unit": "м²",
+      "quantity": "72.4"
+    },
+    {
+      "source_row": 11,
+      "room": "Кухня",
+      "work_name": "Устройство пола",
+      "unit": "м²",
+      "quantity": "24.16"
+    }
+  ],
+  "geometry": {
+    "rooms": [
+      {
+        "room_id": "room_001",
+        "name": "Кухня",
+        "metrics": {
+          "floor_area_m2": "40.56",
+          "ceiling_area_m2": "40.56",
+          "gross_wall_area_m2": "72.80",
+          "doors_area_m2": "3.60",
+          "windows_area_m2": "2.52",
+          "openings_area_m2": "6.12",
+          "net_wall_area_m2": "66.68",
+          "baseboard_length_m": "24.20",
+          "door_count": "2",
+          "window_count": "1"
+        }
+      }
+    ]
+  },
+  "mapping": {
+    "room_matches": 3,
+    "room_unresolved": 0,
+    "work_matches": 21,
+    "work_unsupported": 0,
+    "work_unresolved": 0,
+    "price_matches": 21,
+    "price_unsupported": 0,
+    "price_unresolved": 0
+  },
+  "price_summary": {
+    "catalog_items": 7,
+    "checked": 21,
+    "partially_checked": 0,
+    "not_checked": 0,
+    "deviations": 2
+  },
+  "price_checks": [
+    {
+      "source_row": 2,
+      "status": "deviation_found",
+      "mcp_work_id": "wall_painting",
+      "estimate_price": "560",
+      "mcp_price": "450"
+    },
+    {
+      "source_row": 11,
+      "status": "deviation_found",
+      "mcp_work_id": "floor_installation",
+      "estimate_price": "1700",
+      "mcp_price": "1700"
+    }
+  ],
+  "deterministic_findings": [
+    {
+      "finding_id": "finding_004",
+      "type": "price_overstatement",
+      "severity": "high",
+      "source_row": 2,
+      "source_rows": [
+        2
+      ],
+      "quantity_check_scope": null,
+      "allocation_status": null,
+      "canonical_room_id": null,
+      "canonical_room_name": "—",
+      "canonical_work_name": "Окраска стен",
+      "estimated_value": "560",
+      "control_value": "450",
+      "deviation_percent": "24.44444444444444444444444444",
+      "unit": "м²",
+      "calculation_trace_refs": [
+        "price:row:2:wall_painting"
+      ]
+    },
+    {
+      "finding_id": "finding_003",
+      "type": "quantity_understatement",
+      "severity": "high",
+      "source_row": 11,
+      "source_rows": [
+        11
+      ],
+      "quantity_check_scope": null,
+      "allocation_status": null,
+      "canonical_room_id": "room_001",
+      "canonical_room_name": "Кухня",
+      "canonical_work_name": "Устройство пола",
+      "estimated_value": "24.16",
+      "control_value": "40.56",
+      "deviation_percent": "40.4339250493096646942800789",
+      "unit": "м²",
+      "calculation_trace_refs": [
+        "room:room_001:floor_area_m2",
+        "quantity_check:rows:11"
+      ]
+    },
+    {
+      "finding_id": "finding_001",
+      "type": "arithmetic_mismatch",
+      "severity": "warning",
+      "source_row": 2,
+      "source_rows": [
+        2
+      ],
+      "quantity_check_scope": null,
+      "allocation_status": null,
+      "canonical_room_id": null,
+      "canonical_room_name": "—",
+      "canonical_work_name": "—",
+      "estimated_value": "32580",
+      "control_value": "40544",
+      "deviation_percent": "19.64285714285714285714285714",
+      "unit": "",
+      "calculation_trace_refs": []
+    },
+    {
+      "finding_id": "finding_002",
+      "type": "arithmetic_mismatch",
+      "severity": "warning",
+      "source_row": 11,
+      "source_rows": [
+        11
+      ],
+      "quantity_check_scope": null,
+      "allocation_status": null,
+      "canonical_room_id": null,
+      "canonical_room_name": "—",
+      "canonical_work_name": "—",
+      "estimated_value": "68952",
+      "control_value": "41072",
+      "deviation_percent": "67.88079470198675496688741722",
+      "unit": "",
+      "calculation_trace_refs": []
+    }
+  ],
+  "warnings": [],
+  "coverage": {
+    "checked_rows": 21,
+    "not_checked_rows": 0
+  },
+  "relevant_calculation_trace": [
+    {
+      "trace_id": "room:room_001:floor_area_m2",
+      "room_id": "room_001",
+      "metric": "floor_area_m2",
+      "formula": "explicit floor_area_m2",
+      "inputs": {
+        "floor_area_m2": "40.56"
+      },
+      "rounded_result": "40.56",
+      "results": null
+    },
+    {
+      "trace_id": "quantity_check:rows:11",
+      "room_id": "room_001",
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "24.16",
+        "control_quantity_raw": "40.56",
+        "control_quantity_display": "40.56",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "rounded_result": null,
+      "results": {
+        "deviation_signed": "-16.4",
+        "deviation_absolute": "16.4",
+        "deviation_percent_raw": "40.4339250493096646942800789",
+        "threshold_exceeded": true,
+        "status": "deviation_found"
+      }
+    },
+    {
+      "trace_id": "price:row:2:wall_painting",
+      "room_id": null,
+      "metric": "price_and_total_check",
+      "formula": {
+        "mcp_total": "estimate_quantity * mcp_unit_price",
+        "unit_price_impact": "(estimate_unit_price - mcp_unit_price) * estimate_quantity",
+        "total_cost_impact": "estimate_total - mcp_total"
+      },
+      "inputs": {
+        "estimate_quantity": "72.4",
+        "estimate_unit_price": "560",
+        "mcp_unit_price": "450",
+        "estimate_total": "32580",
+        "estimate_total_source": "provided_or_cached"
+      },
+      "rounded_result": null,
+      "results": {
+        "mcp_total": "32580",
+        "unit_price_impact": "7964",
+        "total_cost_impact": "0"
+      }
+    }
+  ],
+  "provenance": {
+    "price_catalog_source_tool": "mcp_construction_prices__get_supported_works",
+    "price_catalog_source_transport": "structured_object"
+  }
+}
