@@ -1,7 +1,6 @@
 {
   "source": "real_run",
   "job_id": "audit_med_20260717",
-  "skill_version": "0.7.5",
   "input_mode": "estimate_and_plan",
   "status": "completed",
   "geometry": {

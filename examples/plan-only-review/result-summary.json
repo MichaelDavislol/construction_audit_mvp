@@ -1,7 +1,6 @@
 {
   "source": "real_run",
   "job_id": "plan_med_20260718",
-  "skill_version": "0.7.6",
   "input_mode": "plan_only",
   "status": "estimate_generated",
   "geometry": {
