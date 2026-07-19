@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "scope": "construction_audit_mvp_post_check_analysis",
+  "object": {
+    "name": "Медицинский офис — план 2, смета 2",
+    "geometry_revision": 2,
+    "geometry_confirmed": true,
+    "confirmed_geometry_sha256": "caa6636a85b79182311d54f99687514969b5bdb3f7f4ea1ef5f418b0bcc6b056"
+  },
+  "estimate_rows": [],
+  "geometry": {
+    "rooms": []
+  },
+  "mapping": {
+    "room_matches": 5,
+    "room_unresolved": 0,
+    "work_matches": 35,
+    "work_unsupported": 0,
+    "work_unresolved": 0,
+    "price_matches": 35,
+    "price_unsupported": 0,
+    "price_unresolved": 0
+  },
+  "price_summary": {
+    "catalog_items": 7,
+    "checked": 35,
+    "partially_checked": 0,
+    "not_checked": 0,
+    "deviations": 0
+  },
+  "price_checks": [],
+  "deterministic_findings": [],
+  "warnings": [],
+  "coverage": {
+    "checked_rows": 35,
+    "not_checked_rows": 0
+  },
+  "relevant_calculation_trace": [],
+  "provenance": {
+    "price_catalog_source_tool": "mcp_construction_prices__get_supported_works",
+    "price_catalog_source_transport": "structured_object"
+  }
+}

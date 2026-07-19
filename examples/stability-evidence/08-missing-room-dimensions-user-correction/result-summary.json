@@ -1,0 +1,66 @@
+{
+  "source": "real_run",
+  "job_id": "audit_med2_20260719",
+  "skill_version": "0.7.7",
+  "input_mode": "estimate_and_plan",
+  "scenario": "room_dimensions_removed_then_supplied_by_user",
+  "known_test_setup": "reception_dimension_labels_erased_from_plan",
+  "expected_outcome": "no_dimension_guessing_user_correction_drives_deterministic_audit",
+  "reproducibility": "reproducible_on_rerun_with_same_user_correction",
+  "status": "completed",
+  "geometry": {
+    "revision": 2,
+    "confirmed": true,
+    "rooms_count": 5,
+    "floor_area_m2": "164.36",
+    "unique_doors_count": 6,
+    "unique_windows_count": 5,
+    "missing_fields_count": 0,
+    "conflicts_count": 0,
+    "correction_events_count": 1,
+    "correction_items_count": 3
+  },
+  "target_room": {
+    "room_id": "room_002",
+    "name": "Ресепшен",
+    "user_statement": "Ресепшн размеры ширина 4.2 длина 9.2. Высота всех помещений 2.8 метра",
+    "length_m": {
+      "value": "9.2",
+      "source_type": "user_correction"
+    },
+    "width_m": {
+      "value": "4.2",
+      "source_type": "user_correction"
+    },
+    "height_m": {
+      "value": "2.8",
+      "source_type": "user_correction"
+    },
+    "floor_area_m2": {
+      "value": "38.64",
+      "source_type": "derived_from_explicit_dimensions"
+    },
+    "perimeter_m": {
+      "value": "26.8",
+      "source_type": "derived_from_explicit_dimensions"
+    },
+    "net_wall_area_m2": "67.12",
+    "baseboard_length_m": "24.10"
+  },
+  "audit": {
+    "estimate_rows": 35,
+    "quantity_coverage_percent": "100",
+    "price_coverage_percent": "100",
+    "quantity_exact_match_rows": 35,
+    "quantity_deviation_rows": 0,
+    "price_deviation_rows": 0,
+    "findings_count": 0
+  },
+  "analyst": {
+    "status": "no_useful_observations",
+    "hypotheses_count": 0
+  },
+  "generated_estimate": {
+    "status": "not_requested"
+  }
+}

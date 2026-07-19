@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "rooms": [
+    {
+      "room_id": "room_001",
+      "room_name": "Кабинет администратора",
+      "metrics": {
+        "floor_area_m2": "28.56",
+        "ceiling_area_m2": "28.56",
+        "gross_wall_area_m2": "59.92",
+        "doors_area_m2": "3.60",
+        "windows_area_m2": "2.52",
+        "openings_area_m2": "6.12",
+        "net_wall_area_m2": "53.80",
+        "baseboard_length_m": "19.60",
+        "door_count": "2",
+        "window_count": "1"
+      }
+    },
+    {
+      "room_id": "room_002",
+      "room_name": "Ресепшен",
+      "metrics": {
+        "floor_area_m2": "38.64",
+        "ceiling_area_m2": "38.64",
+        "gross_wall_area_m2": "75.04",
+        "doors_area_m2": "5.40",
+        "windows_area_m2": "2.52",
+        "openings_area_m2": "7.92",
+        "net_wall_area_m2": "67.12",
+        "baseboard_length_m": "24.10",
+        "door_count": "3",
+        "window_count": "1"
+      }
+    },
+    {
+      "room_id": "room_003",
+      "room_name": "Зона ожидания",
+      "metrics": {
+        "floor_area_m2": "34.16",
+        "ceiling_area_m2": "34.16",
+        "gross_wall_area_m2": "65.52",
+        "doors_area_m2": "3.60",
+        "windows_area_m2": "2.52",
+        "openings_area_m2": "6.12",
+        "net_wall_area_m2": "59.40",
+        "baseboard_length_m": "21.60",
+        "door_count": "2",
+        "window_count": "1"
+      }
+    },
+    {
+      "room_id": "room_004",
+      "room_name": "Кабинет врача 2",
+      "metrics": {
+        "floor_area_m2": "29.40",
+        "ceiling_area_m2": "29.40",
+        "gross_wall_area_m2": "62.72",
+        "doors_area_m2": "5.40",
+        "windows_area_m2": "2.52",
+        "openings_area_m2": "7.92",
+        "net_wall_area_m2": "54.80",
+        "baseboard_length_m": "19.70",
+        "door_count": "3",
+        "window_count": "1"
+      }
+    },
+    {
+      "room_id": "room_005",
+      "room_name": "Кабинет врача 1",
+      "metrics": {
+        "floor_area_m2": "33.60",
+        "ceiling_area_m2": "33.60",
+        "gross_wall_area_m2": "66.08",
+        "doors_area_m2": "3.60",
+        "windows_area_m2": "2.52",
+        "openings_area_m2": "6.12",
+        "net_wall_area_m2": "59.96",
+        "baseboard_length_m": "21.80",
+        "door_count": "2",
+        "window_count": "1"
+      }
+    }
+  ],
+  "object_totals": {
+    "floor_area_m2": "164.36",
+    "ceiling_area_m2": "164.36",
+    "gross_wall_area_m2": "329.28",
+    "doors_area_m2": "21.60",
+    "windows_area_m2": "12.60",
+    "openings_area_m2": "34.20",
+    "net_wall_area_m2": "295.08",
+    "baseboard_length_m": "106.80",
+    "door_count": "6",
+    "window_count": "5"
+  }
+}

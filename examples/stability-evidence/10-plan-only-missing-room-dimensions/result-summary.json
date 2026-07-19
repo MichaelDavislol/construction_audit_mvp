@@ -1,0 +1,55 @@
+{
+  "source": "real_run",
+  "job_id": "audit_medoffice_20260719b",
+  "skill_version": "0.7.7",
+  "input_mode": "plan_only",
+  "scenario": "plan_only_with_room_dimensions_removed_from_plan",
+  "known_test_setup": "all_linear_dimensions_removed_from_reception_room",
+  "expected_outcome": "request_explicit_dimensions_confirm_geometry_and_generate_estimate",
+  "reproducibility": "reproducible_on_rerun_with_same_user_correction",
+  "status": "generated_estimate_completed",
+  "paired_case": "08-missing-room-dimensions-user-correction",
+  "input": {
+    "documents_count": 1,
+    "plan_sha256": "45f4858d2d534c538926d5d7af282ccca0f0cc560bd8e9d236bfd787a9c695ff",
+    "source_estimate_present": false,
+    "same_plan_as_case_08": true
+  },
+  "geometry": {
+    "revision": 2,
+    "confirmed": true,
+    "correction_events_count": 1,
+    "rooms_count": 5,
+    "floor_area_m2": "164.36",
+    "unique_doors_count": 6,
+    "unique_windows_count": 5,
+    "reception": {
+      "width_m": "4.2",
+      "length_m": "9.2",
+      "height_m": "2.8",
+      "floor_area_m2": "38.64",
+      "perimeter_m": "26.8",
+      "net_wall_area_m2": "67.12",
+      "baseboard_length_m": "24.1"
+    }
+  },
+  "price_catalog": {
+    "source_tool": "mcp_construction_prices__get_supported_works",
+    "items_count": 7,
+    "validation_status": "validated"
+  },
+  "generated_estimate": {
+    "rows_count": 31,
+    "skipped_count": 0,
+    "quantity_warnings_count": 0,
+    "rooms_count": 5,
+    "door_installation_quantity": "6",
+    "door_installation_unit_price": "7000",
+    "door_installation_total": "42000",
+    "total_cost": "678821.60"
+  },
+  "audit": {
+    "status": "not_started",
+    "reason": "plan_only_mode_has_no_source_estimate"
+  }
+}

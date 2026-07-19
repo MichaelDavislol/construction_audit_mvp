@@ -1,0 +1,73 @@
+{
+  "source": "real_run",
+  "job_id": "audit_medoffice_20260719",
+  "skill_version": "0.7.7",
+  "input_mode": "estimate_and_plan",
+  "scenario": "room_removed_from_estimate_but_present_on_plan",
+  "known_test_setup": "all_administrator_office_rows_removed_from_estimate_including_door_installation",
+  "expected_outcome": "vision_keeps_room_audit_does_not_invent_rows_generated_estimate_restores_room",
+  "reproducibility": "reproducible_on_rerun",
+  "status": "completed",
+  "geometry": {
+    "revision": 2,
+    "confirmed": true,
+    "rooms_count": 5,
+    "floor_area_m2": "164.36",
+    "unique_doors_count": 6,
+    "unique_windows_count": 5,
+    "missing_room": {
+      "room_id": "room_001",
+      "name": "Кабинет администратора",
+      "floor_area_m2": "28.56",
+      "doors": [
+        "Д-3",
+        "Д-4"
+      ],
+      "windows": [
+        "ОК-5"
+      ]
+    }
+  },
+  "source_estimate": {
+    "rows_count": 28,
+    "rooms_count": 4,
+    "administrator_office_present": false
+  },
+  "mapping": {
+    "mode": "deterministic_mapping",
+    "room_matches_count": 4,
+    "room_unresolved_count": 0,
+    "synthetic_administrator_office_rows_created": false
+  },
+  "audit": {
+    "quantity_coverage_percent": "100",
+    "price_coverage_percent": "100",
+    "quantity_exact_match_rows": 24,
+    "quantity_deviation_rows": 4,
+    "price_deviation_rows": 0,
+    "findings_count": 1,
+    "findings_by_severity": {
+      "high": 0,
+      "warning": 1
+    },
+    "door_installation_estimate_total": "5",
+    "door_installation_unique_plan_total": "6",
+    "door_installation_check_scope": "object_total_unique_doors",
+    "door_finding_financial_impact_absolute": "7000"
+  },
+  "analyst": {
+    "status": "generated",
+    "hypotheses_count": 2,
+    "missing_room_presented_as_hypothesis": true
+  },
+  "generated_estimate": {
+    "rows_count": 31,
+    "rooms_count": 5,
+    "skipped_count": 0,
+    "administrator_office_present": true,
+    "administrator_office_rows_count": 6,
+    "door_installation_quantity": "6",
+    "door_installation_unit_price": "7000",
+    "door_installation_total": "42000"
+  }
+}

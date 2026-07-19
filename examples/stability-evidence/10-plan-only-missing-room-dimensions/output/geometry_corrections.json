@@ -1,0 +1,58 @@
+[
+  {
+    "revision_from": 1,
+    "revision_to": 2,
+    "previous_geometry_sha256": "24b0a44ff352795ef4337ef0939fa3eebab489c228ac411daa6c7d12604930cb",
+    "geometry_sha256": "d9ea304d20514be2a51938a00e0633144ace7e2518ec34d27c6a8b995b18e341",
+    "user_statement": "Ресепшн размеры ширина 4.2 длина 9.2. Высота всех помещений 2.8 метра",
+    "corrections": [
+      {
+        "target": "rooms",
+        "room_ids": [
+          "2"
+        ],
+        "element_ids": "all",
+        "field": "width_m",
+        "input_value": 4.2,
+        "normalized_value": "4.2",
+        "value": "4.2",
+        "applied_targets": [
+          "room_002.width_m"
+        ]
+      },
+      {
+        "target": "rooms",
+        "room_ids": [
+          "2"
+        ],
+        "element_ids": "all",
+        "field": "length_m",
+        "input_value": 9.2,
+        "normalized_value": "9.2",
+        "value": "9.2",
+        "applied_targets": [
+          "room_002.length_m"
+        ]
+      },
+      {
+        "target": "rooms",
+        "room_ids": "all",
+        "element_ids": "all",
+        "field": "height_m",
+        "input_value": 2.8,
+        "normalized_value": "2.8",
+        "value": "2.8",
+        "applied_targets": [
+          "room_001.height_m",
+          "room_002.height_m",
+          "room_003.height_m",
+          "room_004.height_m",
+          "room_005.height_m"
+        ]
+      }
+    ],
+    "task_id": "f7188933",
+    "client_message_id": "msg-1784458488344-2",
+    "created_at": "2026-07-19T10:55:02.207394+00:00"
+  }
+]

@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "scope": "construction_audit_mvp_post_check_analysis",
+  "object": {
+    "name": "Медицинский офис 2_1",
+    "geometry_revision": 2,
+    "geometry_confirmed": true,
+    "confirmed_geometry_sha256": "c17681ada4d2fe66daa892aa292eb345af7d029b74386f2f63eebbe28be65ba4"
+  },
+  "estimate_rows": [
+    {
+      "source_row": 7,
+      "room": "Ресепшен",
+      "work_name": "Установка дверей",
+      "unit": "шт.",
+      "quantity": "2"
+    },
+    {
+      "source_row": 14,
+      "room": "Зона ожидания",
+      "work_name": "Установка дверей",
+      "unit": "шт.",
+      "quantity": "1"
+    },
+    {
+      "source_row": 21,
+      "room": "Кабинет врача 1",
+      "work_name": "Установка дверей",
+      "unit": "шт.",
+      "quantity": "1"
+    },
+    {
+      "source_row": 28,
+      "room": "Кабинет врача 2",
+      "work_name": "Установка дверей",
+      "unit": "шт.",
+      "quantity": "1"
+    }
+  ],
+  "geometry": {
+    "rooms": []
+  },
+  "mapping": {
+    "room_matches": 4,
+    "room_unresolved": 0,
+    "work_matches": 28,
+    "work_unsupported": 0,
+    "work_unresolved": 0,
+    "price_matches": 28,
+    "price_unsupported": 0,
+    "price_unresolved": 0
+  },
+  "price_summary": {
+    "catalog_items": 7,
+    "checked": 28,
+    "partially_checked": 0,
+    "not_checked": 0,
+    "deviations": 0
+  },
+  "price_checks": [
+    {
+      "source_row": 7,
+      "status": "checked",
+      "mcp_work_id": "door_installation",
+      "estimate_price": "7000",
+      "mcp_price": "7000"
+    },
+    {
+      "source_row": 14,
+      "status": "checked",
+      "mcp_work_id": "door_installation",
+      "estimate_price": "7000",
+      "mcp_price": "7000"
+    },
+    {
+      "source_row": 21,
+      "status": "checked",
+      "mcp_work_id": "door_installation",
+      "estimate_price": "7000",
+      "mcp_price": "7000"
+    },
+    {
+      "source_row": 28,
+      "status": "checked",
+      "mcp_work_id": "door_installation",
+      "estimate_price": "7000",
+      "mcp_price": "7000"
+    }
+  ],
+  "deterministic_findings": [
+    {
+      "finding_id": "finding_001",
+      "type": "quantity_understatement",
+      "severity": "warning",
+      "source_row": 7,
+      "source_rows": [
+        7,
+        14,
+        21,
+        28
+      ],
+      "quantity_check_scope": "object_total_unique_doors",
+      "allocation_status": "estimate_declared",
+      "canonical_room_id": null,
+      "canonical_room_name": "Весь объект",
+      "canonical_work_name": "Установка дверей",
+      "estimated_value": "5",
+      "control_value": "6",
+      "deviation_percent": "16.66666666666666666666666667",
+      "unit": "шт",
+      "calculation_trace_refs": [
+        "object_total:door_count",
+        "quantity_check:rows:7-14-21-28"
+      ]
+    }
+  ],
+  "warnings": [],
+  "coverage": {
+    "checked_rows": 28,
+    "not_checked_rows": 0
+  },
+  "relevant_calculation_trace": [
+    {
+      "trace_id": "object_total:door_count",
+      "room_id": null,
+      "metric": "door_count",
+      "formula": "deduplicate by element_id",
+      "inputs": {
+        "room_values": [
+          {
+            "room_id": "room_001",
+            "value": "2"
+          },
+          {
+            "room_id": "room_002",
+            "value": "3"
+          },
+          {
+            "room_id": "room_003",
+            "value": "2"
+          },
+          {
+            "room_id": "room_004",
+            "value": "3"
+          },
+          {
+            "room_id": "room_005",
+            "value": "2"
+          }
+        ],
+        "element_ids": [
+          "Д-1",
+          "Д-2",
+          "Д-3",
+          "Д-4",
+          "Д-5",
+          "Д-6"
+        ]
+      },
+      "rounded_result": "6",
+      "results": null
+    },
+    {
+      "trace_id": "quantity_check:rows:7-14-21-28",
+      "room_id": null,
+      "metric": "quantity_threshold_check",
+      "formula": "abs(estimate_quantity - control_quantity) / abs(control_quantity) * 100 > tolerance_percent",
+      "inputs": {
+        "estimate_quantity": "5",
+        "control_quantity_raw": "6",
+        "control_quantity_display": "6",
+        "tolerance_percent": "5",
+        "comparison_operator": ">"
+      },
+      "rounded_result": null,
+      "results": {
+        "deviation_signed": "-1",
+        "deviation_absolute": "1",
+        "deviation_percent_raw": "16.66666666666666666666666667",
+        "threshold_exceeded": true,
+        "status": "deviation_found"
+      }
+    }
+  ],
+  "provenance": {
+    "price_catalog_source_tool": "mcp_construction_prices__get_supported_works",
+    "price_catalog_source_transport": "structured_object"
+  }
+}
